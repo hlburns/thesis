@@ -1,0 +1,336 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                                                         %%%%
+%%%%------------------------Glossary-------------------------%%%%
+%%%%                                                         %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newglossarystyle{symbunitlong}{%
+\setglossarystyle{long3col}% base this style on the list style
+\renewenvironment{theglossary}{% Change the table type --> 3 columns
+  \begin{longtable}{lp{0.6\glsdescwidth}>{\centering\arraybackslash}p{2cm}}}%
+  {\end{longtable}}%
+%
+\renewcommand*{\glossaryheader}{%  Change the table header
+  \bfseries Symbol & \bfseries Description & \bfseries Unit \\
+  \hline
+  \endhead}
+\renewcommand*{\glossentry}[2]{%  Change the displayed items
+\glstarget{##1}{\glossentryname{##1}} %
+& \glossentrydesc{##1}% Description
+& \glsunit{##1}  \tabularnewline
+}
+}
+% ======================= SYMBOLS LIST ======================== %
+\newglossaryentry{symb:a}{name=\ensuremath{_a},
+   description={denotes ageostophic},
+   unit={},
+   type=symbolslist}
+\newglossaryentry{symb:b}{name=\ensuremath{b},
+   description={buoyancy},
+   unit={},
+   type=symbolslist}
+\newglossaryentry{symb:be}{name=\ensuremath{\beta},
+   description={Coriolis ratio},
+   unit={},
+   type=symbolslist}
+\newglossaryentry{symb:bo}{name=\ensuremath{\mathcal{B}},
+   description={buoyancy forcing},
+   unit={},
+   type=symbolslist}
+\newglossaryentry{symb:chi}{name=\ensuremath{\chi},
+   description={},
+   unit={},
+   type=symbolslist}
+\newglossaryentry{symbLCp}{name=\ensuremath{C{_p}},
+description={ Specific heat capacity. (Sea water = 3985 JKg$^{-1}$K$^{-1}$}),
+unit={JKg$^{-1}$K$^{-1}$},
+   type=symbolslist}
+\newglossaryentry{symb:D}{name=\ensuremath{D},
+   description={Material derivative},
+   unit={},
+   type=symbolslist}
+\newglossaryentry{symb:Ek}{name=\ensuremath{Ek},
+   description={Ekman number},
+   unit={},
+   type=symbolslist}
+\newglossaryentry{symb:eta}{name=\ensuremath{\eta},
+   description={Bottom topography},
+   unit={m},
+   type=symbolslist}
+\newglossaryentry{symb:etab}{name=\ensuremath{\eta _b},
+   description={Sea Surface Height},
+   unit={m},
+   type=symbolslist}
+\newglossaryentry{symb:f}{name=\ensuremath{f},
+   description={coriolis frequency},
+   unit={},
+   type=symbolslist}
+\newglossaryentry{symb:Fu}{name=\ensuremath{F},
+   description={Function (variables)},
+   unit={},
+   type=symbolslist}
+\newglossaryentry{symb:G}{name=\ensuremath{\mathcal{G}},
+   description={Green's function ?},
+   unit={},
+   type=symbolslist}
+\newglossaryentry{symb:hml}{name=\ensuremath{hml},
+   description={Mixed layer Depth},
+   unit={m},
+   type=symbolslist}
+\newglossaryentry{symb:J}{name=\ensuremath{J},
+   description={Jacobian},
+   unit={},
+   type=symbolslist}
+\newglossaryentry{symb:K}{name=\ensuremath{K},
+   description={Eddy transfer coefficient},
+   unit={},
+   type=symbolslist}
+\newglossaryentry{symb:Ka}{name=\ensuremath{\kappa},
+   description={Eddy diffusivity constant},
+   unit={},
+   type=symbolslist}
+\newglossaryentry{symb:L}{name=\ensuremath{L},
+   description={Length},
+   unit={m},
+   type=symbolslist}
+\newglossaryentry{symb:N2}{name=\ensuremath{N^2},
+   description={Brunt V{\"a}is\"al\"a  frequency},
+   unit={},
+   type=symbolslist}
+\newglossaryentry{symb:omega}{name=\ensuremath{\Omega },
+   description={},
+   unit={},
+   type=symbolslist}
+\newglossaryentry{symb:phi}{name=\ensuremath{\Phi },
+   description={},
+   unit={},
+   type=symbolslist}
+\newglossaryentry{symb:psi}{name=\ensuremath{\Psi },
+   description={Stream function},
+   unit={m$^3$ /s},
+   type=symbolslist}
+\newglossaryentry{symb:Q}{name=\ensuremath{Q},
+   description={Heat Flux},
+   unit={w/m$^2$},
+   type=symbolslist}
+\newglossaryentry{symb:rho}{name=\ensuremath{\rho },
+   description={Density, $_0$ denotes reference density.},
+   unit={kg/m$^2$},
+   type=symbolslist}
+\newglossaryentry{symb:ro}{name=\ensuremath{Ro },
+   description={Rossby number},
+   unit={},
+   type=symbolslist}
+\newglossaryentry{symb:sp}{name=\ensuremath{S_p },
+   description={Isopycnal slope},
+   unit={},
+   type=symbolslist}
+\newglossaryentry{symb:Tau}{name=\ensuremath{\tau _s},
+   description={Wind Stress},
+   unit={},
+   type=symbolslist}
+\newglossaryentry{symb:TauCurl}{name=\ensuremath{\nabla \times \tau _s},
+   description={Wind Stress Curl},
+   unit={},
+   type=symbolslist}
+\newglossaryentry{symb:theta}{name=\ensuremath{\theta },
+   description={Potential temperature},
+   unit={$^o$ C},
+   type=symbolslist}
+\newglossaryentry{symb:U}{name=\textbf{u},
+   description={Velocity vector (x,y,z,t), $u$ = zonal, $v$ = meridional, $w$ = vertical},
+   unit={m/s},
+   type=symbolslist}
+\newglossaryentry{symb:Pi}{name=\ensuremath{\pi},
+   description={Geometrical value},
+   unit={},
+   type=symbolslist}
+\newglossaryentry{P}{name=\ensuremath{P_b},
+        description={Bottom Pressure},
+        unit={N/m$^2$},
+        type=symbolslist}
+\newglossaryentry{vor}{name=\ensuremath{q},
+        description={vorticity},
+        unit={},
+        type=symbolslist}
+% ======================= ACRONYMS LIST ======================= %
+\newacronym[sort=AABW]{AABW}{AABW}{Antarctic Bottom Water}
+\newacronym[sort=AAIW]{AAIW}{AAIW}{Antarctic Intermediate Water}
+\newacronym[sort=ACC]{ACC}{ACC}{Antarctic Circumpolar Current}
+\newacronym[sort=AMOC]{AMOC}{AMOC}{Atlantic Meridional Overturning Circulation}
+\newacronym[sort=AOGCM]{AOGCM}{AOGCM}{Atmosphere-Ocean Coupled Global Climate Model} 
+\newacronym[sort=CDW]{CDW}{CDW}{Circumpolar Deep Water}
+\newacronym[sort=CFL]{CFL}{CFL}{Courant–Friedrichs–Lewy}
+\newacronym[sort=Fortran]{Fortran}{Fortran}{Formula Translating System}
+\newacronym[sort=EKE]{EKE}{EKE}{Eddy Kinetic Energy}
+\newacronym[sort=EPE]{EPE}{EKE}{Eddy Potential Energy}
+\newacronym[sort=GCM]{GCM}{GCM}{General Circulation Model}
+\newacronym[sort=GPE]{GPE}{GPE}{Gravitational Potential Energy}
+\newacronym[sort=GS]{GS}{GS}{Gulf Stream}
+\newacronym[sort=KE]{KE}{KE}{Kinetic Energy}
+\newacronym[sort=KPP]{KPP}{KPP}{K-profile parameterization}
+\newacronym[sort=LCDW]{LCDW}{LCDW}{Lower Circumpolar Deep Water}
+\newacronym[sort=LHS]{LHS}{LHS}{Left Hand Side}
+\newacronym[sort=ITCZ]{ITCZ}{ITCZ}{Inter Tropical Convergence Zone}
+\newacronym[sort=MITgcm]{MITgcm}{MITgcm}{Massachusetts Institute of Technology General Circulation Model}
+\newacronym[sort=MOC]{MOC}{MOC}{Meridional Overturning Circulation}
+\newacronym[sort=NADW]{NADW}{NADW}{North Atlantic Deep Water}
+\newacronym[sort=NCEPNCAR]{NCEPNCAR}{NCEPNCAR}{National Centers for Environmental Prediction-National Centre for Atmospheric Research}
+\newacronym[sort=NERC]{NERC}{NERC}{Natural Environment Research Council}
+\newacronym[sort=netCDF]{netCDF}{netCDF}{Network Common Data Form}
+\newacronym[sort=NOC]{NOC}{NOC}{National Oceanography Centre}
+\newacronym[sort=PV]{PV}{PV}{Potential Vorticity}
+\newacronym[sort=PF]{PF}{PF}{Polar Front}
+\newacronym[sort=POP]{POP}{POP}{ Parallel Ocean Programme}
+\newacronym[sort=RHS]{RHS}{RHS}{Right Hand Side}
+\newacronym[sort=RMOC]{RMOC}{RMOC}{Residual Meridional Overturning Circulation}
+\newacronym[sort=ROC]{ROC}{ROC}{Residual Overturning Circulation}
+\newacronym[sort=QG]{QG}{QG}{Quasi-Geostophic}
+\newacronym[sort=SAF]{SAF}{SAF}{Southern Antactarctic Front}
+\newacronym[sort=SAM]{SAM}{SAM}{Southern Annular Mode}
+\newacronym[sort=SAMW]{SAMW}{SAMW}{Sub Antarctic Mode Water}
+\newacronym[sort=SOMOC]{SOMOC}{SOMOC}{Southern Ocean Meridional Overturning Circulation}
+\newacronym[sort=SOROC]{SOROC}{SOROC}{Southern Ocean Residual Overturning Circulation}
+\newacronym[sort=SSH]{SSH}{SSH}{Sea Surface Height}
+\newacronym[sort=SSHA]{SSHA}{SSHA}{Sea Surface Height Anomaly}
+\newacronym[sort=SST]{SST}{SST}{Sea Surface Temperature}
+\newacronym[sort=SSTA]{SSTA}{SSTA}{Sea Surface Temperature Anomaly}
+\newacronym[sort=SSSA]{SSSA}{SSSA}{Sea Surface Salinity Anomaly}
+\newacronym[sort=STF]{STF}{STF}{Subtropical Front}
+\newacronym[sort=TIW]{TIW}{TIW}{Tropical Instability Wave}
+\newacronym[sort=TEM]{TEM}{TEM}{Transformed Eulerian Mean}
+\newacronym[sort=TKE]{TKE}{TKE}{Turbulent Kinetic Energy}
+\newacronym[sort=TNA]{TNA}{TNA}{Tropical North Atlantic}
+\newacronym[sort=U]{U}{U}{Zonal Velocity in m/s}
+\newacronym[sort=UCDW]{UCDW}{UCDW}{Upper Circumpolar Deep Water}
+\newacronym[sort=V]{V}{V}{Meridional Velocity in m/s}
+
+%-----------------------------------------------------------------------------
+% ======================= GLOSSARY LIST ======================== %
+\newglossaryentry{adiabatic}
+{
+name={adiabatic},
+description={},
+sort=adiabatic
+}
+%-------------------------------
+\newglossaryentry{baroclinic}
+{
+name={baroclinic},
+description={},
+sort=baroclinic
+}
+%-------------------------------
+\newglossaryentry{barotropic}
+{
+name={Barotropic},
+description={},
+sort=barotropic
+}
+%-------------------------------
+\newglossaryentry{Brunt Vaisala frequency}
+{
+name={Brunt V{\"a}is\"al\"a  frequency},
+description={Largest temporal frequency that internal waves can have},
+sort=Brunt Vaisala frequency
+}
+
+%-------------------------------
+\newglossaryentry{diabatic}
+{
+name={Diabatic},
+description={},
+sort=diabatic
+}
+%-------------------------------
+\newglossaryentry{e-folding}
+{
+name={e-folding},
+description={A factor of 1/$e$ , space scale for change of 1/$e$ if exponential decay is assumed},
+sort=e-fold
+}
+%-------------------------------
+\newglossaryentry{Geostrophic}
+{
+name={geostrophic},
+description={},
+sort=geostrophic,
+type = main
+}
+%-------------------------------
+\newglossaryentry{isotherm}
+{
+name={Isotherm},
+description={Surface of equal temperature},
+sort=isotherm
+}
+%-------------------------------
+\newglossaryentry{incompressibility}
+{
+name={Incompressibility},
+description={incompressibility},
+sort=incompressibility
+}
+%-------------------------------
+\newglossaryentry{psi}
+{
+name={$\ensuremath{\psi}$},
+description={ Stream function (m$^{2}$s$^{-1}$)},
+sort=psi
+}
+%-------------------------------
+\newglossaryentry{psir}
+{
+name={$\ensuremath{\psi_{res}}$},
+description={ Residual overturning stream function (m$^{2}$s$^{-1}$)},
+sort=psir
+}
+%-------------------------------
+ \newglossaryentry{psu}
+{
+  name={psu},
+  description={ The Practical Salinity Scale defines salinity in terms of the conductivity ratio of a sample to that of a solution of 32.4356 g of KCl at $15^{o}$C in a 1 kg solution. A sample of seawater at 15$^{o}$C with a conductivity equal to this KCl solution has a salinity of exactly 35 practical salinity units (psu)           },
+  sort=psu
+}
+%-------------------------------
+\newglossaryentry{rho}
+{
+name={$\ensuremath{\rho}$},
+description={ Density of sea water (1030 kg m$^{-3}$)},
+sort=rho
+}
+%-------------------------------
+\newglossaryentry{Rsbrad}
+{
+name={Rossby radius},
+description={The scale for mesoscale eddies to form baroclinic instability. $\displaystyle {L_d = \frac{NH}{f}}$, where N is the bouyancy frequency, H is thickness and f is the coriolis frequency.  },
+sort=rossby
+}
+%-------------------------------
+\newglossaryentry{SO}
+{
+  name={Southern Ocean},
+  description={Region of ocean around Antarctica, although not defined as a subregion of the world ocean by the International Hydrographic Organization, it represents a region of differing dynamics separate from the Atlantic, Pacific and Indian oceans \citep{tomczak2003}.},
+  sort=So
+}
+%-------------------------------
+\newglossaryentry{Sv}
+{
+  name={Sverdrups},
+  description={ 10$^{6}$ m/s$^{2}$                 },
+  sort=Sv
+}
+%-------------------------------
+
+%-------------------------------
+%-------------------------------
+%-------------------------------
+%-------------------------------
+
+%
+
+
+
+
+
+
+

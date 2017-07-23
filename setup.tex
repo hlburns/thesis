@@ -1,0 +1,180 @@
+\section{Outline of model}
+\subsection{MITgcm overview}
+The model code used is the Massachusetts Institute of Technology general circulation model (MITgcm) \citep{jmarshall1997}. The MITgcm is a finite difference primitive equation model solver rooted in the incompressible Navier-Stokes equations.
+Assuming the flow is incompressible:
+\begin{equation}
+D_t \rho << \rho \nabla \cdot \textbf{$v$} ,
+\label{eq:incompressible}
+\end{equation}
+to filter the acoustic modes.
+Density perturbations are assumed to be smaller compared to the reference density:
+\begin{equation}
+\rho ' = (\rho - \rho _0) << \rho _0 .
+\label{eq:smallrho}
+\end{equation}
+This allows the use of the Boussinesq approximation to make the momentum equations more linear. Therefore the incompressible Boussinesq equations are:
+\begin{equation}
+\begin{array}{rcl}
+\rho _0 D_t \mathbf{v} + 2 \Omega \times \rho _0 \mathbf{v} + g \rho \hat{k} + \nabla \rho &=& \mathbf{F} \\
+\rho _0 \nabla \cdot \mathbf{v} &=&  0 \\
+\partial _t \eta + \nabla \cdot ( H + \eta)\mathbf{v} &=& P - E\\ 
+D_t \theta &=& Q_\theta \\
+D_t s &=& Q_s \\
+\rho &=& \rho (s, \theta, p) \\
+\end{array}
+\label{eq:prim_eqs}
+\end{equation}
+where $\mathbf{v}$ is velocity, p is pressure $\rho$ is density, $\eta $ is the displacement of free surface from resting sea-level, $\theta$ is potential temperature, s is salinity, $\rho _0$ is the reference density, g is gravitational acceleration, H is bottom depth, F, P-E, $Q_\theta$, $Q_s$ are forcing fields \citep{Adcroft2004}. The hydrostatic approximation is also be made for horizontal resolutions coarser than 1km \citep{Adcroft2004}. Many of these approximations were discussed and used in \ref{sec:TEM}. 
+
+The model is then discretized using finite volume methodology \citep{Adcroft1997}. Where the governing equations are integrated over finite volumes and applying the Guass-divergence theorem to give a continuity in the form:
+\begin{equation}
+A^{u}_{east}u_{east} - A^{u}_{west}u_{west} + A^{v}_{north}v_{north} - A^{v}_{south}v_{south} + A^{w}_{up}w_{up} - A^{w}_{down}w_{down} = 0,
+\end{equation}
+written in terms of the normal flow across cell faces. With no normal flow at rigid boundaries (volume flux though a rigid boundary is set to zero). The components of velocity are staggered on an Arakawa C grid \citep{Chang1997} in the horizontal and a Lorenz grid in the vertical  \citep{lorenz1960energy} see \fref{fig:gridfig}.
+
+\begin{figure}[h]
+\center
+\noindent \includegraphics[width=0.8\textwidth]{../../Figures/gidfig.pdf} 
+\caption{A illustration of the horizontal and vertical grid spacing. a) Arakawa C grid and b) Lorenz vertical grid. \textit{Adapted from} \protect \citep{Collins2013}}
+\label{fig:gridfig}
+\end{figure}
+
+The model then discretizes the momentum equations between time levels and substitutes then into the discrete continuity equation to obtain an elliptic equation for pressure, refer to \citet{jmarshall1997} for detailed explanation of Algorithms used. Information referring to finite volume advection is discussed in appendix \ref{sec:appendix1}. In the following section we outline the parameters and boundary conditions applied to set up the MITgcm for our purpose.
+
+\subsection{Considering model set up}
+
+First we have to consider the best to approach modelling this problem within temporal and computational limits. It is not feasible to run a high resolution eddy resolving coupled climate model altering \gls{NADW} formations and analysing the \gls{SOROC} and diabatic eddy response. This would also be too complex to fully understand the important factors controlling the diabatic eddy response and the underlying physics. In order to reduce computational costs, we can run an idealised channel model with periodic flow, applying boundary conditions to mimic the processes outside of the southern ocean. We then have to apply surface and bottom boundary conditions and forcing to generate the appropriate flow and circulation. A simple box ocean can then be used to run a high resolution simulation to enable us to examine the basic physics controlling southern ocean diabatic eddies. 
+
+Here we outline the rational for the most basic parameters, before going on to give a full overview of the generalised set up that all the simulations will be based off. 
+\subsubsection{Fundamental parameters}
+A few fundamental parameters must decided to establish a trade off between computational cost, most appropriate physics and ease of analysis to test the basic theory. In order to gain a better understanding we require a model setup that can be run many times with altered boundary conditions.
+\begin{itemize}
+\item[\textbf{Domain size:}] Minimised for computational efficiency. Depth 3000~m (if no topography), but must be 4000~m if ridges are included. In absence of topography width need only be 1000~km as no meanders in the ACC to consider. The meridional length must allow space for boundary conditions and forcing variation so we have chosen 2000~km.  
+\item[\textbf{Resolution:}] To achieve the most appropriate results we have chosen a standard horizontal resolution of 5~km, this is just about eddy resolving. Considering the Rossby radius of deformation is: \begin{equation}
+L_{d} = \frac{NH}{f},
+\end{equation} 
+where N is the buoyancy frequency typically 3x10$^{-3}$~s$^{-1}$ , H is thickness scale (typically 1000~m) and f is the Coriolis parameter (1x10$^{-4}$ s$^{-1}$-1.3x10$^{-4}$ s$^{-1}$). Giving values of 10-30~km. Allowing for a minimum of 2 grid spacing per radius.
+\item[\textbf{Diffusion:}] Set to zero for an adiabatic interior
+\item[\textbf{EOS:}] For simplistic idealised models only a linear equation of state can be used to establish qualitative results ideal for starting to understand a poorly understood mechanism. In more complex models this would not suffice.
+\item[\textbf{Time Step:}]Set to 450s, depending on resolution to satisfy the \gls{CFL} condition.
+\end{itemize}
+Other run time parameters are outlined in appendix \ref{sec:appendix2}, where we include an example data file. Next, with these constraints in mind, the next most fundamental aspects of the model set up are the boundary conditions applied.
+
+\subsubsection*{Northern boundary conditions}
+
+In order to begin to understand how the diabatic eddies might respond to an altered northern boundary condition. We must decide how to represent the rest of the World Oceans in the model, as the SO is not disconnected from the rest of the world and the SO ROC requires diabatic processes to the north of the ACC in order to close. To this end we considered 3 ways of dealing with the outside of the SO:
+\singlespacing
+\begin{enumerate}
+\item Another additional basin representing the northern hemisphere
+\item Enhanced vertical diffusion 
+\item Sponge layer
+\end{enumerate}
+
+\doublespacing
+1. Similar to \citet{saenz2012}, which to be run at a high enough resolution would be far to computationally expensive, when considering the number of model runs to be performed. The \citet{saenz2012} model was run at a resolution of $\displaystyle{\sfrac{1}{4}\degree}$ and at least $\displaystyle{\sfrac{1}{12}\degree}$ would be required to investigate the eddy dynamics in the SO. These factors ruled out the additional basin method.\\
+2.  With no heat flux through the northern boundary a
+shallow thermocline will be generated. Therefore excess vertical diffusion can be applied near the northern edge of the domain to increase the thermocline depth, north of the most northernmost front. Enhanced diffusion in the north of the domain represents the overturning circulation,
+wind-driven circulation and vertical mixing acting throughout the global ocean.
+Changes in stratification due to variations in surface buoyancy are felt very quickly
+compared with slow (millennia) equilibration times in the real ocean \citet{allison2010}. Preliminary experiments using enhanced vertical diffusion, following variations of the model set up used in \citet{hogg2010}, were unsuccessful in generating a sensible overturning (\textit{not shown here}). The average \gls{EKE} of these tests were too low and generated little eddy compensation (overturning was not the focus of the \citet{hogg2010} experiments). Therefore enhanced diffusion is not suitable for investigating changes in the SO ROC and diabatic eddies. \\
+3. Sponge layer models where temperature/density is relaxed to a prescribed profile have shown promising results in a number of other studies \citep{Abernathey2011,Abernathey2014,Zhai2014}[etc]. Preliminary experiments using a Sponge layer to relax to a set temperature profile as in \citet{Abernathey2011} were able to generate a sensible \gls{SOROC} by mimicking diabatic processes outside the southern ocean. \footnote{NB: A very small amount of random noise: $O 10^{-5}$ must be added to the temperature layers to prevent laminar flow (\textit{Abernathey Pers coms}) }
+
+Preliminary experiments helped us to establish the most appropriate northern boundary condition as a sponge layer relaxing to a set temperature profile. Outlined later in detail in \fref{sec:Setup_stand}.
+\subsubsection*{Surface boundary conditions}
+Considerations:
+\singlespacing
+\begin{enumerate}
+\item Atmosphere
+\item Free surface
+\item Heat
+\item Wind
+\end{enumerate}
+
+\doublespacing 
+1. To reduce complexity and computational cost we chose an ocean only model noting that coupling to an atmosphere would perhaps be an interesting addition for future work.\\
+% Why not rigid lid
+2. The MITgcm allows a free surface or rigid lid surface boundary condition, the only additional complication with a free surface boundary condition is the additional requirement of a free surface correction in vertically integrated tracer budgets\footnote{On calculation this is very small and can be neglected. This correction term is outlined later in budget analysis when applied in the relevant chapters.}. The upper surface of the ocean is a free surface which is driven by the divergence of volume flux in the interior. We chose a linear free-surface which permits surface gravity waves with finite phase speed and introduces a Helmholtz term in the surface pressure equation. This is a very good approximation for deep water where $\eta << H$ \citep{Campin2004} such as in our channel model setup. Using a non-linear free surface has many additional complications and extra computational cost with no benefits, so is not considered appropriate here.\\
+3. Buoyancy forcing in the absence of an atmosphere for heat exchange can be achieved via a number of methods in the MITgcm. As we are using an equation of state linear in temperature only, we only consider buoyancy forcing from heat forcing and not from evaporation and precipitation/ freshwater forcing. The simplest buoyancy forcing would be a fixed surface heat flux Q (W/m$^2$) varying only in x and/or y. Time varying heat fluxes to generate seasonal cycles is not appropriate in such an idealised set up. Another method is surface restoring where temperature/density is restored to a set profile in the uppermost layer. The initial set up will be using fixed surface heat fluxes, discussed in \fref{sec:Setup_stand}. Buoyancy forcing will be discussed in much greater detail in chapter \ref{chap:3}. \\
+4. Wind forcing can be applied in a zonal and/or meridional direction. Again we have chosen to apply a fixed surface wind stress rather than time varying due the idealised nature of our model and for ease of interpretation. We use a fixed wind stress in order to generate an \gls{ACC} to be described in \fref{sec:Setup_stand}.
+
+
+\subsubsection*{Bottom boundary conditions}
+\label{sec:BBC}
+As the Southern boundary will be a fixed wall and the zonal boundaries will be periodic. The last set of boundary conditions to be applied are those at the bottom of the domain.
+\singlespacing
+\begin{enumerate}
+\item Slip
+\item Topography
+\item Linear drag
+\end{enumerate}
+
+\doublespacing 
+1. The sides and bottom of the model must have a boundary condition defining the flow at these boundaries. Usually this is either: no slip or free slip. As the computational cost is not severely constrained, we use a no slip boundary condition which maintains zero flow at the boundary by adding in an additional source term in the cells next to the boundary.\\  
+2. The Southern Ocean has a continental shelf that helps maintain deep water formation and ridges that slow the zonal flow and enhance eddy activity.  Topography steers the ACC flow and generates standing eddies (steady-state meanders). The importance of these standing eddies is a topic sparking a lot of interest. If zonal means are used in the decomposition then it would appear the standing eddy component dominates in
+both idealised and realistic eddy-permitting models \cite{treguier2007}. However observational studies \cite{szoeke1981} suggest that there is no mean flow heat flux across depth averaged contours of temperature, this is only achieved by transient eddies suggesting the large scale dynamics in flat bottom models closely resemble the stream wise averaged models with topography. This would suggest the approach of stream-wise averaging should be used instead of zonal averaging in models with topography, but this a more complex framework to use so was often neglected in earlier studies: \cite{hallberg2006,farneti2010} leading to different results on the importance of standing eddies and as to whether they alter the stratification of the ACC, or just the path \cite{abernathey2013}. Studies that have investigated the effect of topography using a stream-wise framework \cite{viebahn2012} and \citep{abernathey2013}, investigating heat fluxes across the ACC, suggest the standing eddy component is not negligible and qualitatively effects the generation and distribution of transient eddies. 
+For initial runs we use a flat bottom to reduce computational cost, as little zonal variation arises in the ACC. It should be noted that some topography runs must be used to validate the flat bottom runs and the possible missing effects must be considered. We also note the the lowermost overturning cell in our experiments with flat bottoms should not be interpreted as meaningful.  \\
+3. In the absence of topography, Hidaka's Dilemma must be considered  \citep{hidaka1953}. For a flat bottom  scenario with zero bottom friction, zonal transport would scale only with viscosity, channel width and wind stress would generate an unrealistically large ACC. \citet{hidaka1953} showed the only way to generate a sensible sized ACC was either to alter viscosity or diffusivity to unreasonable values, or they found that that this can be mitigated by a no-slip boundary condition and a linear bottom drag, which is the approach we use. \\
+\subsubsection*{Advection schemes}
+There are many different options for advection schemes in the MITgcm for a variety of setups. These vary in computational cost and spurious numerical mixing \citep{Ilıcak2012,hill2012}. In preliminary experiments we investigated the most appropriate advection scheme. In general there are some schemes more appropriate for high resolution than for coarse resolution set ups and vice versa, with a higher order scheme being more appropriate for higher resolution. For propagating fronts, a flux limiting scheme must be employed. When the time step is limited by advection, then multi-dimensional non-linear schemes offer the most stability, however they reduce the ability to calculate accurately diffusion/dissipation. We investigated schemes 33; as in \citet{hogg2010}, 81 as in \citet{Abernathey2011} and advection scheme 7 as used in \citet{Zhai2014}.\\
+Advection scheme 33: A third order direct space time flux corrected scheme, for 5~km resolution this produced a slightly noisy tracer field and is perhaps not of high enough order for the increased resolution required in our experiments (twice the resolution used in \cite{hogg2010}). This scheme was considered when running the preliminary experiments to establish the most suitable northern boundary condition, as \citet{hogg2010} formed the basis of our enhanced diffusion experiments, the scheme was later checked in the sponge layer experiments as well. \\
+Advection scheme 81: A Second order moment scheme based off \cite{Prather}. Has a significant increase (20\%) in computational cost. This scheme is favoured in many studies of the southern ocean such as \citep{Abernathey2011,Abernathey2014,wolfe2014} after \cite{hill2012} showed a reduction in spurious diapycnal mixing.   \\
+Advection scheme 7: Seventh-order one-step method with monotonicity-preserving limiter OS7MP, \cite{Daru2004} with modifications from Adcroft and Campin, (MITgcm support mailing list communications 2010), in many cases compares adequately with the more computationally expensive scheme 81 \cite{Ilıcak2012}.
+
+With diffusion set to zero in the interior and at high resolution the effects of spurious diapycnal mixing between OSMP7 and a Prather advection scheme are negligible for this study. Preliminary experiments not shown here showed no noticeable difference other than computational cost between advection scheme 7 and 81, motivating us to use scheme 7.
+
+\subsubsection*{Mixing parameterisation}
+
+Some sub grid mixing must be included in order to maintain a stable mixed layer. In the MITgcm this can be achieved through a number of methods of varying complexity: \gls{TKE} , \gls{KPP} and Convective adjustment. 
+Many models employ the widely used KPP mixing scheme \citep{large1994},  which greatly enhances vertical diffusion in the upper 50~m as well as introducing a non-local transport term to represent convective transport, as all other convection parametrisations must be disabled in the model. KPP requires additional terms to be introduced into buoyancy budgets, in order estimate the diffusion term as well as careful and considered adjustment to ensure a sensible mixing.  
+Convective adjustment \citep{cox1984} is the most basic method of maintaining a stable mixed layer as it simply re stratifies statically unstable density configurations, convective adjustment is simpler to analyse than using KPP and requires little consideration on overall impact on the physics of the model. It can only be used in idealised models with reasonably coarse vertical resolution otherwise the computational cost of the iterative method of stabilisation would be too high and the mixing not sufficient. Studies comparing convective adjustment and KPP, such as \cite{Boccaletti2007b}, show only slight differences in EKE, which is the same order of magnitude for both, suggesting convective adjustment is adequate for the physics of an idealised model and offers the advantage of simplicity. Although convective adjustment is a sensible choice for a highly idealised model, with finer vertical resolution or in a less idealised case such as the inclusion of topography, this method may not be suitable as evaluated in \cite{griffies2000}. The turbulent kinetic energy (TKE) scheme, described in \cite{Gaspar1990,Madec1998}, is a another method, favoured in runs such as the NEMO ORCA models \citep{Kazantsev2013}. TKE requires no explicit convective scheme so allows for a more flexible model set up, offering an alternative to KPP where convective adjustment alone will not suffice.
+Given these considerations, for our starting model set up with a flat bottom we use the least complex mixing parameterisation: convective adjustment. 
+
+\section{Channel model set up}
+\label{sec:Setup_stand}
+Here we outline the basic model set up for a flat bottom channel to test the initial effects of closing the northern boundary. All subsequent models will be variants of the model outlined here and the specifics described in detail in the relevant chapters. An example python script generating the model grid and forcing is given in appendix. %C.
+ The initial channel domain is 1000km by 2000km and 2985m deep with a horizontal resolution of 5km with 30 geopotential layers ranging in thickness from 10m at the surface to 250m at the bottom.
+To allow for a small domain size and reduce computational cost the channel was setup with no topography as rationalised in \citet{Abernathey2011} (see \fref{sec:BBC}). To reduce spurious diapycnal mixing advection scheme 7 was chosen \citep{hill2012, Ilıcak2012} which is a Seventh-order one-step method with monotonicity-preserving limiter scheme outline in \cite{Daru2004}. Convective adjustment was employed to maintain a stable mixed layer. 
+
+The model was forced using similar zonal wind stress sine bell, to \citet{Abernathey2011} to generate an appropriate ACC in a flat bottomed channel model to generate an ACC.
+\begin{equation}
+\tau_s(y)=\tau_0 sin(\frac{\pi y}{Ly}),
+\label{eq:tau}
+\end{equation}
+where L$_y$ is the meridional width, Q$_0$ = 10 W m$^{-2}$ and $\tau_0$ = 0.2 N m$^{-2}$. The size roughly approximates observed surface wind stress \cite{Large2009}. 
+\begin{figure}[h]
+\center
+\noindent \includegraphics[width=0.8\textwidth]{../../Figures/taumodel.png} 
+\caption{a) Taken from \protect \cite{Abernathey2011} the net surface wind  from CORE 2 \protect \citep{Large2009}. b) A simplified version of the observed surface wind stress used in our model.}
+\label{fig:modeltau}
+\end{figure}
+We also employed a similar heat forcing (fixed surface flux), however as the northern boundary is be fully closed so the surface heat flux has been adjusted so that there is no net cooling at the surface:
+\begin{equation}
+Q(y)=
+\begin{cases}
+-Q_{0}\,cos(\frac{18\pi y}{5Ly}) & \text{for }\, y \le \frac{5Ly}{36} \text{ and } \frac{22Ly}{36} \geq y \geq \frac{30Ly}{36},\\
+-Q_{0}\,cos(\frac{18 \pi y}{5Ly}-\frac{\pi}{2}) & \text{for }\, \frac{5Ly}{36} \geq y \geq \frac{20Ly}{36},\\
+0 & \text{for }\, y \geq \frac{5Ly}{6},
+\end{cases}
+\label{eq:Q}
+\end{equation}
+Surface buoyancy forcing in the southern ocean is poorly constrained, \cite{cerovecki2011} so the buoyancy forcing applied is a simplification of the buoyancy loss/gains associated with \gls{AABW} , the ACC and \gls{AAIW}, roughly matching the CORE2 estimates from \cite{Large2009} \fref{fig:modelQ}.
+
+\begin{figure}[h]
+\center
+\noindent \includegraphics[width=0.8\textwidth]{../../Figures/heatmodel.png} 
+\caption{a) Taken from \protect \cite{cerovecki2011} the net surface heat flux from various estimates b) A simplified version of the LY09 line \protect \citep{Large2009} to force our model in a simple cooling, heating, cooling pattern.}
+\label{fig:modelQ}
+\end{figure}
+
+Previous idealised channel models such as \cite{cerovevcki2009,cessi2006} tried to model the Southern Ocean without representation of the rest of the global basins, which leads to a vanishingly small deep residual overturning circulation. \citet{Abernathey2011} used a sponge layer to relax the northern boundary temperature (T) profile to a prescribed temperature profile:
+\begin{equation} 
+T^*(z)=\Delta T\frac{(e^{z/N}-e^{-H/N})}{1-e^{-H/N}} ,
+\label{eq:tprof}
+\end{equation} 
+assuming a natural stratification N=1000m and a temperature difference ($\Delta T$) of 8$^{\circ}$C. This exponential is taken from \citet{Abernathey2011} based on modelling and observational studies \citep{karsten2002,wolfe2008}. % check citation
+  This allows a return pathway for deep overturning that requires crossing of isopycnals to exist and is computationally inexpensive, allowing a small domain eddy resolving set up. The sponge is set using a mask (M$_{rbcs}$) of values between 0 and 1 (0 = no relaxation, 1 = relaxing on time scale ($\displaystyle{\frac{1}{\tau_{T}}}$)). The tendency of temperature at each grid point is modified to:
+\begin{equation}
+\frac{\mathrm{d}T}{\mathrm{d}t}=\frac{\mathrm{d}T}{\mathrm{d}t}-\frac{M_{rbcs}}{\tau_{T}}(T-T^*).
+\end{equation}
+
+This is the basis for our channel model configurations. The first stage of our investigation is to understand what physical processes are altered when the northern boundary is closed and whether this is a step function response or a smooth transition. As this model is highly idealised, we use the results as a qualitative guide to provide insight on how to quantitatively and more definitively investigate this in the future.

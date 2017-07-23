@@ -1,0 +1,357 @@
+\label{chap:3}
+
+\section{The influence of the surface forcing formulation.}
+\label{sec:Surface1}
+\subsection*{Introduction}
+
+Thus far we have tested the conjecture that altering diabatic processes outside the Southern Ocean through altering a relaxation time-scale in the sponge layer affects the SO ROC through a change in diabatic eddy fluxes. However, in the scenario that NADW production ceases we would anticipate a response in the surface fluxes \citep{Wunsch2004,gnanadesikan1999}. The southern ocean with its unique dynamics and weather systems may have a complex set of feedbacks and interactions in a changing climate. When considering the effects of changing altered buoyancy forcing, we must investigate the possible mediators of the response to altered stratification north of the ACC, represented by our northern boundary condition. The SO \gls{SST} response and feedbacks to changing climate has many uncertainties \citep{Hausmann2016,Ferreira2015} and estimating the air-sea flux from the bulk formulas subject to changing basic variables \citep{cerovecki2011}. It is, therefore, useful to consider a number of different surfacing forcing scenarios in order to enable us to consider various possibilities. Buoyancy fluxes arise from contributions of heat and freshwater fluxes \citep{Gill1982}. A positive buoyancy flux implies decreasing ocean surface buoyancy flux associated with either cooling SST or increase in Evaporation minus Precipitation (E-P). As our experiments do not have varying salinity we can consider the approach of \citet{Moore2002} which expresses buoyancy and freshwater fluxes as heat-equivalent fluxes:
+\begin{equation}
+Q_{BF} = Q_{HF} + Q_{FW} = \frac{\rho_0 c_p}{g \alpha} B
+\end{equation} 
+This allows us to consider fixed surface heat fluxes as larger contributions from $Q_{HF}$ and surface restoring boundary conditions larger contributions from $Q_{FW}$
+
+First, we compare our fist set of experiments using fixed surface heat fluxes with a similar set up using surface restoring used in \citet{Abernathey2014}. These comparisons should give us some insight on the relevant next line of investigation to further access the role of the surface boundary condition. 
+
+\subsection{Set up}
+To assess the sensitivity to the choice of a fixed flux boundary condition instead of a fixed surface air temperature with a restoring surface condition, a further four experiments were run using the surface forcing similar to \citet{Abernathey2014} (AC14), where the surface temperatures are relaxed to a linear meridional temperature gradient:
+\begin{equation}
+\theta = \Delta (\theta \frac{y}{Ly}),
+\end{equation}
+where $\Delta \theta  = 8^{o}C$, with $\tau _R$ set to 30 days \citep{Hanley1971}. We ran two experiments with this surface restoring condition, one with a 3 day relaxation time-scale in the sponge layer, and one with a closed northern boundary. We then diagnosed the surface heat fluxes arising from the surface restoring condition and ran 2 more experiments with the diagnosed surface heat fluxes fixed. To enable us to compare with \citet{Abernathey2014} the surface restoring runs were done implementing the KPP scheme rather than using convective adjustment. 
+
+\subsection{Influence on overturning and diabatic eddies}
+
+\begin{figure}
+\center
+\noindent \includegraphics[width=0.75\textwidth]{../../Figures/Closedvariations.pdf} 
+\caption{The isothermal stream function $\Psi_{res}(y,\theta)$ remapped onto depth coordinates, to give $\Psi_{res}(y,z)$. Isotherms in multiples of 1$^{\circ}$C are overlaid as solid black contours.}
+\label{fig:Closedvariations}
+\end{figure}
+Figure \ref{fig:Closedvariations}a shows the closed flat bottom run forced with surface restoring, generating a weak overturning cell in the upper 250 m similar to that noted in \citet{Abernathey2014} due to the diabatic effects in the surface layer. However, if we diagnose the surface heat fluxes from this experiment and apply those as a fixed surface heat flux we obtain an almost vanishing SO ROC with a much deeper mixed layer and a sharp internal boundary as in our initial experiments shown in Fig.~\ref{fig:Closedvariations}b and c. The diagnosed heat fluxes, however, are very weak in comparison with the 10 $Wm^{-2}$ fluxes used in the first set of experiments at less than 1 $Wm^{-2}$. This indicates that the surface restoring generates a different and also much weaker diabatic forcing. By including a strong sponge layer we can further test the impact of the surface forcing condition on the diabatic forcing of the SO ROC. \fref{fig:Spongevariations} shows the ROC for the different surface heat forcing conditions when the sponge layer is active.  \fref{fig:Spongevariations}a shows a weak 2-3 cell ROC when forced with a surface restoring profile. The surface cell is weaker than when using a closed wall (Fig.~\ref{fig:Closedvariations}a), but below the surface, a SO ROC is present, albeit weaker than in the first set of experiments. When replacing the surface restoring condition with fixed surface heat fluxes the SO ROC remains very similar (\fref{fig:Spongevariations}b). It is much weaker than in our first set of experiments, consistent with the weaker heat fluxes used. Note that the amplitude of the heat flux forcing in the first set was motivated in \cite{Abernathey2011} by the observed heat fluxes over the Southern Ocean and that the diagnosed heat fluxes from applying the surface restoring condition appear too weak. 
+
+\begin{figure}[H]
+\center
+\noindent \includegraphics[width=0.75\textwidth]{../../Figures/Spongevariations.pdf} 
+\caption{The isothermal stream function $\Psi_{res}(y,\theta)$ remapped onto depth coordinates, to give $\Psi_{res}(y,z)$ . Isotherms in multiples of 1$^{\circ}$C are overlaid as solid black contours.}
+\label{fig:Spongevariations}
+\end{figure}
+
+We can deduce from these figures that the northern boundary is responsible for the sense and existence of the SO ROC, but that the local overturning strength is moderated by the surface heat forcing over the Southern Ocean. 
+
+To investigate whether the surface forcing conditions affect the driving mechanisms for changes in diabatic eddy heat flux divergence when the northern wall closes, we performed a heat budget analysis and plotted the diabatic eddy heat flux divergence in depth space. When a short relaxation timescale sponge layer is present all runs feature a similarly weak diabatic heat flux divergence, slightly increasing when the surface fluxes become stronger (not shown). The closed boundary runs display larger differences, but these are mainly quantitative. All runs feature an increased diabatic eddy heat flux divergence as well as an increase in mixed layer depth over which these fluxes occur. The dipole just above and below the bottom of the mixed layer, however, only develops when fixed fluxes are used, but appears more prominently when these fluxes are larger (Fig.~\ref{fig:dhdvary}a-c). 
+
+\begin{figure}[H]
+\center
+\noindent \includegraphics[width=0.6\textwidth]{../../Figures/dhdvariationsnew.pdf} 
+\caption{Zonal mean diabatic heat divergence for relaxation timescale 3, 300, 3000 days and no relaxation.}
+\label{fig:dhdvary}
+\end{figure}
+
+These results imply that when surface restoring conditions are used the increase in diabatic eddy heat fluxes when the northern boundary is closed is much smaller than when a flux condition is used. The smaller increase is to be expected as for both the short relaxation timescale sponge and the closed wall basin the runs with temperature restoring are weakly forced by heat exchange and feature a diabatic driven overturning cell that is mainly confined to the upper 250 m, cancelling the through its heat transport divergence the surface forcing, without the need to invoke strong diabatic eddy fluxes. When the diagnosed surface heat fluxes from the restoring conditions are applied, both the SO ROC and stratification in the channel change and they become more sensitive to the northern boundary condition. This adjustment is associated with a larger response in the diabatic eddy heat fluxes, associated with a collapsing SO ROC. This increase, however is still small in comparison to the increase when stronger, fixed surface heat fluxes are applied, consistent with observational estimates. In a closed basin the larger surface forcing creates deeper mixed-layers, allowing for stronger baroclinic instabilities and larger diabatic heat fluxes.
+
+\subsection{Summary}
+One of the main differences between using restoring conditions and fixed fluxes is that, when the northern boundary is closed, with fixed fluxes a deeper mixed-layer arises in the north, with isothermals at the bottom that surface only in the southern part of the channel, causing the establishment of a sharp thermal front in the south. When restoring to a fixed temperature gradient this response is prohibited, and even in the closed boundary case an anti-clockwise overturning in the surface layer exists. Which response is the correct one, cannot be deduced from these idealised experiments. While the temperature boundary condition is closer to a restoring condition, the surface boundary condition for freshwater forcing should be more like a fixed flux condition. Ultimately, however, the large adjustments associated with these changes in the SO ROC and diabatic processes north of the Southern Ocean, would also affect the atmosphere, that is the temperature profile to which sea surface temperature is restored and associated with this, the meridional profile of the wind forcing. Since it is impossible without using a global coupled ocean-atmosphere model, to adequately represent all these processes, the results presented here must be interpreted as envelopes, or extreme limits, of the behaviour expected in a fully coupled model. For instance, the strong adjustment in sea surface temperature profile, when using fixed fluxes, to changes in the northern boundary condition might give an indication on how sea surface and atmospheric surface temperature could adjust to such changes further north. In any case, however, we should expect the response of a fully coupled global system to be a mixture of the responses shown in chapters \ref{chap:2} and \ref{chap:3} under different boundary conditions. 
+
+\section{Varying the surface forcing}
+%How diabatic eddies modify/cancel the net diabatic surface forcing and Eulerian mean MOC depends on the type of surface forcing (HDB1). Here we investigate further the different response to fixed flux and fixed temperature surface forcing 1) by increasing the fluxes in case of fixed temperatures to become comparable with the fixed flux forcing; 2) by varying the relaxation time scale to the fixed temperature profile; 3) by including topography changing the stratification and depth scale of the ROC and diabatic eddies.
+%1. we should focus on the closed regime
+%2. we should focus on the response of the diabatic eddies
+
+In \fref{sec:Surface1} we compared the impact of changing the surface forcing to a surface restoring taken from the channel model of \citet{Abernathey2014}. Here we wish to further investigate the role that the surface heat boundary condition plays. 
+The behaviour in model runs with surface restoring were quite different to fixed surface heat fluxes. Fig. \ref{fig:AC14} shows the variation in SOROC produced with the differing surface forcing. 
+
+\begin{figure}[H]
+\center
+\noindent \includegraphics[width=0.7\textwidth]{../../Figures/AC14_ROC.pdf} 
+\caption{The isothermal stream function $\Psi_{res}(y,\theta)$ remapped onto depth coordinates, to give $\Psi_{res}(y,z)$ for a-b) $\tau _R$ = 3 day and c-d) no relaxation. Isotherms in multiples of 1$^{\circ}$C are overlaid as solid black contours. Note: AC14 runs b and d have rescaled colour bars to account for weaker circulation}
+\label{fig:AC14}
+\end{figure}
+
+It would appear perhaps that the surface restoring in AC14 heat forcing appears to be too weak. This provides some insight into the role of the surface forcing, but the very weak heat fluxes that negate some of our comparisons. When we applied the diagnosed heat fluxes from the surface restoring runs we see a differing result to the surface restoring (see \fref{fig:Closedvariations} and \fref{fig:Spongevariations}) runs suggesting that the mechanics of surface restoring is playing a role in altering the way diabatic eddies respond to altered northern boundary conditions. The main questions we wish to address are: what causes the surface overturning cell seen in runs with surface restoring? why does the deep surface mixed layer appear with fixed fluxes and not with surface restoring? Can we produce the same strength SO ROC with surface restoring alone and if not why? 
+
+\subsection{Model set up}
+To investigate this we devised a further set of experiments. The model is once again based on the set up described in \fref{sec:Setup_stand} and we give a brief overview of the exact set up used here. The channel domain is 1000 km by 2000 km and 3000 m deep with an eddy-resolving horizontal resolution of 5 km with 30 geopotential layers, ranging in thickness from 5 m at the surface to 280 m at the bottom.
+To allow for a small domain size and reduce the computational cost the channel was setup with no topography as rationalized in \citet{Abernathey2011}. To reduce spurious diapycnal mixing advection scheme 7 was chosen \citep{hill2012, Ilıcak2012} and convective adjustment was employed to maintain a stable mixed layer. Key model parameters are outlined in Table~\ref{tab:setup2}.
+
+\begin{table}
+\caption{Model Setup}
+\label{tab:setup2}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline \hline
+\textbf{Symbol} & \textbf{Description}  & \textbf{Value} \\ 
+\hline 
+L$_x$, L$_y$, H & Domain & 1000 km, 2000 km, 300 m \\ 
+\hline 
+L$_{sponge}$ & Length scale of sponge layer & 100 km \\ 
+\hline 
+Q$_0$ & Surface heat flux magnitude maximum & 0-10 W m$^{-2}$ \\ 
+\hline 
+$\tau _0$ & Max surface wind stress & 0.2 N m$^{-2}$ \\ 
+\hline 
+dx, dy & Horizontal grid spacing & 5 km  \\ 
+\hline 
+dz & Vertical grid spacing & 5-280 m \\ 
+\hline 
+Adv Scheme & 7$^{\text{th}}$ order centred & 7 \\ 
+\hline 
+Open $\tau_{R}$ & Sponge relaxation time scale & 30-day  \\ 
+\hline 
+Closed $\tau_{R}$ & Sponge relaxation time scale &  $\infty$ \\ 
+\hline 
+$\lambda$ & Surface restoring time scale &  30-300 \\ 
+\hline 
+r$_b $& Linear bottom drag parameter & 1.3x10$^{-3}$ m s$^{-2}$ \\ 
+\hline 
+\end{tabular}
+\end{center}
+\end{table}
+
+The fixed surface model runs are again forced using similar zonal wind stresses and surface heat fluxes as in \citet{Abernathey2011} As a result, the profiles used in \citet{Abernathey2011} have been adjusted to:
+\begin{equation*}
+Q(y)=
+\begin{cases}
+-Q_{0}\,cos(\frac{18\pi y}{5Ly}) & \text{for }\, y \le \frac{5Ly}{36} \text{ and } \frac{22Ly}{36} \geq y \geq \frac{30Ly}{36},\\
+-Q_{0}\,cos(\frac{18 \pi y}{5Ly}-\frac{\pi}{2}) & \text{for }\, \frac{5Ly}{36} \geq y \geq \frac{20Ly}{36},\\
+0 & \text{for }\, y \geq \frac{5Ly}{6}.
+\end{cases}
+\tag{\ref{eq:Q} \textit{revisited}}
+\end{equation*}
+The surface wind stress is kept the same as in \cite{Abernathey2011}:
+\begin{equation*}
+\tau_s(y)=\tau_0 sin(\frac{\pi y}{Ly}),
+\tag{\ref{eq:tau} \textit{revisited}}
+\end{equation*}
+where L$_y$ is the meridional width, Q$_0$ = 2-10 W m$^{-2}$ and $\tau_0$ = 0.2 N m$^{-2}$. As before the surface restoring and the sponge layer are set using a mask (M$_{rbcs}$) of values between 0 and 1 (0 = no relaxation, 1 = relaxing at a rate of $ \displaystyle{\frac{1}{\tau_{T}}}$). The tendency of temperature at each grid point is modified to:
+\begin{equation*}
+\frac{\mathrm{d}T}{\mathrm{d}t}=\frac{\mathrm{d}T}{\mathrm{d}t}-\frac{M_{rbcs}}{\tau_{T}}(T-T^*).
+\end{equation*}
+We adjust the value of (M$_{rbcs}$) to allow for differing timescales in the sponge and surface restoring. 
+
+For the additional runs with surface restoring alone as well as along side fixed surface heat fluxes we must determine a temperature profile varying with meridional distance. The profile for the surface restoring is drawn from \citet{Zhai2014}, where we can take the surface temperature profile from our fixed fluxes runs and moderate that in order to produce the same fluxes using \fref{eq:Ts}.
+\begin{equation}
+T_{s} = T_{ref} - \frac{Q(y)}{\rho C_p \lambda \Delta z}
+\label{eq:Ts}
+\end{equation}
+Where $T_s $ is the surface restoring profile, $T_{ref}$ is the reference profile, Q is the standard heat flux from the original experiments, $ \rho $ reference density and $\Delta z$ the water depth. How the surface temperature profile must vary with varying $\lambda $ is shown in \fref{fig:Tsall}. We see at short restoring time scales we see a more similar profile to the reference profile  (closer to linear and the profile used in AC14). As mentioned in the 30 day time scale is justified in \cite{Hanley1971} to be appropriate keeping the surface temperatures very close to the profile.
+ 
+\begin{figure}[H]
+		\center
+        \includegraphics[width=0.6\textwidth]{../../Figures/Tsall.pdf}
+    \caption{The surface temperature to restore to from eq. \ref{eq:Ts}. Varying $\lambda $ from 1 month to 6 months (30 - 300 days)}
+    \label{fig:Tsall}
+\end{figure}
+
+
+To establish the role of surface boundary condition we can adjust 3 parameters: Q , $\lambda $ and T$_ref$. As mentioned previously the surface temperature is related to the stratification at the northern boundary:
+\begin{equation*}
+T_(y) = T_N(z=yS_T),
+\end{equation*}
+so that
+\begin{equation*}
+\frac{\partial T}{\partial y} =  -S_T \left(\frac{\partial T_N}{\partial z}\right),
+\end{equation*}
+We would expect to see a difference in results when we alter the $T_{ref}$ to that of the closed boundary simulations as this may better match the closed wall northern boundary stratification. We performed some preliminary work to assess what experiments to run, this involved finding $ \lambda $ that produces the closest SO ROC to our runs in chapter \ref{chap:2} , including a small fixed surface Q to increase the SO ROC and runs without
+either fixed fluxes or restoring. After comparing results we used $\lambda = 90 $. We will compare the strong sponge and closed boundary scenarios varying lambda and the reference profiles as shown in \fref{fig:Tsall} by dashed lines. These runs have both a weak surface heat flux ($Q_0$ = $2 W/m^2$) and pure restoring. The runs used are summaries in \fref{tab:run}. 
+\begin{table}[h]
+\caption{Outline of runs}
+\label{tab:run}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline \hline
+\textbf{Run name} & \pbox{20cm}{\textbf{Restroing or}\\ \textbf{ fixed fluxes?} } & \textbf{$Q_0$} & \textbf{$\lambda $} & \textbf{additional info} \\ 
+\hline 
+Original & fixed & 10 $W/m^2$    & n/a &  \\ 
+\hline 
+AC14  & restoring & 0 $W/m^2$    &  90 & with KPP \\ 
+\hline 
+AC14HF & fixed & 0 $W/m^2$    &  90    & \\ 
+\hline 
+NoQ   & none  & 0 $W/m^2$    & n/a   & \\ 
+\hline 
+L902Q  & mixed & 2 $W/m^2$    &  90   & $T_{ref}$ altered for closed\\ 
+\hline 
+L90  & restoring & 0 $W/m^2$    &  90  & $T_{ref}$ altered for closed  \\ 
+\hline 
+\end{tabular}
+\end{center}
+\end{table}
+
+In \citet{Zhai2014} and \citet{Abernathey2014} and in \fref{sec:Surface1} we see a surface counter cell appear in the surface mixed layer that is not seen with fixed surface heat fluxes. We wish to assess what causes this and would the cell appear with surface restoring that most closing matches the fixed heat flux forcing? In \citet{Zhai2014} this surface cell does disappear at surface restoring time-scales ($\lambda $ ) of greater than half a year and requiring spinning up with strong fixed surface heat fluxes.
+
+\subsection{Overturning}
+
+All experiments were run focusing on the closed northern boundary and the strongest sponge scenarios. The Eulerian Mean overturning remains constant for all the runs (at a maximum of $\approx $2.25 Sv) as the wind forcing remains the same throughout our experiments. In this section, we look at the effects these boundary conditions have on the two extremes of northern boundary conditions. The SO ROC is calculated as before as an isothermal streamfunction (\fref{eq:psidense}). \fref{fig:extremesyT}, shows the SO ROC in temperature space for the two extremes of northern boundary condition, is included here for easy reference when comparing the differing surface forcing with our original strong fixed surface heat fluxes used in chapter \ref{chap:2}. 
+\begin{figure}[H]
+\noindent \includegraphics[width=\textwidth]{../../Figures/3closedrocyt.pdf}
+\caption{The isothermal stream function $\Psi_{res}(y,T)$ for a) $\tau _R$ = 3 day and b) no relaxation.}
+\label{fig:extremesyT}
+\end{figure}
+
+\subsubsection*{No surface heat forcing}
+
+First, we show the effects of having no surface heat forcing. Spinning up the model runs that involve no surface heat forcing requires significantly more spin up time. Kinetic energy plots suggest after 1000 year spin ups the models are yet to achieve equilibrium. This leads to a noisy SO ROC. \fref{fig:noqrocyz} shows the 3 day SO ROC is much diminished in the absence of either surface heat fluxes or surface restoring, at half the maximum and minimum values. Despite the noisy nature of the SO ROC generated we can see different overturning circulation forming, with no cooling in the south of the domain the lowermost cell is unable to form\footnote{*In the absence of topography}. We also see the surface counter clockwise cell that appeared in \fref{fig:Spongevariations} at a minima of -0.4 Sv. The surface diabatic layer is also shallower than the runs with a fixed surface flux never extending deeper than 500 m. However, apart from the noise at depth, we see the SO ROC responds the same way by vanishing when the northern boundary is closed. It is worth noting, however, in the spin up of the closed scenario we see a different path to the collapsed state with no surface intensification before the SO ROC disappears.
+\begin{figure}[H]
+\center
+\noindent \includegraphics[width=\textwidth]{../../Figures/noQROCyz.pdf}
+\caption{The isothermal stream function $\Psi_{res}(y,T)$ for a) $\tau _R$ = 3 day and b) no relaxation, remapped into depth space.}
+\label{fig:noqrocyz}
+\end{figure}
+In temperature space in \ref{fig:noqrocyT}.a we see how the how the counter-clockwise cell that appears in the surface extends down to lower temperatures than the fixed surface flux scenario (\fref{fig:extremesyT}.a but the coldest temperature layers are not able to outcrop. Where isotherms do not outcrop no SO ROC can exist. We also see the source of the noise in \fref{fig:noqrocyT}b), mainly in the coldest waters that expand when remapped into depth space. 
+
+\begin{figure}[H]
+\center
+\noindent \includegraphics[width=\textwidth]{../../Figures/noQROCyT.pdf}
+\caption{The isothermal stream function $\Psi_{res}(y,T)$ for a) $\tau _R$ = 3 day and b) no relaxation.}
+\label{fig:noqrocyT}
+\end{figure}
+
+
+
+\subsubsection*{Surface restoring}
+
+When we set $\lambda $ to 90 days as with all surface restoring runs we see a strong clockwise surface overturning not seen with only fixed fluxes. This cell was larger in runs with shorter $\lambda $.  \fref{fig:L90rocyz} shows the SO ROC for the extremes of $\tau_R$ and $T_{ref}$ profile. The surface mixed layer remains similar for the $T_{ref}$ profiles from the 3 day relaxation timescale runs in \fref{fig:L90rocyz}.a-b. This hints at the surface overturning cell being controlled by meridional temperature gradient we can deduce that the response to closing the northern boundary is moderated by surface conditions preventing the deep mixed layer from forming. In all cases when the northern boundary is closed the clockwise cell is unable to form \fref{fig:L90rocyz}.b-c and whenever surface restoring is employed the SO ROC strength remains around a third of the strength seen in the fixed flux cases. 
+
+\begin{figure}[H]
+\center
+\noindent \includegraphics[width=\textwidth]{../../Figures/L90ROCyz.pdf}
+\caption{The isothermal stream function $\Psi_{res}(y,T)$ for a) $\tau _R$ = 3 day and b) no relaxation, remapped into depth space.}
+\label{fig:L90rocyz}
+\end{figure}
+
+This behaviour is further demonstrated when we compare \ref{fig:L90rocyT} with that of \fref{fig:extremesyT}. The three cell pattern seen in \fref{fig:extremesyT}.a is not established in \fref{fig:L90rocyT}.a with the upper anticlockwise cell elongated over many more latitudes and temperature layers. These long thin cells crossing many temperature layers suggest a diabatic nature to the overturning. When the boundary is closed \fref{fig:L90rocyT}.b keeps a strong intense surface overturning in the surface mixed layer, it is worth noting in the fixed flux run spin up a large diabatic surface cell appeared before disappearing perhaps required to redistribute heat for the new equilibrium state. In the fixed flux runs we saw a drastic shift in the surface temperature profile which is prevented here by restoring to the standard surface temperature profile. \fref{fig:L90rocyz}.c and  \fref{fig:L90rocyT}.c show that when the surface temperature profile is altered the deep surface mixed layer is able to form and the SO ROC is much more similar to the closed scenario when using strong fixed surface heat fluxes.
+\begin{figure}[H]
+\center
+\noindent \includegraphics[width=\textwidth]{../../Figures/L90ROCyT.pdf}
+\caption{The isothermal stream function $\Psi_{res}(y,T)$ for a) $\tau _R$ = 3 day and b) no relaxation.}
+\label{fig:L90rocyT}
+\end{figure}
+
+\subsubsection*{Surface restoring with a small flux}
+
+
+We have shown the SO ROC with strong fixed surface fluxes where we a strong see a strong three cell overturning vanish when the northern boundary is closed( \fref{fig:extremesyT}). Compared with no surface forcing when a very weak 2 cell SO ROC consists of a surface overturning cell and clock wise adiabatic cell vanished when the northern boundary is closed (\fref{fig:noqrocyT}) and surface restoring which generates a similar SO ROC that does not completely vanish when the northern boundary is closed but remains as an intense surface overturning cell (\fref{fig:L90rocyT}). This leads us to consider the scenario of mixed surface restoring and fixed fluxes if we include a small surface heat flux, does this allow the water mass transformations required. \fref{fig:L902Qrocyz}a. shows with an additional $2W/m^2$ a much strong SO ROC forms (around half that of the strong fixed fluxes), the additional cooling in the south of the domain also allows for the lowermost cell to form. When the northern boundary is closed the SO ROC remains the same as the surface restoring run without any additional surface fluxes added (\fref{fig:L902Qrocyz}.b. 
+\begin{figure}[H]
+\center
+\noindent \includegraphics[width=\textwidth]{../../Figures/L902QROCyz.pdf}
+\caption{The isothermal stream function $\Psi_{res}(y,T)$ for a) $\tau _R$ = 3 day and b) no relaxation, remapped into depth space.}
+\label{fig:L902Qrocyz}
+\end{figure}
+This is further show when plotted in depth space with \fref{fig:L902Qrocyz}.a more closely matching the fixed flux scenario \fref{fig:extremesyT}.a ,but with an enhanced surface cell and  \fref{fig:L902Qrocyz}.b matching \fref{fig:L90rocyT}.b showing little effect from the addition of heat fluxes in a closed scenario.
+\begin{figure}[H]
+\center
+\noindent \includegraphics[width=\textwidth]{../../Figures/L902QROCyT.pdf}
+\caption{The isothermal stream function $\Psi_{res}(y,T)$ for a) $\tau _R$ = 3 day and b) no relaxation.}
+\label{fig:L902QrocyT}
+\end{figure}
+
+These runs demonstrate the surface cell and surface mixed layer appear to be dependent on the surface meridional temperature gradient and the deep cell is dependent on cooling over the south of the domain in the absence of topography. The mixed layer depth depends with decreasing meridional temperature gradient perhaps controlling the southwards eddy-induced transport at the surface requiring further analysis.
+%1). How does the development of a deep mixed-layer depend on the surface forcing and why is the diabatic eddy flux so sensitive to the mixed-layer depth?
+%2) Why is there a clockwise surface overturning cell in case of weak mixed-layers and why does it disappear when the mixed layer deepens?
+%4. In a similar way we should address the appearance/disappearance of the surface ROC and development of the mixed-layer. The latter probably depends on the development of a large no-meridional temp gradient region, which only arises when SST is not strongly restored to a strong meridional temp-profile. This probably also controls the strength of the southward eddy-induced transport at the surface, but the causal mechanism if much more unclear and needs further analysis.
+
+
+\subsection*{Heat Budget}
+
+Starting from \fref{eq:cart}:
+
+\begin{equation*}
+\underbrace{\frac{\partial \overline{v}\overline{T}}{\partial y } + \frac{\partial\overline{w} \overline{T}}{\partial z } + \frac{\partial \overline{v'T'}S_T}{\partial z } + \frac{\partial \overline{v'T'}}{\partial y }}_\text{Residual ($\nabla \cdot \overline{\textbf{u$_{\textbf{res}}$}T}$)} = \underbrace{\frac{\partial Q}{\partial z}}_\text{air-sea fluxes} - \underbrace{\frac{\partial \left( \overline{w'T'}-\overline{v'T'}S_T \right)}{\partial z }}_\text{Diabatic eddies} = \frac{\partial (Q - D)}{\partial z}.
+\end{equation*}
+
+We can, as before use the terms to gain insight of the redistribution of heat in these model runs. 
+
+\subsubsection*{No surface heat forcing}
+
+In the absence of any surface heat forcing when we evaluate the terms in \ref{eq:cart} , with no surface heat flux terms to force heat redistribution we see little latitudinal variation in vertically integrated terms from \ref{eq:cart} in \fref{fig:noqQbudget}. There a peak coinciding with the maximum overturning of the SO ROC in \fref{fig:noqQbudget}a) which is absence in \fref{fig:noqQbudget}b) when there is no SO ROC present. Overall we see the heat flux divergence fall 10 fold when the northern boundary is closed.
+\begin{figure}[H]
+\center
+\noindent \includegraphics[width=\textwidth]{../../Figures/noQheatbuget.pdf} 
+\caption{The components of the full depth buoyancy budget evaluated in as in \protect Eq.~\ref{eq:cart} for runs with no surface heat fluxes or restoring.}
+\label{fig:noqQbudget}
+\end{figure}
+When we plot the diabetic eddy heat flux term in depth space (\fref{fig:noQdhd}) We once again see the near perfect dipole pattern emerge when the northern boundary is closed contributing to the very small vertically integrated values. One thing to note is the the diabatic eddy heat flux divergence is separated from the surface an with out heat forcing shows no asymmetry in the divergence and convergent cells that appear in the closed scenario. The values for both are significantly smaller suggesting the surface heat flux plays a role in setting the strength of the diabatic eddy heat flux divergence as well as the spatial distribution (to a lesser extent).
+\begin{figure}[H]
+\center
+\noindent \includegraphics[width=\textwidth]{../../Figures/noQdhd.pdf} 
+\caption{Zonal mean diabatic eddy heat flux divergence.}
+\label{fig:noQdhd}
+\end{figure}
+This is useful to see the diabatic eddy heat flux dipole appears to not require fixed surface heat fluxes \fref{fig:noQdhd}.b. The dipole once again forms around the deep mixed layer. 
+
+\subsubsection*{Surface restoring}
+We now look at the surface restoring runs. As the runs with a small heat flux added produced very similar results to those with surface restoring alone we discuss only the surface restoring runs here for brevity. Overall the largest vertically integrated heat flux divergences are in \fref{fig:L90Qbudget}.a when we have strong sponge layer, turning off the sponge layer in \fref{fig:L90Qbudget}.b reduces this by $25\% $, but when the closed surface temperature profile is applied alongside the closed northern boundary we get a $50 \% $  reduction \fref{fig:L90Qbudget}.c. 
+\begin{figure}[H]
+\center
+\noindent \includegraphics[width=\textwidth]{../../Figures/L90Qbudget.pdf} 
+\caption{The components of the full depth buoyancy budget evaluated in as in \protect Eq.~\ref{eq:cart} for runs with no surface heat fluxes or restoring.}
+\label{fig:L90Qbudget}
+\end{figure}
+This is much like our original fixed flux runs when we compare the dabatic eddy heat flux divergence in depth space. We see a small surface convergence in \fref{fig:L90dhd}.a which leads to a large vertical integrated term with nothing to counteract it at depth. Unlike the surface restoring experiments we used in \fref{sec:Surface1} we see the formation of a dipole in the diabatic eddy heat flux divergence when the northern boundary is closed \fref{fig:L90dhd}.b-c that does not arise with the restoring of \citet{Abernathey2014}. When the surface is restored to the surface profile set by a strong sponge we see coherent dibatic eddy heat flux divergence \fref{fig:L90dhd}.a-b, this is also seen in every run that generates the surface overturning cell (\fref{fig:noQdhd} and \fref{fig:Spongevariations}) and can be associated with diabatic layer anticlockwise overturning. This suggests the surface overturning cell is linked to the surface meridional temperature gradient. Indeed we see a slight decrease in surface temperature gradient over the ACC in our fixed flux runs from chapter \ref{chap:2}. When we switch to the surface temperature profile of the closed runs we get a strong diabatic eddy heat flux divergence dipole arising much like we saw in chapter \ref{chap:2}. This also aligns with a deep mixed layer. Suggesting that a weak meridional temperature gradient allows for the set up of opposing diabatic eddy heat flux divergence cooling the upper layers and warming bottom to generate a sharp internal boundary layer.
+\begin{figure}[H]
+\center
+\noindent \includegraphics[width=\textwidth]{../../Figures/L90dhd.pdf} 
+\caption{Zonal mean diabatic eddy heat flux divergence.}
+\label{fig:L90dhd}
+\end{figure}
+
+
+\subsection*{Energetics}
+
+\subsubsection*{No surface heat forcing}
+
+With out any surface heat forcing we see a stark difference in EKE response to closing the northern boundary. \fref{fig:noQeke} shows a decrease in EKE maxima as well as a decrease in the area over which there is enhanced eddy kinetic energy. This is not perhaps what we would expect as the same large decrease in stratification occurs in a deep mixed layer. Once again we see little increase in the Mean kinetic energy.
+\begin{figure}[H]
+\center
+\noindent \includegraphics[width=\textwidth]{../../Figures/EKEnoQ.pdf} 
+\caption{EKE.}
+\label{fig:noQeke}
+\end{figure}
+
+\subsubsection*{Surface restoring}
+EKE remains fairly consistent across all the runs with fixed Q or surface restoring. We do not see the increase in EKE when the northern boundary is closed but the surface restoring remains the same \fref{fig:L90eke}.b, but the increase seen in the fixed flux runs is nearly replicated when the surface restoring is set using the closed \fref{fig:L90eke}.c. 
+\begin{figure}[H]
+\center
+\noindent \includegraphics[width=\textwidth]{../../Figures/L90EKE.pdf} 
+\caption{EKE.}
+\label{fig:L90eke}
+\end{figure}
+However, EPE is increased with surface restoring and reduced with the addition of a fixed surface Q, a large increase is seen in the northern half of the domain. EPE is plotted for our surface restoring experiments in \fref{fig:L90epe}. The surface restoring is forcing short time scale temperature perturbations relaxing surface temperature to a prescribed profile. This is greatly increased by setting the restoration profile using the closed scenario \fref{fig:L90epe}.c where large temperature perturbations are combined with sharp temperature gradients at the internal boundary layer.
+\begin{figure}[H]
+\center
+\noindent \includegraphics[width=\textwidth]{../../Figures/L90EPE.pdf} 
+\caption{EKE.}
+\label{fig:L90epe}
+\end{figure}
+
+
+
+\subsection{Conclusions on varying the surface boundary condition}
+
+
+We did not find any regime where diabatic eddy fluxes can be neglected even when using restoring conditions. The vertical integral of the diabatic eddy heat flux convergence decreases by an order of magnitude for weaker diabatic forcing in the sponge layer, however, the eddy fluxes themselves increase by a factor of 2 to 3 between a closed basin and a configuration with strong restoring to a prescribed temperature stratification in the northern sponge layer. 
+
+When using a restoring boundary condition the main balance in the vertically integrated heat budget is somewhat different because no internal boundary layer develops and the northward deepening of the mixed layer is absent except for when the surface is restored using the closed fixed flux scenario as the reference temperature. In the runs with surface restoring to a strong meridional temperature gradient the ROC is even more confined to the surface layer, and also in the case of a closed basin diabatic eddies and heat transport convergence by the ROC dominate the surface forcing. To illustrate our conclusions on the impact of surface restoring on the diabatic eddy and SO ROC response to closing the northern boundary, we include here additional plots for various surface restoring scenarios compared with the fixed surface flux scenario for the closed northern boundary runs. 
+\begin{figure}[H]
+\center
+\noindent \includegraphics[width=\textwidth]{../../Figures/surfrest_rocd.pdf} 
+\caption{Zonal mean SO ROC eddy heat flux divergence.}
+\label{fig:srrhd}
+\end{figure}
+In the AC14 surface restoring runs, there is a very larger heat flux divergence in the surface \fref{fig:srrhd}.c generating a large surface overturning. This pattern is reduced with a weaker surface restoring \fref{fig:srrhd}.a, where we saw a weaker surface overturning cell, both the ROC heat divergence and the diabatic eddy heat divergence show less intensification surface intensification. \fref{fig:srrhd}.a is very similar to \fref{fig:srrhd}.c with a near linear reference temperature profile, but weaker restoring, the surface meridional temperature gradient, however, is weaker, then when restoring to a reference profile from the closed scenario fixed fluxes \fref{fig:srrhd}.b begins to match \fref{fig:srrhd}.d more closely with the alternating patterns of divergence and convergence emerging.
+\begin{figure}[H]
+\center
+\noindent \includegraphics[width=\textwidth]{../../Figures/surfrest_dhd.pdf} 
+\caption{Zonal mean diabatic eddy heat flux divergence.}
+\label{fig:srdhd}
+\end{figure}
+This pattern is further illustrated when examining the diabatic eddy heat flux divergence in \fref{fig:srdhd}. We see a clear transition from \fref{fig:srdhd}.c to \fref{fig:srdhd}.b to \fref{fig:srdhd}.b to the fixed flux scenario \fref{fig:srdhd}.d. With the emergence of a strengthening convergence/ divergence dipole with weakening meridional temperature gradient and a deepening of the surface mixed layer.
+\begin{figure}[H]
+\center
+\noindent \includegraphics[width=\textwidth]{../../Figures/surfrest_Trgad.pdf} 
+\caption{Meridional temperature gradient.}
+\label{fig:srTy}
+\end{figure}
+For reference we plot the zonal mean meridional temperature gradient in \fref{fig:srTy}. As shown by the temperature contours were we get an intense surface overturning we have consistent strong meridional temperature gradient \fref{fig:srTy}.c where strong southward eddy heat fluxes dominate. The gradient is much less constant \fref{fig:srTy}.a  allowing for a reduction in that intense surface cell.When the SO ROC collapses with a closed northern boundary we see weak surface meridional temperature gradients in the north of the domain \fref{fig:srTy}.b and \fref{fig:srTy}.d. These results demonstrate the complex nature we would expect from a coupled system the perfect dipole in the diabatic eddy heat could arise from either fixed fluxes or surface restoring but only with certain caveats. We can see that in all cases the SO ROC is altered dramatically when the northern boundary is closed. 
+%%If a fixed flux boundary condition is used, then the eddy compensation is nearly complete; however, using a relaxation boundary condition  eddy compensation cannot be absolutely complete.
+%% fixed surface buoyancy flux at the ocean surface is arguably a more appro- priate boundary condition where salinity plays an impor- tant role in setting buoyancy variations, like under ice. - Climate change melting ice could change this though. (Stewart 2014)

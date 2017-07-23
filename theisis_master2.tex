@@ -1,0 +1,285 @@
+\documentclass[a4paper,12pt, openright, titlepage, twoside]{book}
+\usepackage{appendix}
+\usepackage{tocbibind}
+\usepackage{tocloft}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{natbib}
+\usepackage{float}
+\usepackage{pdfpages}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{wrapfig}
+\usepackage{tabularx}
+\usepackage{sidecap}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{wasysym}
+\usepackage{rotating}
+\usepackage{fullpage}
+\usepackage[hidelinks]{hyperref}
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage{color}
+\usepackage{float}
+\usepackage{mathtools}
+\usepackage{xfrac}
+\usepackage{setspace}
+\usepackage{caption}
+\usepackage{fancyref}
+\usepackage{subcaption}
+\usepackage[normalem]{ulem}
+\usepackage[makeroom]{cancel}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage[normalem]{ulem}
+\usepackage{mathtools}
+\usepackage{pdflscape}
+\usepackage[british]{babel}
+\usepackage{enumitem}
+
+\newcommand\finline[3][]{\begin{myfont}[#1]{#2}#3\end{myfont}}%
+\newlist{abbrv}{itemize}{1}
+\setlist[abbrv,1]{label=,labelwidth=1in,align=parleft,itemsep=-0.5\baselineskip,leftmargin=1in}
+\usepackage[a4paper, top=80pt, bottom=60pt, left=60pt, right=60pt]{geometry}
+%\usepackage[top=11, bottom=20, left=5, right=5]{geometry}
+\bibpunct{(}{)}{;}{a}{,}{,}
+\pagestyle{fancy}
+\linespread{1.5}
+%from Ed Butler
+\setlength{\headheight}{15pt}
+\setlength{\oddsidemargin}{15mm}
+\raggedright
+\setlength{\parskip}{10pt }
+\setlength{\parindent}{0.5 cm}
+\setlength{\textwidth}{148 mm}
+\fancyheadoffset{1 cm}
+\fancyhead[RO]{Your Name}
+\fancyhf{}
+\fancyhead[R]{Your Name}
+\fancyhead[L]{\leftmark} % 1. sectionname
+\fancyfoot[C]{\thepage}
+
+%%%%%%%%%%%%%%%%%%%%%
+%%%% To add code %%%%
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Fortran,
+  aboveskip=2mm,
+  belowskip=2mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true
+  tabsize=3
+}
+%\usepackage[toc,page]{appendix}
+\usepackage[
+nonumberlist,
+toc,
+style=altlist]{glossaries}
+\makeglossaries
+\input{glossary}
+% ENVIRONMENT FOR NEW FONT
+\newenvironment{myfont}[2][]{\csname#2\endcsname[#1]}{}
+
+\newcommand{\Alpine}[1][]{\fontfamily{Alpine}#1\selectfont}
+
+\AtBeginDocument{ 
+%%%%%% So I made my own titlepage %%%%%
+%\begin{titlepage}
+%
+%\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+%
+%\center % Center everything on the page
+% 
+%%----------------------------------------------------------------------------------------
+%%   HEADING SECTIONS
+%%----------------------------------------------------------------------------------------
+%
+%\textsc{\LARGE University of Southampton}\\[1.3cm] % Name of your university/college
+%\textsc{\Large National Oceanography Centre}\\[0.4cm] % Major heading such as course name
+%
+%
+%%----------------------------------------------------------------------------------------
+%%   TITLE SECTION
+%%----------------------------------------------------------------------------------------
+%
+%\HRule \\[0.4cm]
+%{ \huge \bfseries Your Awesome Title}\\[0.4cm] % Title of your document
+%\HRule \\[1.1cm]
+% %----------------------------------------------------------------------------------------
+%\textsc{Thesis for the degree of Doctor of Philosophy}\\[1.2cm]
+%%----------------------------------------------------------------------------------------
+%%   DATE SECTION
+%%----------------------------------------------------------------------------------------
+%%----------------------------------------------------------------------------------------
+%%   AUTHOR SECTION
+%%----------------------------------------------------------------------------------------
+%
+%\begin{minipage}{0.4\textwidth}
+%\begin{flushleft} \large
+%\emph{Author:}\\
+% Helen Burns
+%\end{flushleft}
+%\end{minipage}
+%~
+%\begin{minipage}{0.4\textwidth}
+%\begin{flushright} \large
+%\emph{Supervisors:} \\
+%Sybren Drijfhout and Alberto Naveira Garabato % Supervisor's Name
+%\end{flushright}
+%\end{minipage}\\[2cm]
+%
+%%----------------------------------------------------------------------------------------
+%%   DATE SECTION
+%%----------------------------------------------------------------------------------------
+%
+%{\large \today}\\[2cm] % Date, change the \today to a set date if you want to be precise
+%
+%%----------------------------------------------------------------------------------------
+%%   LOGO SECTION
+%%----------------------------------------------------------------------------------------
+%%\includegraphics[width=0.8\textwidth]{logos.png}%
+%
+%\vfill %Fill the rest of the page with whitespace
+%
+%\end{titlepage}
+\justify
+%\begin{abstract}
+%\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\center % Center everything on the page
+}
+
+
+% Centered title for ToC, LoF, LoT
+\renewcommand{\cfttoctitlefont}{\hfill\Huge\bfseries}
+\renewcommand{\cftaftertoctitle}{\hfill}
+\renewcommand{\cftloftitlefont}{\hfill\Huge\bfseries}
+\renewcommand{\cftafterloftitle}{\hfill}
+\renewcommand{\cftlottitlefont}{\hfill\Huge\bfseries}
+\renewcommand{\cftafterlottitle}{\hfill}
+
+% Leaders for chapter entries
+\renewcommand\cftchapdotsep{\cftdotsep}
+
+% Add space to account for new chapter numbering schema
+\renewcommand\cftchapnumwidth{3em}
+\renewcommand\cftsecindent{3em}
+
+% Redefine representation for chapter (and section) counters
+\renewcommand\thechapter{\arabic{chapter}}
+\renewcommand\thesection{\arabic{chapter}.\arabic{section}}
+
+
+\begin{document}
+%------------------------------------------------------
+\thispagestyle{empty}
+\frontmatter
+\chapter[Abstract]{}
+
+. \\[-5.51cm]
+\textsc{ \textbf{\textsc{UNIVERSITY OF SOUTHAMPTON}}}\\ 
+\textsc{\large \uline{ABSTRACT}}\\[0.1cm]
+
+\textsc{\small FACULTY OF NATURAL AND ENVIRONMENTAL SCIENCES}\\[0.05cm] 
+\textsc{\footnotesize National Oceanography Centre }\\[0.05cm]
+\textsc{\uline{Doctor of Philosophy}}\\[0.1cm]
+
+\textbf{\textsc{\large Title}}\\[0.01cm]
+{by Helen Burns}\\[0.2cm]
+\justify
+%Motivation
+\linespread{1}
+
+Abstract here
+\gls{AMOC}
+\pagestyle{empty}
+\clearpage
+%------------------------------------------------------
+\chapter[Acknowledgements]{}
+\setcounter{page}{2}
+\textsc{\large \uline{Acknowledgements}}\\
+\clearpage
+\tableofcontents
+\clearpage
+\listoftables
+\listoffigures
+
+\clearpage
+\frontmatter
+\chapter[Declaration of authorship]{}
+%\addcontentsline{toc}{chapter}{Declaration of authorship}
+%--------------------------------------------------------------------------------------------
+%\thispagestyle{empty}
+. \\[-6.51cm]
+\textbf{\textsc{\Large Academic Thesis: Declaration Of Authorship}}\\[0.5cm]
+
+
+\noindent I, Helen Burns, declare that this thesis and the work presented in it are my own and has been generated by me as the result of my own original research.\\[0.3cm]
+
+%\textbf{\textsc{\large Title}}\\[0.3cm]
+
+\noindent I confirm that:\\[-1.5cm]
+\begin{enumerate}
+\item This work was done wholly or mainly while in candidature for a research degree at this University;
+\item Where any part of this thesis has previously been submitted for a degree or any other qualification at this University or any other institution, this has been clearly stated;
+\item Where I have consulted the published work of others, this is always clearly attributed;
+\item Where I have quoted from the work of others, the source is always given. With the exception of such quotations, this thesis is entirely my own work;
+\item I have acknowledged all main sources of help;
+\item Where the thesis is based on work done by myself jointly with others, I have made clear exactly what was done by others and what I have contributed myself;
+\item Either none of this work has been published before submission, or parts of this work have been published as: \\
+
+\end{enumerate}
+
+Signed:\hrulefill\\%[1.5cm]
+
+
+Date:\hrulefill\\
+%------------------------------------------------------
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\mainmatter
+% Chapter 1
+\input{intro.tex}
+\input{setup.tex}
+\input{overturning.tex}
+% Chapter 2
+\input{Diabatic.tex}
+\input{setup2.tex}
+\input{results2.tex}
+\input{physics.tex}
+\input{scalings.tex}
+% Chapter 3
+\input{Toposetup.tex}
+\input{results3.tex}
+\input{robustness.tex}
+\input{ACC.tex}
+% Chapter 4
+\input{coupledsetup.tex}
+\input{results4.tex}
+%---------------------------------------------------------------------------------------------
+\backmatter
+\printglossaries
+\bibliographystyle{agu}
+\singlespacing
+\bibliography{../SOMOC2}
+\chapter{Appendix}\label{appendix}
+\clearpage
+\end{document}

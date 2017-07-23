@@ -1,0 +1,120 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: theisis_master.aux
+White space in argument---line 553 of file theisis_master.aux
+ : \citation{Smith
+ :                 and Sandwell,1997}
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys Hogg2010 and hogg2010
+---line 580 of file theisis_master.aux
+ : \citation{Hogg2010
+ :                   }
+I'm skipping whatever remains of this command
+The style file: agu.bst
+Database file #1: ../SOMOC2.bib
+Repeated entry---line 1541 of file ../SOMOC2.bib
+ : @article{speer2000
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1880 of file ../SOMOC2.bib
+ : @article{gnanadesikan1999
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2083 of file ../SOMOC2.bib
+ : @article{Stewart2014
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2298 of file ../SOMOC2.bib
+ : @article{Abernathey2013
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2654 of file ../SOMOC2.bib
+ : @article{kuo2005
+ :                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2859 of file ../SOMOC2.bib
+ : @article{karsten2002
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2870 of file ../SOMOC2.bib
+ : @article{McWilliams2002
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2943 of file ../SOMOC2.bib
+ : @article{Abernathey2011
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2993 of file ../SOMOC2.bib
+ : @article{Karsten2002
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3029 of file ../SOMOC2.bib
+ : @article{hogg2010
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3070 of file ../SOMOC2.bib
+ : @article{shakespeare2012
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3111 of file ../SOMOC2.bib
+ : @article{Abernathey2013
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3148 of file ../SOMOC2.bib
+ : @article{Abernathey2014
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3162 of file ../SOMOC2.bib
+ : @article{Hogg2015
+ :                  ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for ""
+Warning--I didn't find a database entry for "Prather"
+Warning--I didn't find a database entry for "Thompson2008"
+Warning--I didn't find a database entry for "Karstensen2011"
+Warning--I didn't find a database entry for "NaveiraGarabato2009"
+Warning--I didn't find a database entry for "Ferreira2014"
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Warning--missing publisher in Chang1997
+You've used 88 entries,
+            3075 wiz_defined-function locations,
+            1589 strings with 24981 characters,
+and the built_in function-call counts, 94574 in all, are:
+= -- 11150
+> -- 3100
+< -- 54
++ -- 1784
+- -- 740
+* -- 5626
+:= -- 7974
+add.period$ -- 88
+call.type$ -- 88
+change.case$ -- 505
+chr.to.int$ -- 88
+cite$ -- 265
+duplicate$ -- 10195
+empty$ -- 4919
+format.name$ -- 1053
+if$ -- 19070
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 923
+newline$ -- 271
+num.names$ -- 353
+pop$ -- 4219
+preamble$ -- 1
+purify$ -- 419
+quote$ -- 0
+skip$ -- 6397
+stack$ -- 0
+substring$ -- 4213
+swap$ -- 8820
+text.length$ -- 8
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 786
+warning$ -- 1
+while$ -- 498
+width$ -- 0
+write$ -- 964
+(There were 16 error messages)

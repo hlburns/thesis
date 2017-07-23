@@ -1,0 +1,17 @@
+\select@language {british}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces An illustration of the channel model configuration, showing the surface forcing and the sponge layer at the northern boundary with the expected residual circulation from the surface forcing at short sponge relaxation timescales depicted (Arrows and red and blue colours indicating clockwise and anticlockwise circulation respectively\relax }}{2}{figure.caption.7}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces The Eulerian mean ($\overline {\Psi }$) shown for relaxation time-scales of 3, 300, 3000 and infinite days. Isotherms in intervals of 1$^{\circ }$C are overlain as solid black contours.\relax }}{4}{figure.caption.9}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Left: The Eulerian mean ($\overline {\Psi }$) calculated from $\tau _s$. Right: Model $\overline {\Psi }$ calculated from 75 years averaged velocities. \relax }}{5}{figure.caption.10}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces The isothermal stream function $\Psi _{res}(y,\theta )$ in temperature co-ordinates for relaxation time-scales of 3, 300, 3000, and infinite days.\relax }}{6}{figure.caption.11}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces The isothermal stream function $\Psi _{res}(y,\theta )$ remapped onto depth coordinates to give $\Psi _{res}(y,z)$ for relaxation time-scales of 3, 300, 3000, and infinite days. Isotherms in intervals of 1$^{\circ }$C are overlain as solid black contours. Above is the surface heat forcing displayed.\relax }}{7}{figure.caption.12}
+\contentsline {figure}{\numberline {1.6}{\ignorespaces The SO ROC when NADW formation is large (3 day relaxation timescale in the sponge), illustrating the 3 main overturning cells.\relax }}{8}{figure.caption.13}
+\contentsline {figure}{\numberline {1.7}{\ignorespaces Maximum overturning stream function for overturning cells defined in Fig. \ref {fig:Areas} as a function of relaxation timescale (at y = 1700km). The blue line shows the bottom cell (AABW), the red line shows the deep water cell (NADW) and the green line shows the mode water cell (SAMW). \relax }}{9}{figure.caption.14}
+\contentsline {figure}{\numberline {1.8}{\ignorespaces Eddy overturning stream function ($\Psi ^*$) in depth coordinates for relaxation time scales of 3, 300, 3000, and infinite days, calculated from $\Psi ^* = \Psi _{res}(y,z)-\overline {\Psi }$. Isotherms in intervals of 1$^{\circ }$C are overlain as solid black contours\relax }}{12}{figure.caption.15}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }

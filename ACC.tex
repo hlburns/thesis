@@ -1,0 +1,179 @@
+\label{chap:5}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\textcolor{red}{\textbf{What about Heat fluxes and the ACC? To be covered:}}
+%\begin{itemize}
+%\item[]\textcolor{red}{Heat Fluxes}
+%\item[]\textcolor{red}{ACC baroclinic / tropic}
+%\item[]\textcolor{red}{Saturation vs compensations}
+%\end{itemize}
+
+One of the major considerations we have neglected thus far is the influence on topography and the response of the ACC. Although beyond the scope of this thesis to fully include the role of topography on moderating the SO ROC response to altered boundary conditions in a channel model, we can include additional runs to validate and questions our conclusions drawn thus far. In this chapter we show the results for experiments including topography and discuss how this differs from flat bottom runs in the previous chapters.  
+
+\section{Including topography}
+%4) How does topography affect the aforementioned processes, in particular by reducing the scale depth of the ROC and diabatic eddies and reducing meridional isopycnal slopes in the interior?
+%5). Topography comes last and should be used to illustrate how it affects diabatic eddies, heat flux divergence and ACC strength, and surface ROC in restoring runs and put them further into context..
+% This means running addition surface resorting runs from spun up fixed flux runs.
+In the real ocean, the wind stress applied to the surface of the ocean is balanced by bottom stresses and topography plays a leading order role in setting the spatial variability of the eddy field \citep{Thompson2008} as well as the efficiency of eddy dynamics \cite{Abernathey2014}. The southern ocean has areas of rough topography notably the Kerguelen Plateau and the Macquarie Ridge play large roles in setting steering the ACC and enhancing EKE and eddy mixing. As topography plays an important role in southern ocean dynamics it is important to consider what qualitative impacts it may have in our idealised set up and results. 
+
+\subsection{Set up}
+As the Southern Ocean is a region of important topographical interactions \citep{Abernathey2014} we checked whether these results also hold in the presence of topography. To investigate this we devised a further set of experiments. The model is once again based on the set up described in \fref{sec:Setup_stand} and we give a brief overview of the exact set up used here. To this end, we increased the domain size to 4000 km by 2000 km allowing for standing eddies. We also  increased the  domain depth to 4000 m, increasing the number of vertical grid boxes to 40. We then included a continental slope and 2 complex ridges as shown in Fig. \ref{fig:Topo}, similar to that used in previous studies \citep{hogg2010}. We use partial cells in the MITgcm to account for the topography.
+\begin{figure}[H]
+\center
+\noindent \includegraphics[width=0.7\textwidth]{../../Figures/topo.pdf} 
+\caption{Topography included in non-flat bottom runs.}
+\label{fig:Topo}
+\end{figure}
+To reduce spurious diapycnal mixing advection scheme 7 was chosen \citep{hill2012, Ilıcak2012} and turbulent kinetic energy (TKE) scheme \citep{Gaspar1990,Madec1998}  was employed to parametrize sub grid mixing. Key model parameters are outlined in Table~\ref{tab:setup2}.
+
+\begin{table}[H]
+\caption{Model Setup for fixed-flux runs with topography.}
+\label{tab:setup2}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline \hline
+\textbf{Symbol} & \textbf{Description}  & \textbf{Value} \\ 
+\hline 
+L$_x$, L$_y$, H & Domain & 4000 km, 2000 km, 4000 m \\ 
+\hline 
+L$_{sponge}$ & Length scale of sponge layer & 100 km \\ 
+\hline 
+Q$_0$ & Surface heat flux magnitude maximum & 0-10 W m$^{-2}$ \\ 
+\hline 
+$\tau _0$ & Max surface wind stress & 0.2 N m$^{-2}$ \\ 
+\hline 
+dx, dy & Horizontal grid spacing & 5 km  \\ 
+\hline 
+dz & Vertical grid spacing & 5-266 m \\ 
+\hline 
+Adv Scheme & 7$^{\text{th}}$ order centred & 7 \\ 
+\hline 
+ $\tau_{R}$ & Sponge relaxation time scale & 3-day and  $\infty$  \\
+\hline 
+\end{tabular}
+\end{center}
+\end{table}
+
+The surface heat and wind forcing remain unchanged from the fixed flux runs. To test the effect of topography we ran 2 experiments for the 2 extreme relaxation timescales: 3 days and infinite (closed northern boundary). These simulations were run for 400 and 1000 years respectively.
+
+\subsection{Overturning}
+\begin{figure}[H]
+\noindent \includegraphics[width=\textwidth]{../../Figures/instT.pdf} 
+\caption{Instantaneous temperature field for a) and b) Topography runs. c) and d) flat bottom runs.}
+\label{fig:instT}
+\end{figure}
+
+First we plot at the 3D instantaneous temperature field for both the flat runs and runs with topography (shown in grey) to highlight the main differences we see increased variability in in the topography runs \fref{fig:instT}.a-b and flatter isotherms. We still see a boundary layer form in the closed run.
+As with all runs we check the Eulerian mean overturning looks sensible and consistent with all other runs. \fref{fig:MOC_full} shows the Eulerian MOC with topography is around 6 times larger (15 Sv) than the flat bottom runs (2.25 Sv). This increase is as expected with the 4 times increase in channel length alongside a 25\% increase in depth.
+\begin{figure}[H]
+\noindent \includegraphics[width=\textwidth]{../../Figures/MOC_flatvtopo.pdf} 
+\caption{The Eulerian mean streamfunction ($\overline{\Psi}$) for Flat bottom runs a) and c) and for Topography runs b) and d).} 
+\label{fig:MOC_full}
+\end{figure}
+%Dave said
+%What does your bathymetry look like? Does it happen to have ridge, bumps, or something located at the latitude of the 3 lobes that you’re seeing in the EMOC? Its strikes me as possibly an external mode, or whatever the right term is, stemming from interactions of the mean flow with bathymetry. Something just occurred to me - how high off the bottom does your bathymetry come? Is it higher than the bottom of the lobes?
+We also see a different structure in the runs with topography \fref{fig:MOC_full}, which is seen as a loped structure in b and d. This pattern is seen to be unchanged between averaging periods of 20 years to 100 years. Our ridges have some shallow peaks extending into the upper 1000m (as does the real southern ocean topography \citep{Smith and Sandwell, 1997}) of the ocean and the lobes may be due to the locations of the peaks as the overturning circulation must be above the topography \citep{viebahn2012}. As the "Deacon cell" \citep{Doos1994} is a fictitious cell we will not focus on the structure of the Eulerian mean overturning but will consider interaction with the mean flow in other analysis.
+\begin{figure}[H]
+\noindent \includegraphics[width=\textwidth]{../../Figures/ROC_flatvtopoT.pdf} 
+\caption{The isothermal stream function $\Psi_{res}(y,\theta)$ for relaxation time scales of 3 and infinite days for flat bottom a) and c) runs and topography runs b) and d).}
+\label{fig:RemapT_full}
+\end{figure}
+
+
+As with the previous chapters we calculate an isothermal stream function to show the ROC. However for the topography runs we calculated the stream function over 82 discrete potential temperature layers, in order to account for areas with little temperature variation at depth. The isothermal stream function is shown in \fref{fig:RemapT_full}, showing a similar 3 cell ROC pattern aligned with isotherms.
+Fig. \ref{fig:Remap_full}.b shows that the SO ROC remapped into depth in these runs closely matches the 3 cell circulation in the flat bottom runs which collapses \footnote{The full spin up of the closed boundary run would take 3000 years, which is computationally too expensive. However, we know from the flat bottom experiments that the intense surface wind driven cell will disappear after 1000 years.}. The overturning strength is a factor of 5 stronger as expected with the longer channel. We discuss here the qualitative differences between the equivalent runs with flat bottoms. in \fref{fig:Remap_full}.b demonstrating that the fundamental ideas of how the SO ROC responds to stratification changes in the north of the domain still hold in models including topography. It should be noted that the lowermost cell of the SO ROC is still unrealistic in this idealised set up, as it is driven by diabatic processes not included in the idealised model. Its disappearance in these runs even in the presence of topography is not further discussed.
+
+\begin{figure}[H]
+\noindent \includegraphics[width=\textwidth]{../../Figures/ROC_flatvtopo.pdf} 
+\caption{The isothermal stream function $\Psi_{res}(y,\theta)$ remapped onto depth coordinates, to give $\Psi_{res}(y,z)$ for relaxation time scales of 3 and infinite days for flat bottom a) and c) runs and topography runs b) and d). Isotherms in intervals of 1$^{\circ}$C are overlaid as solid black contours. Above the surface heat forcing is displayed.}
+\label{fig:Remap_full}
+\end{figure}
+
+As well as the 3 cell SO ROC an its subsequent collapse we see that the same pattern of stratification change between the open and closed northern boundary case in the presence of topography. The sharp internal boundary layer that forms in the closed scenario appears much less sharp in the runs with the topography runs. We also see a shallowing of the mixed layer depth in the presence of topography for both the open and closed scenarios. Shoaling from 1200 m at the northern boundary in \fref{fig:Remap_full}.c to 500 m in \fref{fig:Remap_full}.d. 
+
+
+
+\subsection{Dynamics}
+
+Topography has a large influence on eddy dynamics with standing eddies playing a large role in eddy heat fluxes. However if we look at the depth profile of the eddy heat fluxes in \fref{fig:wptpfull} we see a reduction in magnitude between topography and no topography runs, but the same general pattern between open and closed northern boundaries. Notably we see a large deviation in the total heat flux between flat and topography runs with topography having larger downwards heat fluxes \fref{fig:wptpfull}.b and d.
+\begin{figure}[H]
+\noindent \includegraphics[width=\textwidth]{../../Figures/wptpfull.pdf} 
+\caption{Vertical eddy heat flux (PW) for flat bottom runs a) and c) and topography runs b) and d). Mean vertical heat flux ($\overline{w}\overline{T}$) is show in red, Eddy($\overline{w'T'}$)  in blue and Total ($\overline{wT}$). }
+\label{fig:wptpfull}
+\end{figure}
+We can see this in the diabatic eddy heat flux divergence terms. The vertically integrated values shown in \fref{fig:DExy} show the convergence in uniform bands in the \fref{fig:DExy}.a and c however we see locally very enhance divergence and convergence around topography \fref{fig:DExy}.b and d at over 100 times larger magnitude but confined to very short zonal areas except for over the continental shelf showing that although the net effect cancelling out the SO ROC still holds this is achieved around topography in strong dipole patterns.
+\begin{figure}[H]
+\noindent \includegraphics[width=\textwidth]{../../Figures/DEfullxy.pdf} 
+\caption{Vertical integrated diapycnal eddy heat flux divergence,for flat bottom runs a) and c) and topography runs b) and d).}
+\label{fig:DExy}
+\end{figure}
+
+\subsubsection*{Energetics}
+
+\begin{figure}[H]
+\noindent \includegraphics[width=\textwidth]{../../Figures/EKE_flatvtopo.pdf} 
+\caption{EKE $\frac{1}{2}(u^2 + v^2)$ sections for relaxation time scales of 3 and infinite days for flat bottom a) and c) runs and topography runs b) and d). Isotherms in intervals of 1$^{\circ}$C are overlaid as solid black contours.}
+\label{fig:EKE_full}
+\end{figure}
+In presence of topography we see an similar magnitudes of EKE maxima (within 10\%) to the flat bottom scenario but a much higher domain average (greater than twice flat bottom domain average).
+\begin{figure}[H]
+\noindent \includegraphics[width=\textwidth]{../../Figures/EKE_flatvtopo_xy.pdf} 
+\caption{Vertically integrated EKE $\frac{1}{2}(u^2 + v^2)$ for relaxation time scales of 3 and infinite days for flat bottom a) and c) runs and topography runs b) and d).}
+\label{fig:EKExy}
+\end{figure}
+As zonal means are not very appropriate in the presence of topography it is best to look at the vertically integrated EKE. As  expected from satellite altimeter data EKE in the southern ocean is patchy with large enhancement downstream of topography \citep{Thompson2008}.
+
+
+\section{ACC}
+%3) What is the role of the ACC-strength and mean isopycnal slope in the ROC and diabatic eddy response and how does it change in response to changes in buoyancy forcing?
+%3. we should try to explain the response in terms of what determines the strength of the diabatic heat flux divergence (some of the deleted scaling of part 1 might come back). We should look at ACC-strength and isopycnal slopes as well.
+Part of the unique dynamics as discussed in the introduction is the \gls{ACC} like the the SO ROC the ACC is driven by wind and buoyancy forcing. In our channel runs we have seen large changes in EKE and stratification and although wind forcing is kept constant we are likely to see a response in the ACC.
+The ACC is set by a number of factors: Wind Stress ($\tau$), Surface buoyancy forcing and remote forcing altering stratification the most basic way of calculating transport is:
+\begin{equation}
+T=\iint u \mathrm{d}z\mathrm{d}y
+\label{eq:transport}
+\end{equation}
+If you substitute thermal wind into \fref{eq:transport}, where thermal wind is given as:
+\begin{equation}
+u_z=\frac{u_z}{f\rho_0}\rho_y
+\label{eq:thermalwind}
+\end{equation}
+Transport can be written:
+\begin{equation}
+T=\frac{g}{f\rho_0}\iint \rho_N -\rho_S \, \mathrm{d}z^2
+\label{eq:transport2}
+\end{equation}
+
+Showing the role of stratification in setting ACC strength \citep{Hogg2010}. 
+
+
+\subsection{The ACC response to altered northern boundary conditions}
+
+We examine here what happens to the ACC when you alter the northern boundary condition with fixed surface fluxes. To illustrate this we have looked at the fixed surface heat flux and surface restoring runs to see how the closing of the northern boundary effects the ACC as well as the surface boundary condition. 
+
+\begin{figure}[H]
+\noindent \includegraphics[width=\textwidth]{../../Figures/Uflat.pdf} 
+\caption{Zonal mean zonal velocity $\overline{u}$ m/s for a) Surface restoring with strong sponge layer, b) fixed heat fluxes and strong sponge layer, c) Surface restoring with Closed northern boundary and d) fixed heat fluxes with a closed northern boundary.}
+\label{fig:Uflat}
+\end{figure}
+
+From varying the relaxation timescale at the northern boundary the ACC varies drastically, particularly the baroclinic component. \fref{fig:Uflat} show how little surface boundary conditions affect the zonal velocities. A very slight increase in velocity is noted with the marginally steeper isotherms in the fixed surface flux runs \fref{fig:Uflat}.b-d. For both surface heat forcing conditions we see the large effect that closing the northern boundary has on the zonal flow. When the northern boundary is closed a very large temperature (density) difference is achieved from the North of the ACC to the South with the sharp boundary layer leading the same difference across the ACC as the entire top to bottom temperature difference. 
+
+\begin{figure}[H]
+\noindent \includegraphics[width=\textwidth]{../../Figures/baroflat.pdf} 
+\caption{Zonal mean barotropic component of zonal velocity for a) Surface restoring with strong sponge layer, b) fixed heat fluxes and strong sponge layer, c) Surface restoring with Closed northern boundary and d) fixed heat fluxes with a closed northern boundary.}
+\label{fig:barotroflat}
+\end{figure}
+
+Breaking down into barotropic (\fref{fig:barotroflat}) and baroclinic (\fref{fig:baroclinflat}) components we see that the surface heat forcing has little effect on the transport with a 3 day relaxation timescale. The major changes between open and closed northern boundary occurs in the baroclinic component although a slight increase in the barotropic component is noted. Interestingly the barotropic transport is more noticeably increased when the northern boundary is closed with fixed surface heat fluxes, this could suggest that the choice of surface heat forcing has an effect on degree of eddy saturation which corroborates the findings of \citet{Zhai2014} who found shorter time scales of surface restoring increased eddy saturation. 
+
+\begin{figure}[H]
+\noindent \includegraphics[width=\textwidth]{../../Figures/baroclinflat.pdf} 
+\caption{Zonal mean baroclinic component of zonal velocity for a) Surface restoring with strong sponge layer, b) fixed heat fluxes and strong sponge layer, c) Surface restoring with Closed northern boundary and d) fixed heat fluxes with a closed northern boundary.}
+\label{fig:baroclinflat}
+\end{figure}
+
+When the northern boundary is closed we see a large increase in baroclinic transport, this increase is mostly seen in the surface mixed layer but we see this increase extend to depth.
+
+
+
+

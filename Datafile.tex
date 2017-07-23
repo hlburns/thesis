@@ -1,0 +1,171 @@
+
+
+To give a full overview of the parameters used in the standard model set up below is an example data input file with the run time model flags and in italics a brief explanation. 
+
+{\setlength{\parindent}{0cm}
+\& \textbf{PARM01}
+
+\textbf{tRef=Reference Profile,} \textit{This the reference temperature used in things like linear EOS, set as the sponge profile} 
+
+\# viscosity 
+
+\textbf{viscAh=12.000000,} \textit{Laplacian viscosity coefficient ($m^2/s$) Set so that horizontal Reynolds number is ~0, this scales with resolution of one less than the order (so linearly here) - basically it is to ensure that the velocity is not too fast that a wave can pass through a cell in less than one time step with the scaling relation  $\displaystyle A_h < \frac{L^2}{4 \Delta t}$ (Courant-Freidrichs-Lewy Constraint on viscosity). \citet{griffies2000} notes that it actually scales to one less power.}
+ 
+\textbf{viscAz=0.000300,}\textit{vertical eddy coefficient. default}
+ 
+\textbf{viscA4=9.0E8,}\textit{Bi-harmonic viscosity coefficient ($m^4/s$) With the relation $\displaystyle A_4 <= \frac{L^4}{32 \Delta t}$}. Allows a less viscous yet numerically stable simulation than harmonic (laplacian) as eddy viscosities can be focuses on the dynamics at the grid scale as large motions would be 'resolved'. 
+ 
+ 
+\textbf{viscA4GridMax=0.500}\textit{Maximum grid dependent biharmonic viscosity }
+
+ 
+\textbf{viscAhGridMax=0.500}\textit{Maximum lateral grid dependent eddy viscosity}
+ 
+\# Diffusion 
+ 
+\textbf{diffKhT=0.000000,}\textit{Laplacian diffusion of heat laterally ($m^2/s$) the boundary condition on this operator is $\displaystyle \frac{\partial}{\partial x}=\frac{\partial}{\partial y}=0$ on all boundaries. Default.}
+ 
+\textbf{diffKzT=0.00000,} \textit{Laplacian diffusion of salt vertically can be set implicitly by setting implicitDiffusion to ’.TRUE.’ Default.}
+ 
+\textbf{diffKhS=0.000000,}\textit{Laplacian diffusion of salt laterally ($m^2/s$) same applies as for T. Default. }
+ 
+\textbf{diffKzS=0.00000,}\textit{Laplacian diffusion of salt vertically ($m^2/s$) same applies as for S.  Default.}
+
+\# Advection Scheme
+
+\textbf{tempAdvScheme=7,}\textit{The seventh-order one-step method with monotonicit-preserving limiter (OS7MP) \citep{Daru2004} and minimises numerical diffusion \citep{Ilıcak2012,shakespeare2012}}
+
+\# Timestepping
+
+\textbf{StaggerTimeStep=.TRUE.,}\textit{The stagger baroclinic time stepping rather than synchronous time stepping. The thermodynamics solver is delayed from half a time step, allowing the use of the most recent velocities to compute the advection terms}
+
+\textbf{saltStepping=.FALSE.,}\textit{Salinity equation off.}
+
+\# equation of state
+
+\textbf{eosType='LINEAR'},\textit{Sets linear EOS, buoyancyRelation is automatically set to OCEANIC. For the nonlinear case, you need to generate a ﬁle of polynomial coeffcients called
+POLY3.COEFFS. To do this, use the program utils/knudsen2/knudsen2.f instead of tAlpha and sBeta}
+
+\textbf{tAlpha=2.0E-4,}\textit{thermal expansion coefficient in $K^{-1}$ for EOS. Default.}
+
+\textbf{sBeta =0.,}\textit{salt is passive here (ppt$^{-1}$)}
+ 
+\# Boundary conditions
+
+\textbf{no\_ slip\_ sides=.TRUE.,} \textit{Free slip or no slip. Free slip give zero stress on boundaries (more convenient to code). No slip defines the normal gradient of a tangential flow such that the flow is zero on the boundary by adding an additional source term in cells next to the boundary}
+
+\textbf{no\_ slip\_ bottom=.TRUE.,}
+
+\textbf{bottomDragLinear=1.1E-03,}\textit{linear bottom-drag coefficient ( m/s )}
+
+\textbf{ bottomDragQuadratic=0.000000E+00,}\textit{quadratic bottom-drag coeff. Default.}
+
+\# physical parameters
+
+\textbf{f0=-1.E-4,}\textit{Coriolis parameter ($s^{-1}$), $\displaystyle f=2\omega sin \phi$ Here this is set to the negative reference value and as beta is non zero f0 is the value of f at the southern edge of the domain.}
+
+\textbf{beta=1E-11,}\textit{$\displaystyle \frac{\partial f}{\partial y}$ ($m^{-1}s^{-1}$)}
+
+\textbf{gravity=9.81,}
+
+\# exact volume conservation
+
+\textbf{exactConserv=.TRUE.,}
+
+\# C-V scheme for Coriolis term
+
+\textbf{useCDscheme=.FALSE.,}
+
+\# partial cells for smooth topography
+
+\textbf{HfacMin=0.05,} \textit{ Limit partial cells to 50m thickness}
+
+\# file I/O parameters
+
+\textbf{readBinaryPrec=64,}\textit{double precision} 
+
+\textbf{ useSingleCpuIO=.TRUE.,}
+
+\textbf{ debugLevel=1,}
+
+\# Default surface conditions
+
+\textbf{rigidLid=.FALSE.,}
+
+\textbf{implicitFreeSurface=.TRUE.,}\textit{these lines suppress the rigid lid formulation of the surface pressure inverter and activate the implicit
+free surface form of the pressure inverter.}
+
+\textbf{\&}
+
+\textbf{\& PARM02}
+
+\textbf{cg2dMaxIters=500,}\textit{Upper limit on 2d con. grad iterations, default is 150.}
+
+\textbf{cg2dTargetResidual=1.E-9,} \textit{default is 1.E-7}
+
+\textbf{cg3dMaxIters=40,}\textit{Sets the maximum number of iterations the three-dimensional, conjugate gradient solver}
+
+\textbf{cg3dTargetResidual=1.E-9,}
+
+
+\textbf{\&}
+
+
+\textbf{\& PARM03}
+
+\textbf{deltaT=450,}\textit{time steps scales with resolution}
+
+\# 7.5 minute time step -> 69120 time steps/year
+
+\textbf{nIter0=0,}\textit{Start at..}
+
+\textbf{nTimeSteps=1382400,}\textit{20 years}
+
+\textbf{cAdjFreq = -1.,}\textit{Convective adjustment interval (s), the frequency at which the adjustment algorithm is called to a non-zero value, a negative value sets to tracer time step}
+
+\textbf{abEps=0.1,}\textit{ Adams-Bashforth stabilizing parameter, required as staggerTimeStep is set to TRUE}
+
+\# Permanent restart/checkpoint file interval ( s )
+
+\# Try 10 year interval (two per run)
+
+\textbf{pChkptFreq=311040000.00,}\textit{Checkpoint file interval (s)}
+
+\textbf{dumpFreq=0.0,} \textit{Model state write out interval (s)}
+ 
+\textbf{monitorFreq=0.0,} \textit{Monitor output interval (s)}
+
+\textbf{dumpInitAndLast=.TRUE.,}
+
+\textbf{pickupStrictlyMatch=.FALSE.,}
+
+\textbf{\&}
+
+\textbf{\& PARM04}
+
+\textbf{usingCartesianGrid=.TRUE.,}\textit{Uses cartesian co-ordinate system with uniform grid space via dXspacing or dYspacing or by vectors DelX or DelY in (m)}
+
+\textbf{usingSphericalPolarGrid=.FALSE.,}
+
+\textbf{delXfile='delX',}\textit{Can be set as a 1D array file or as gridlines * spacing i.e 300*5E3 300 grid lines at 5km spacing}
+
+\textbf{delYfile='delY',}
+
+\textbf{delZfile='delZ'}
+
+\textbf{\&}
+
+\textbf{\& PARM05}
+
+\textbf{surfQfile='Qsurface'}
+
+\textbf{bathyFile='topog'}
+
+\textbf{zonalWindFile='Wind',}
+
+\textbf{meridWindFile=,}
+
+\textbf{hydrogThetaFile='T.init',}
+
+\textbf{\&}
+}

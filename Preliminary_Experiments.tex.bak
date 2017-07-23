@@ -1,0 +1,61 @@
+%\addbibresource{../SOMOC2} 
+\chapter[Northern stratification]{Varying the northern boundary stratification}
+
+% mention that we touch upon this in our unsuccessful closed boundary stratification experiment
+The previous chapters have shown the role of diabatic eddies in responding to closing the northern boundary. Originally we ran experiments altering $ \tau _r $, the relaxation time scale, this dramatically altered the domain stratification so a natural extension to this is to alter the stratification profile of the sponge layer by altering the e-folding depth scale N. We saw although some gradual changes can be seen with increasing relaxation timescale, this is more a stepped response between turning on or off the sponge layer when using relaxation timescale as the variable, to assess if this would truly be a stepped response  directly altering the stratification to see how the SO ROC responds. This may also assist to assess if there as any form of proportionality in that response relating to $T_N$. It should be stressed that as an idealised modelling study these will just be approximate proportionality merely forming a guide for consideration of consequences for altering boundary conditions. Or to guide further studies to narrow down a parametrisation once more complex factors are included such as a coupled atmosphere and variations in salinity. 
+Chapter \ref{chap:2} showed us that changing stratification at the northern boundary can lead to increased diabatic eddy heat fluxes from increase diabatic layer depth and EKE and a small increase in APE. Those experiments used changing sponge layer to achieve this so although allowed a demonstration of the change in diabatic eddies leaving to modulating the effects of effective surface buoyancy forcing. Although this allowed us to gain insight into what factors control diabatic eddies and the role that diabatic eddies can play in setting the ROC these experiments did not allow us to establish a direct relationship between stratification and diabatic eddy heat fluxes. 
+These findings prompted us to investigate further the link between northern boundary stratification and diabatic eddy heat flux modulation of the effective buoyancy forcing. Establishing how diabatic eddies will respond to altered northern boundary conditions may be important for setting up a channel or southern hemispheric models; where the effective buoyancy forcing may be partly determined by the northern boundary condition before the surface parameters are altered. Understanding the response of diabatic eddies to changing background ocean stratification may also be useful for parametrizations in climate models and understanding the Southern Ocean response in high-resolution climate models. We now investigate diabatic eddy heat fluxes with a direct alteration of northern boundary stratification to propose a new scaling of diabatic eddy heat fluxes with stratification.
+
+\subsection{Set up}
+
+Once again we base the model set up off the set up described in \fref{sec:Setup_stand} (\fref{fig:model}) however we now directly alter the northern boundary stratification to establish a relationship.
+We use an idealised channel model setup similar to part \Rmnum{1} based off the setup used in \citet{Abernathey2011}. For an indepth explaination of model set up the reader is directed to Part \Rmnum{1}. The model code is the Massachusetts Institute of Technology general circulation model (MITgcm) \citep{marshall1997}. The channel domain is 1000 km by 2000 km and 2985 m deep with an eddy-resolving horizontal resolution of 5 km with 30 geopotential layers, ranging in thickness from 2 m at the surface to 275 m at the bottom. The surface forcing is a  the original fixed surface heat flux:
+\begin{equation*}
+Q(y)=
+\begin{cases}
+-Q_{0}\,cos(\frac{18\pi y}{5Ly}) & \text{for }\, y \le \frac{5Ly}{36} \text{ and } \frac{22Ly}{36} \geq y \geq \frac{30Ly}{36},\\
+-Q_{0}\,cos(\frac{18 \pi y}{5Ly}-\frac{\pi}{2}) & \text{for }\, \frac{5Ly}{36} \geq y \geq \frac{20Ly}{36},\\
+0 & \text{for }\, y \geq \frac{5Ly}{6}.
+\end{cases}
+\end{equation*}
+The surface wind stress is kept the same as in \cite{Abernathey2011}:
+\begin{equation*}
+\tau_s(y)=\tau_0 sin(\frac{\pi y}{Ly}),
+\end{equation*}
+where L$_y$ is the meridional width, Q$_0$ = 10 W m$^{-2}$ and $\tau_0$ = 0.2 N m$^{-2}$.
+
+For the control run the northernmost 100 km of the domain is a full depth sponge layer to relax the northern boundary temperature (T) profile to a prescribed temperature profile:
+\begin{equation*} 
+T^*(z)=\Delta T\frac{(e^{z/N}-e^{-H/N})}{1-e^{-H/N}} ,
+\end{equation*} 
+assuming a natural stratification N = 1000m and a temperature difference ($\Delta T$) of 8 $^{\circ}$C. The sponge is set using a mask (M$_{rbcs}$) of values between 0 and 1 (0 = no relaxation, 1 = relaxing on time scale $\left( \displaystyle{\frac{1}{\tau_{T}}}\right)$. The tendency of temperature at each grid point is modified to:
+\begin{equation*}
+\frac{\mathrm{d}T}{\mathrm{d}t}=\frac{\mathrm{d}T}{\mathrm{d}t}-\frac{M_{rbcs}}{\tau_{T}}(T-T^*),
+\end{equation*}
+where the relaxation timesscale $\tau _T$ is set to 3 days. 
+
+We then directly alter the northern boundary stratification by altering N in Eq. \ref{eq:tprof} from N = 50 m to N = 10000 m. 
+
+Another way to directly alter the northern boundary stratifications is by altering $\Delta T$. Once again a channel model set up similar to that outlined in \fref{chap:2} and that will be further outlined in the next section. We began to investigate the effects of direct alteration on the northern boundary stratification.
+
+
+\subsection{Preliminary experiments}
+
+We ran a series of experiments varying N from 50 m to 10000 m, which generate the temperature profiles shown in 
+\begin{figure}[H]
+\center
+\noindent \includegraphics[width=\textwidth]{../../Figures/TNfail.pdf}
+\caption{Temperature profiles to relax to, using various values for N.}
+\label{fig:TNfail}
+\end{figure}
+
+
+
+\ref{fig:VNfail} shows the ROC when these new stratifications are applied. The natural stratification of 1000m used in previous experiments \fref{fig:VNfail}.e shows the 3 cell ROC we are familiar with and increasing N depth weakens the ROC as isotherms appear to flatten slightly \fref{fig:VNfail}. When the e-folding length N is reduced we see a steepening of the isotherms in the south of the domain and a shallowing of the isotherms in the upper north of the domain. This leads to a large increase in the lower-most cell - baroclinic instability driven overturning cell \fref{fig:VNfail}.a-c. However, the steep isotherms and 'bumpy' nature of this overturning appears somewhat unstable as the isotherms become almost vertical in the south of \fref{fig:VNfail}. \fref{fig:VNfail}.We see a full depth diabatic layer \footnote{For speed in the calculation the mixed layer depth plotted here is simply the MITgcm output mixed layer depth, which gives an approximation.} in the south of the domain. \fref{fig:VNfail}. f-h) have unventilated isotherms which leads to some behaviour that suggests the model has not reached equilibrium. 
+
+\begin{figure}[H]
+\center
+\noindent \includegraphics[width=0.9\textwidth]{../../Figures/rocvnall.pdf}
+\caption{ROC with varying N. Preliminary experiment.}
+\label{fig:VNfail}
+\end{figure}

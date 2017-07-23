@@ -1,0 +1,310 @@
+\label{chap:2}
+
+
+This chapter focuses on the SO ROC response to closing the northern boundary condition in a highly idealised setting to understand the most basic fundamentals of this process and establish if in fact the SO ROC vanishes with a closed northern boundary.
+
+\section{Introduction}
+%%
+
+Changes to the Southern Ocean Residual Overturning Circulation (SO ROC) could have large effects on ocean circulation and climate, making it of great interest to understand what sets the strength and sense of the SO ROC. The upper cell of the SO ROC is closed outside the Southern Ocean connecting the surface branch with the deep branch (Fig.~\ref{fig:BBschemandmodel}).
+
+\begin{figure}
+\noindent \includegraphics[width=\textwidth]{../../Figures/Diagram_Sept16.pdf}
+\caption{An illustration of the channel model configuration, showing the surface forcing and the sponge layer at the northern boundary, with the expected residual circulation from the surface forcing at short sponge relaxation time scales depicted. The SO ROC in coloured arrows is determined in the surface mixed layer, which in this configuration can be several hundred meters deep, and directed along mean isopycnals in the interior.}
+\label{fig:BBschemandmodel}
+\end{figure}
+
+We look at this within a modelling context where a Northern boundary condition must be applied in order to close the SO ROC. In the framework of \cite{Marshall2003} the SO ROC can be related to the effective buoyancy forcing in the Southern Ocean channel. However, without an open boundary the SO ROC cannot be maintained, implying that the effective buoyancy forcing in the Southern Ocean must go to zero. This part of the SO ROC circulation must be represented when considering the SO in isolation, \citet{Marshall2003} argued that in the present climate the effective surface buoyancy forcing in the Southern Ocean is dominated by surface buoyancy exchange between ocean and atmosphere. If the Northern boundary of a channel model is closed then the buoyancy budget in the Southern Ocean needs to change. In a set-up of fixed surface fluxes and no diapycnal mixing (consistent with the adiabatic pole-to-pole circulation), either convective mixing, or diabatic eddy fluxes must increase to cancel the surface fluxes. This suggests the choice of northern boundary condition may have a large impact on the dynamics of the model impacting the outcome of any theory investigated. 
+
+Here we start in a very idealised theoretical framework considering the closure of the northern boundary. Specifically we show that the response in diabatic forcing in the mixed layer is achieved by diabatic eddy fluxes altering the effective surface buoyancy forcing. This is used as the initial starting point in our investigation before proposing other factors to investigate. Our first line of investigation is to establish if indeed the SO ROC ceases to exist when we close the northern boundary without altering the surface forcing and if that change is a step change or a smooth transition. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                   Theory                     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+\section{Theory}
+
+We investigate the overturning adjustments associated with changes in diabatic processes outside the Southern Ocean by considering an idealised channel model in which diabatic processes further north are represented through a diabatic sponge layer at the northern side of the channel. The diabatic forcing of the sponge layer is decreased by increasing the specified relaxation time scale in which the stratification is restored to a prescribed profile. When the northern boundary condition is changed, we expect a response in the diabatic eddy fluxes, adjusting the net diabatic forcing in the surface mixed-layer to accommodate the change in diabatic forcing, and as a result in stratification, at the northern boundary. Also, because the unchanged winds will leave the Eulerian MOC unaffected, a change in the SO ROC must be accommodated by a change in the eddy-driven overturning. So, the change in eddy-driven overturning must be associated and consistent with a change in net buoyancy forcing in the diabatic mixed-layer.
+Here, we focus on how the time-mean heat budget is affected. To simplify the analysis we consider a model setup with a linear equation of state, equating buoyancy to temperature. Starting from the time mean heat budget we write:
+
+\begin{equation}
+\nabla \cdot \overline{\textbf{u}T} = \frac{\partial Q}{\partial z},
+\label{eq:B_budget}
+\end{equation}
+
+where Q is the heat supplied to the surface through air-sea fluxes and other diabatic processes like diapycnal mixing and convective overturning.
+
+Starting from this time mean heat budget \citet{Marshall2003} created a widely used diagnostic by decomposing the eddy fluxes into adiabatic and diabatic components and removing the diabatic eddy fluxes from the LHS of Eq.~\ref{eq:B_budget} to the RHS. The background theory for this is described this in detail in section \ref{sec:TEM} where we arrive at \fref{eq:mr03bbudget}. Evaluated at the base of the mixed layer, below which the SO ROC is constant along mean isopycnals, the SO ROC is related to the diabatic forcing over the mixed layer. Putting \fref{eq:mr03bbudget} from \cite{Marshall2003} in terms of temperature alone, as per our model's equation of state gives:
+
+\begin{equation}
+ \Psi_{res} |_{hml} \frac{\partial T}{\partial y} =  Q - \int_{hml}^{0} \frac{\partial \left(\overline{v'T'} - \frac{\overline{w'T'}}{S_T} \right)}{\partial y } \mathrm{d}z,
+ \label{eq:MR03}
+\end{equation}
+
+ where $\Psi_{res}$ is the SO ROC and $S_T=-\overline{T_y}/\overline{T_z}$ is the slope of mean temperature surfaces.~\citet{Marshall2003} showed that in most realistic cases the diabatic eddy contribution and other diabatic forcing terms are small compared with the surface forcing and that the SO ROC can be predicted from $Q=Q_{surflux}$, neglecting diapycnal mixing and convective overturning. As our motivation for this study is the idea of far field forcing altering the SO ROC we look to the role of northern boundary conditions in channel models.
+ For a different stratification north of the ACC, the diabatic eddy component may become as important as the surface buoyancy forcing term, or deeper convective mixing in the SO channel must come into play. We will assume that the diapycnal mixing away from the bottom will remain negligible and will not affect the SO ROC upper cell and that diabatic eddy fluxes cannot be neglected. This could mean when setting up a channel model to evaluate the SO ROC response to altered surface forcing the fundamental dynamics may have been determined by the boundary condition applied to maintain a 3 cell SO ROC.
+
+In some scenarios the diabatic eddy contribution to the heat budget may not be negligible and must be considered. To do this Eq.~\ref{eq:MR03} must be reformulated to become compatible with the model equations. Part of this reformulation is due to the model's discretization, but another part is more fundamental. Some parts of the TEM theory used in \citet{Marshall2003} use QG assumptions that are not appropriate in the surface mixed layer. When deriving \fref{eq:MR03} the QG stream function is represented by \fref{eq:eddyflux} which means the left hand side of \fref{eq:MR03} is appropriate for the base of the mixed layer and below. This makes the original TEM framework inappropriate to investigate the mixed layer.  If we keep in a Cartesian framework and start from Eq.~\ref{eq:B_budget} and making a Reynolds decomposition the budget is split into eddy and mean transport terms: 
+
+\begin{equation}
+\frac{\partial \overline{v}\overline{T}}{\partial y } + \frac{\partial \overline{w}\overline{T}}{\partial z } + \frac{\partial \overline{v'T'}}{\partial y } + \frac{\partial \overline{w'T'}}{\partial z } = \frac{\partial \overline{Q}}{\partial z}.
+\end{equation}
+
+Traditionally the eddy fluxes are decomposed  into an along $\overline{T}$ component and a remaining horizontal component ~\citep{Marshall2003}. Here we decompose the transport terms into an along $\overline{T}$ component and a remaining vertical component:
+ 
+\begin{equation}
+\left(\overline{v'T'},\overline{w'T'}\right) =  \underbrace{\left(\overline{v'T'}, \overline{v'T'}S_T\right)}_\text{along $\overline{T}$}  + \underbrace{\left(0,\overline{w'T'} - \overline{v'T'}S_T \right)}_\text{remaining vertical}.
+\end{equation}
+
+Diabatic eddy fluxes should be down the mean buoyancy gradient. Decomposing the eddy fluxes along isotherm and either a remaining vertical (done here) or horizontal \citep[as in]{treguier1997}. The two different decompositions makes differing assumptions about the mixed layer, the assumption in the tradition TEM configuration is as in \fref{fig:mixedlayer}.a whereas our assumption assumes a layer like \fref{fig:mixedlayer}.b  \citep{Plumb2005}.
+\begin{figure}
+\center
+\noindent \includegraphics[width=0.7\textwidth]{../../Figures/mixedlayer.pdf}
+\caption{Mean isotherms in a hypothetical mixed layer (grey) showing a) assumed no vertical temperature gradient with purely horizontal diabatic fluxes and b) assumes isotherms are not vertical and an artificial thin layer where there is no along isothermal flow. \protect{ adapted from \citet[]{Plumb2005}}  }
+\label{fig:mixedlayer}
+\end{figure}
+
+We have chosen to combine eddy flux vectors this way to make a direct comparison possible between diabatic forcing by surface heat fluxes and by diabatic eddies in the surface mixed layer:
+
+\begin{equation}
+\underbrace{\frac{\partial \overline{v}\overline{T}}{\partial y } + \frac{\partial\overline{w} \overline{T}}{\partial z } + \frac{\partial \overline{v'T'}S_T}{\partial z } + \frac{\partial \overline{v'T'}}{\partial y }}_\text{Adiabatic  advective fluxes ($\nabla \cdot \overline{\textbf{u$_{\textbf{A}}$}T}$)} = \underbrace{\frac{\partial Q}{\partial z}}_\text{air-sea fluxes} - \underbrace{\frac{\partial \left( \overline{w'T'}-\overline{v'T'}S_T \right)}{\partial z }}_\text{Diapycnal fluxes} = \frac{\partial (Q - D)}{\partial z},
+\label{eq:cart}
+\end{equation}
+with
+\begin{equation}
+D = \overline{w'T'}-\overline{v'T'}S_T 
+\end{equation}
+
+It is noted in \citet{Plumb2005} that these "Raw" eddy fluxes contain reversible diapycnal mixing as well as irreversible mixing and will typically be much larger than the true irreversible diabatic eddy fluxes. The L.H.S will only represent the residual flux divergence when the the flow is adiabatic below the surface mixed layer. In a Cartesian frame work these terms acts as approximations for the heat budget of diabatic eddies and adiabatic fluxes but will differ from the residual mean counter parts that require additional surface mixed layer assumptions (discussed in chapter 1) in order to calculate. When we refer to diabatic eddy heat flux divergence we acknowledge by this definition additional reversible fluxes will be included so these fluxes will be quantitatively larger than the true irreversible diabatic fluxes.
+
+It should be stressed that the diabatic surface mixed layer, is the layer over which Q and D go to zero. This layer equals the depth of the (winter) convective mixing or (winter) mixed layer. In our model seasonality is excluded, but the mixed layer depth can still be O (100 m), or even O (1000 m) in some of the experiments we will discuss later in this chapter.
+
+Tracer evolution by the SO ROC is purely advective (non divergent), so that:
+
+\begin{equation}
+\overline{\nabla \cdot \textbf{u}T} = \overline{\textbf{u}} \cdot  \nabla \overline{T} ,
+\label{eq:adv}
+\end{equation}
+This arises from the continuity equation:
+\begin{equation}
+\overline{\nabla \cdot \textbf{u}} = 0 ,
+\label{eq:cont}
+\end{equation}
+In continuous equations if \fref{eq:cont} is true then \fref{eq:adv} must be true. This however, does not hold in a discrete model due to tracer and velocity grid alignment. In the MITgcm the part advection scheme FORTRAN routine generalises 1-D advection to 3-D by removing the local divergence flow separately in each dimension. Using the identity:
+
+\begin{equation}
+v \frac{\partial Q}{\partial y} =\frac{\partial v Q}{\partial y} - Q \frac{\partial v}{\partial y},
+\end{equation}
+This indicates on a discrete model grid \fref{eq:adv} would have to be written:
+\begin{equation}
+\overline{\nabla \cdot \textbf{u}T} = \overline{\textbf{u}} \cdot  \nabla \overline{T} - \overline{T} \cdot \textbf{u} ,
+\label{eq:advdiscrete}
+\end{equation}
+This has implications for transferring the continuous equations from \cite{Marshall2003} to discrete equations. As a result, the divergence of heat transport cannot be formulated as advection by a (residual) stream function adequately in discrete equations. For this reason we will use the heat budget of Eq.~\ref{eq:cart} to diagnose the contribution by the residual circulation, diabatic eddies, surface heat fluxes, and remaining terms. The LHS of \fref{eq:cart} is the advective transport and the RHS is the diapycnal divergent terms. The LHS will disappear when the circulation is adiabatic but however will be larger than the true irreversible diabatic transport.
+
+From the derivation of the buoyancy budget put in a TEM frame work it can be noted that if the local buoyancy forcing is kept constant, in order for the heat budget (Eq.~\ref{eq:cart}) to hold, there must be a response in the diabatic eddy heat flux if the residual circulation changes in response to changing northern boundary conditions. This is illustrated in Fig.~\ref{fig:BBschemandmodel} where the surface temperature gradient is related to the northern boundary stratification through geometrical arguments:
+\begin{equation}
+T_(y) = T_N(z=yS_T),
+\end{equation}
+so that
+\begin{equation}
+\frac{\partial T}{\partial y} =  -S_T \left(\frac{\partial T_N}{\partial z}\right),
+\label{EQ:nbc_geom}
+\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                Model Set up                  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+\section{Model Setup}
+We use an idealised channel model setup similar to ~\citet{Abernathey2011} and ~\citet{Zhai2014}. The model is based off the set up described in \fref{sec:Setup_stand} and we give a brief overview of the exact set up used here. Key model parameters are outlined in Table~\ref{tab:setup1} and the setup is shown schematically in Fig.~\ref{fig:BBschemandmodel}.
+
+\begin{table}
+\caption{Model Setup for flat bottom fixed-surface flux experiments.}
+\label{tab:setup1}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline \hline
+\textbf{Symbol} & \textbf{Description}  & \textbf{Value} \\ 
+\hline 
+L$_x$, L$_y$, H & Domain & 1000 km, 2000 km, 2985 m \\ 
+\hline 
+L$_{sponge}$ & Length scale of sponge layer & 100 km \\ 
+\hline 
+Q$_0$ & Surface heat flux magnitude maximum & 10 W m$^{-2}$ \\ 
+\hline 
+$\tau _0$ & Max surface wind stress & 0.2 N m$^{-2}$  \\ 
+\hline 
+dx, dy & Horizontal grid spacing & 5 km  \\ 
+\hline 
+dz & Vertical grid spacing & 10-280 m \\ 
+\hline 
+Adv Scheme & 7$^{\text{th}}$ order centred & 7 \\ 
+\hline 
+$\tau_{R}$ & Sponge relaxation time scale & 3-day - $\infty$ \\ 
+\hline 
+r$_b $& Linear bottom drag parameter & 1.3x10$^{-3}$ m s$^{-2}$ \\ 
+\hline 
+\end{tabular}
+\end{center}
+\end{table}
+
+In modelling studies of the Southern Ocean, sponge layers can be used to provide a northern boundary condition representing outside processes that would maintain a background stratification, enabling the SO ROC to close \citep{Abernathey2011,Abernathey2014,Zhai2014}. By altering the relaxation rate of the sponge layer we can show how important the choice of the northern boundary condition is. We do this by changing the relaxation time scale $\tau_{T}$ of the sponge layer to impose a northern boundary condition of varying rigidity.
+
+The northern boundary condition is altered by changing the relaxation time scale $\tau_{T}$ from days to years to decades to an infinite time scale (closed northern boundary). Short relaxation time scales strongly constrain the northern boundary stratification and the SO ROC to a circulation effectively determined by that stratification. Increased relaxation time scales provide only weak constraints allowing the stratification to free evolve leading to a breakdown of the SO ROC. When $\tau_T$ is set to infinity the northern boundary acts like a closed wall.
+
+Each model run is spun up for 400-3000 years (depending on relaxation time scale) to reach equilibrium indicated by mean Kinetic Energy and SO ROC strength (significantly longer than \citet{Abernathey2011} due to the longer relaxation time scales used here). The model is then run for a further 100 years with results averaged over this period \footnote{required to close the heat budget}.
+
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%            Overturning Response              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+\section{Overturning response}
+
+The motivation for this study is a) the conjecture that the SO ROC vanishes when the northern boundary is closed, irrespective of the surface forcing and b) %% Hdthe asph forward. At B ??
+that the SO ROC can be determined for all local forcing
+%%Ho of e consider hold 
+as we keep local fluxes constant but keep change the northern boundary condition. Before moving to a detailed evaluation of the processes involved, we test whether this is the case. A series of experiments were run varying the relaxation time scale $\tau_T$ in Eq.~\ref{eq:sponge} from 3 days to a fully closed channel ($\tau_T = \infty$). The relaxation time scales used were: 3, 10, 30, 100, 1000, 3000, 10000 days and no relaxation ($\tau_T = \infty$). In this section, we show the results from 4 runs: a sponge layer with relaxation timescale of 3 ,300 and 300 days and a fully closed boundary. To allow us to establish if this is a stepped response or a smooth transition to SO ROC collapse.
+
+\begin{figure}[H]
+\noindent \includegraphics[width=\textwidth]{../../Figures/MOC1.pdf}
+\caption{The Eulerian mean streamfunction ($\overline{\Psi}$), calculated from 100 years averaged velocities. }
+\label{fig:MOC}
+\end{figure}
+
+The Eulerian mean overturning stream function ($\overline{\psi}$) remains constant \fref{fig:MOC} (maximum $\approx$ 2.25 Sv, which scales to $\approx$ 60 Sv for a full channel) regardless of the northern boundary condition. This is expected as the Eulerian component is wind driven and throughout all our experiments the surface wind stress remains constant. We will not continue to show the Eulerian mean overturning in subsequent runs unless it differs from \fref{fig:MOC}.
+
+The SO ROC is calculated as an isothermal stream function\footnote{A very good approximation for the residual stream function, but we note that this deviates from the complete ROC in the surface layers.} following the method of \citet{Abernathey2011}:
+\begin{equation}
+\psi_{res}(y, T)= \frac{1}{\Delta t} \int_{t_o}^{t_{o}+\Delta t} \int_{0}^{L_x}  \int_{T}^{0} vh \,\mathrm{d}T \,\mathrm{d}x\,\mathrm{d}t,
+\label{eq:psidense} 
+\end{equation} 
+where $\displaystyle{h = \frac{-\partial z}{\partial T}}$ is the layer thickness in potential temperature (T) and the averaging period $\Delta t$ is 100 years. The isothermal stream function is calculated over 42 discrete potential temperature layers shown in \fref{fig:RemapT1} and is remapped onto depth coordinates to give $\psi_{res}(y,z)$ shown in Fig.~\ref{fig:MOC+Remap}.
+When a short relaxation time scale of 3 days is applied the ROC features 3 distinct cells directed along mean isopycnals, reproducing the result of \cite{Abernathey2011}. The SO ROC has a maximum of $\pm$ 0.75 Sv (30$\%$ of the mean) away from the surface. This is a realistic result as scaled to a full-length channel (approximately a factor of 25 times larger), a transport of 15 Sv would be obtained. This three cell structure disintegrates with increasing relaxation time scale and becomes virtually zero below the surface mixed layer when the northern boundary is closed (Fig.~\ref{fig:MOC+Remap}.d. 
+
+\begin{figure}[H]
+\noindent \includegraphics[width=\textwidth]{../../Figures/ROCyz1.pdf}
+\caption{The isothermal stream function $\Psi_{res}(y,\theta)$ remapped onto depth coordinates, to give $\Psi_{res}(y,z)$ for a) $\tau _R$ = 3 day and b) no relaxation. Isotherms in multiples of 1$^{\circ}$C are overlaid as solid black contours. The surface heat forcing is displayed above.}
+\label{fig:MOC+Remap}
+\end{figure}
+
+\begin{figure}[H]
+\noindent \includegraphics[width=\textwidth]{../../Figures/ROCyT1.pdf}
+\caption{The isothermal stream function $\Psi_{res}(y,T)$ for a) $\tau _R$ = 3 day and b) no relaxation.}
+\label{fig:RemapT1}
+\end{figure}
+
+When the northern boundary of the Southern Ocean is closed, there is a complete collapse of the SO ROC and very weak diabatic circulations remain that are completely confined to the surface mixed layer i.e. the depth of the convective overturning in the model. Below the surface mixed layer no circulation connected to the northern boundary can be maintained as there is no longer a means to close such a circulation away from the adiabatic interior. This underscores the SO ROC being part of an adiabatic pole-to-pole circulation \citep{Wolfe2011}. When the circulation at the northern end collapses, the circulation at the southern end is doomed to disappear as well. 
+
+Fig. \ref{fig:MOC+Remap} shows that changing the northern boundary condition completely alters the domain-wide stratification and the diabatic layer-depth is increased with increasing $\tau _R$. Short relaxation time scales show the top-to-bottom stratification of today's Southern Ocean, while longer relaxation time scales set up an alternate state with a large stratified surface layer and a sharp internal boundary layer (Fig. \ref{fig:MOC+Remap}. c-d). The northern boundary stratification T$_N$ also plays an important role in setting the isopycnal slope in the interior of the domain, which can be associated with a meridional buoyancy gradient allowing for the SO ROC. This result implies that not only diabatic eddy fluxes may cancel the surface heat flux in the mixed-layer, but also the role of convective mixing becomes more prominent and might be instrumental in collapsing the net surface forcing over the mixed layer. These results suggest that the SO ROC must be connected to the north of the domain in order to be maintained.
+
+\begin{figure}
+\noindent \includegraphics[width=\textwidth]{../../Figures/Closed_boundary_profile_ROC_300day.pdf} 
+\caption{The isothermal stream function $\Psi_{res}(y,\theta)$ remapped onto depth coordinates, to give $\Psi_{res}(y,z)$ for a sponge layer relaxing to the closed boundary profile with a relaxation time scales of 300 days. Isotherms in multiples of 1$^{\circ}$C are overlaid as solid black contours.}
+\label{fig:closedprofile}
+\end{figure}
+
+A question that arises is what is the cause of this collapse? Is it the change in stratification or the decrease in diabatic forcing in the sponge-layer? As a test we ran an experiment where the stratification is restored on a three-day timescale towards the profile displayed in the closed boundary run (Fig.~\ref{fig:MOC+Remap}.d . With a medium 300-day relaxation time scale, the isotherm streamfunction produced is shown in Fig.~\ref{fig:closedprofile}. The stratification becomes inconsistent with the diabatic forcing in the sponge-layer, implying an unstable solution. A small perturbation from the prescribed profile due to an eddy, invokes a diabatic forcing term that drives the circulation further away from the prescribed profile. Using shorter relaxation time-scales (3 days) results in an equally strong oscillating ROC that does not reach a steady state. These oscillations have peak to peak variations in total kinetic energy of 40$\%$ of the mean value, one to two orders of magnitude larger than in other spin-up runs.
+We conclude that the SO ROC is associated with net diabatic forcing and that the stratification associated with a collapsed SO ROC is inconsistent with net diabatic forcing. We address the impact of altering the boundary stratification and surface forcing systematically in chapter \ref{chap:3}.
+% inclused oscillation EKE plot?
+%mention the difficulty in setting up such a scenario and how they basically are inconsitent forcing that can not work
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%              Buoyancy Budget                 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+
+\section{Heat budget}
+
+\begin{figure}
+\noindent \includegraphics[width=\textwidth]{../../Figures/neefig4.png} 
+\caption{The components of the full depth buoyancy budget evaluated in as in Eq.~\ref{eq:cart}. The advective transport component is show in black and diapycnal transport in blue, surface heat forcing in red and the total in thin black line.}
+\label{fig:tembb_fix}
+\end{figure}
+
+To assess if a collapse in the SO ROC is at least partly due to a response in the diabatic eddy heat flux divergence we now move to plotting the terms of the heat budget \fref{eq:cart}. The terms of Eq.~\ref{eq:cart} are plotted in Fig.~\ref{fig:tembb_fix}. The difference between the thin grey line and the red line indicates the role of convective mixing and diabatic processes in the sponge layer. We also have included free surface correction term required due to the linear free surface boundary condition used in the model. This is calculated by:
+\begin{equation}
+\mathcal{T}_{surfcorr} = \frac{WTHMASS}{dz},
+\label{eq:surcor}
+\end{equation}
+where WTHMASS is the vertical mass-weight transport of potential temperature at the surface. Although included in the thin black line term to assess how well the heat budget closes, this term is $\mathcal{O}10^{-7}$, so essentially negligible being 1-2 orders of magnitude less than our flux divergence terms.
+We plot the LHS of \fref{eq:cart} the advective transport head divergence term as the SO ROC heat divergence (below the surface diabatic layer) in black in \fref{fig:tembb_fix} and the down gradient eddy heat heat flux divergence as our diabatic eddy term in blue, acknowledging these terms are larger than the real ROC/ diabatic eddy divergence terms. In all cases diabatic eddy heat fluxes nearly cancel the heat transport by the adiabatic ROC, with the surface heat flux being a small residual. These results suggest that for this set up there is no regime where diabatic eddy heat fluxes can be neglected in the budget of Eq.~\ref{eq:MR03}. In the northern 75\% of the domain the heat transport by the ROC gradually decreases with increasing restoring time scale, until in the closed basin case heat transport divergence by the ROC drops to zero and the diabatic eddy fluxes almost exactly cancel the surface forcing. In the southern part of the domain a surface confined ROC cell remains and here the diabatic eddy fluxes at first order cancel the heat transport accomplished by this residual cell. Changes in convective mixing are negligible in affecting the net surface forcing over the surface mixed layer. Figure \ref{fig:tembb_fix} highlights the changing diabatic eddy heat flux divergence and indicates the role of diabatic eddies in redistributing heat. However, as this figure shows the depth integrated divergence, we do not see the full spatial pattern. To investigate the distribution of the diabatic eddy heat flux divergence with depth, we plot the zonally averaged diabatic eddy heat flux divergence in latitude-depth space revealing the full extent of the diabatic eddy heat flux divergence changes (Fig.~\ref{fig:dhd}). 
+
+\begin{figure}
+\noindent \includegraphics[width=\textwidth]{../../Figures/dhdnew.png} 
+\caption{Zonal mean diapycnal heat divergence for relaxation timescale 3, 300, 3000 days and no relaxation.}
+\label{fig:dhd}
+\end{figure}
+
+The figure reveals that the magnitude of the diabatic eddy heat flux divergence/convergence is increasing almost everywhere with increasing relaxation timescales. The diabatic eddy heat flux divergence/convergence disappears where there is adiabatic flow, however this is not the true diabatic eddy heat flux convergence simply the down temperature gradient diapycnal fluxes. Large changes in the heat redistribution occur in the upper 1250 m. The depth over which the diabatic eddy fluxes are significant increases with increasing mixed layer depth as the relaxation time scale increases. Also the magnitude of the heat flux divergence increases, but at the bottom of the mixed layer a dipole pattern arises, which contributes little to the integral over depth. The diabatic eddy heat fluxes remove heat from the bottom of the mixed layer and transport it to the middle of the mixed layer layer, allowing for the creation of a sharp internal boundary layer, as seen in Fig.~\ref{fig:MOC+Remap}b, and a deep surface mixed layer. Heat transport by the ROC (\fref{fig:rhd}) is doing the opposite, bringing the heat downwards. At the southern end, the diabatic eddies cool everywhere, opposing the heating by the surface confined ROC. At the northern end, a large area arises with weak heat convergence in the upper part of the mixed layer, with heating at the bottom due to diabatic eddies, opposing cooling by the ROC. Although the SO ROC nearly collapses, within and across the surface mixed layer a weak cell remains that is associated with non-negligible heat transport due to the increased vertical gradient in temperature. From these figures it is clear that changes in the northern boundary condition lead to large changes in the effective surface heat forcing through a diabatic eddy response. To further understand this adjustment we must consider what sets the strength of the diabatic eddies.   
+\begin{figure}
+\noindent \includegraphics[width=\textwidth]{../../Figures/rocdiv1.pdf} 
+\caption{Zonal mean Adiabatic heat divergence for relaxation timescale 3, 300, 3000 days and no relaxation.}
+\label{fig:rhd}
+\end{figure}
+
+It should be noted that the increase in diabatic eddies is accompanied by a decrease of the vertically integrated diabatic eddy heat flux convergence, compare Figs.~\ref{fig:tembb_fix}d and \ref{fig:dhd}d. This occurs as the diabatic eddy heat flux convergence appears to be more and more as a perfect dipole pattern when the diabatic forcing in the sponge layer decreases. After establishment of an internal boundary layer, the diabatic eddies are associated with heating and equally large cooling in the upper and lower half of the internal boundary layer, respectively, the surface-confined ROC is associated with the opposite pattern. 
+
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%         Controls on Diabatic Eddies          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+\section{Controls on diabatic eddies}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                              %% 
+%%  Eddy energetics must be discussed here.     %%
+%%       Refer to Olbers and Eden book          %%
+%%              Page 377 of pdf                 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Having found a significant response in the diabatic eddy heat flux divergence, it is now important to understand what establishes this response. 
+The controls on diabatic eddy flux divergence can be thought of as being made up of an eddy velocity perturbation $v'$ , and a temperature perturbation $T'$. A relative measure of $v'$ can be obtained by taking the square root of the eddy kinetic energy (EKE) and a measure for $T'$ can be obtained from taking the square root of the eddy potential energy (EPE) \citep{VonStorch2012}. 
+\cite{Gill1974a} noted that changes in stratification in the upper few hundred meters can lead to large changes in stability properties; decreasing stratification leads to greater conversion from potential energy to kinetic energy i.e. increased baroclinic instability \citep{Legg2001}. This is exactly what we see happening when the diabatic forcing in the northern sponge layer decreases.
+
+\begin{figure}
+\noindent \includegraphics[width=\textwidth]{../../Figures/EKE1.pdf} 
+\caption{EKE $\frac{1}{2}(u^2 + v^2)$ for relaxation time scales of 3, 300, 3000 days and no relaxation. Isotherms in multiples of 1$^{\circ}$C are overlaid as solid black contours. The light grey contour indicates the mixed layer depth. Above the surface heat forcing is displayed. }
+\label{fig:EKE_flat}
+\end{figure}
+
+Figure \ref{fig:EKE_flat} shows the zonally averaged EKE, with isotherms overlaid in black, and a thick grey line to indicate the mixed layer depth. Both the mixed layer depth and EKE increase, leading to large increases in diabatic eddy heat transport when the relaxation time scale in the sponge layer is increased. In the 3-day $\tau _R $ mixed layer depth is almost similar to the 300 day relaxation timescale layer depth, but once an internal boundary layer starts forming in the 3000-day and closed-basin runs, the mixed layer deepens and EKE increases. A redistribution in EKE occurs, decreasing in the north of the domain and increasing in the south and at depth, a pattern that we also observe in the diabatic eddy heat flux divergence in Fig.~\ref{fig:dhd}. As relaxation time scales increase to orders of tens of years and in the closed northern boundary case, a sharp increase in EKE with decreasing stratification occurs, in agreement with \cite{Gill1974a}. The change in mean kinetic energy between the runs is an order of magnitude smaller  and the increase in EPE in \fref{fig:EPE_flat} is qualitatively similar to the change in EKE.  
+\begin{figure}
+\noindent \includegraphics[width=\textwidth]{../../Figures/EPE1.pdf} 
+\caption{EPE $\displaystyle{= g' T ^{\prime 2} \sfrac{d T^{*} }{dz}}$ for relaxation time scales of 3 days and no relaxation. Isotherms in multiples of 1$^{\circ}$C are overlaid as solid black contours. Above the surface heat forcing is displayed. }
+\label{fig:EPE_flat}
+\end{figure}
+
+
+When considering kinetic energy we see a very clear trend of increasing KE and EKE with increasing relaxation time scale. Again this is almost a step wise response increasing drastically between 300 days and 3000 days. \fref{fig:KE_flat} shows a) the average increase in EKE corresponding to b) the increasing domain integrated KE. The increase in Kinetic energy is almost entirely confined to the EKE component.  
+
+\begin{figure}[H]
+\center
+\subfloat[EKE][EKE]{\includegraphics[width=0.5\textwidth]{../../Figures/DEKE1.pdf}}
+\subfloat[KE][KE]{\includegraphics[width=0.5\textwidth]{../../Figures/DKE1.pdf}}
+\caption{Change in kinetic energy}
+\label{fig:KE_flat}
+\end{figure}
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                Discussion                    %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+\section{Conclusions}
+
+The diabatic eddy heat flux divergence strongly responds to changes in the northern boundary condition, becoming larger (increasing by 250\% in amplitude) when the stratification at the northern boundary is better able to freely evolve and is less constrained by the circulation and diabatic processes in the sponge layer. The resulting changes in diabatic forcing lead to a dramatic increase in surface mixed layer depth, which leads to enhanced baroclinic instability and larger EKE and EPE. This result is qualitatively robust to the surface boundary condition, but when surface restoring is applied instead of a flux formulation, a much smaller increase in diabatic fluxes occurs and the EKE is more constrained. Nevertheless, the role of diabatic eddy fluxes in the vertically integrated heat budget is equally large for both surface boundary conditions. It appears that the diabatic eddy heat flux divergence is sensitive to both the strength of the surface heat flux and the diabatic forcing in the sponge layer, but also to the surface boundary condition for temperature (buoyancy).
+
+When the northern boundary is closed there can be no interior residual overturning circulation (where $\Psi _{iso} = \Phi _{res}$), although we see here $\Psi _{iso}$ reduces to near zero that is not necessarily a requirement. In the absence of diabatic forcing elsewhere the residual circulation will be confined to the surface mixed layer determined by surface heat fluxes and diabatic fluxes. When diabatic forcing becomes stronger in the sponge layer, the upper cell in the SO gains amplitude and becomes comparable to the observed SO ROC (and AMOC). In this regime the diabatic eddy heat flux divergence is always of first order importance, counteracting the heat transport by the ROC, leaving the surface forcing as a smaller residual. We did not find any regime where diabatic eddy fluxes can be neglected. 
+
+The vertical integral of the diabatic eddy heat flux convergence decreases by an order of magnitude for weaker diabatic forcing in the sponge layer. Using fixed fluxes these changes are reconciled by the establishment of a strong internal boundary layer with a large vertical temperature gradient. 
+As a result, both heat transport divergence by a weak ROC confined to strong northward deepening mixed layer, and the diabatic eddy heat flux divergence appear as dipoles of opposing signs. For the diabatic eddy fluxes heat convergence in the upper half of the internal boundary layer and heat divergence in the lower half occurs, while the heat transport divergence associated with the ROC in the mixed layer shows the opposite.
+Without diabatic forcing in a northern boundary sponge layer diabatic eddies cancel the effective surface buoyancy forcing, while the heat transport divergence by the ROC integrates to zero in the vertical. As a result, below the surface mixed layer the SO ROC completely collapses, because  the connection to an adiabatic pole-to-pole circulation ceases to exist. 
+
+The upper cell SO ROC collapses when diabatic forcing in the northern sponge-layer is absent. 
+These results underscore the interhemispheric link between the SO ROC and the northern hemisphere AMOC. Such links were previously demonstrated in \citet{Gnanadesikan2000} and \citet{Wolfe2011}. Here, by altering the northern boundary condition we showed how the SO ROC adjusts to changes in stratification at the northern end of the SO. Although some gradual changes can be seen with increasing relaxation timescale, this is more a stepped response between turning on or off the sponge layer when using relaxation timescale as the variable.  
+
+It should be stressed, however, that the representation of the far-field forcing, i.e. NADW formation, by a sponge layer with a prescribed e-folding stratification is crude and should be tested against other ways of closing the SO ROC. Nevertheless, the absence of far-field forcing implies a disconnect between the SO ROC and the AMOC, and our results imply that in this case the upper cell of the SO ROC cannot be maintained. The large changes in out diapycnal fluxes indicate that diabatic eddy heat fluxes could play a crucial role in the adjustment process to such changes highlights the need for a carefully designed diabatic eddy representation in the surface mixed layer of the ocean, which should also depend on the atmospheric state and forcing. Our results also imply that although there is a significant step between the reduced diabatic forcing in sponge layers with relaxation time scale of under a year and multiple years there are already changes in the dynamics of a channel model before we see the full destruction of the SO ROC.
+
+
+
+
+

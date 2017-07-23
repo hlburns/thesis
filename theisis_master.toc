@@ -1,0 +1,67 @@
+\select@language {british}
+\contentsline {chapter}{Abstract}{i}{Doc-Start}
+\contentsline {chapter}{Acknowledgements}{ii}{Doc-Start}
+\contentsline {chapter}{Declaration of authorship}{iii}{chapter*.1}
+\contentsline {chapter}{Contents}{iv}{section*.2}
+\contentsline {chapter}{List of Tables}{vii}{section*.3}
+\contentsline {chapter}{List of Figures}{vii}{section*.4}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{section*.4}
+\contentsline {section}{\numberline {1.1}Introduction to Southern Ocean dynamics}{2}{figure.caption.6}
+\contentsline {subsection}{\numberline {1.1.1}Eddies in the the Southern Ocean}{3}{section*.7}
+\contentsline {subsection}{\numberline {1.1.2}Meridional Overturning Circulation}{4}{section*.7}
+\contentsline {subsection}{\numberline {1.1.3}ACC}{5}{figure.caption.8}
+\contentsline {subsection}{\numberline {1.1.4}Eddy saturation.}{6}{figure.caption.8}
+\contentsline {section}{\numberline {1.2}Residual Mean and Transformed Eulerian Mean Theory}{7}{figure.caption.8}
+\contentsline {subsection}{\numberline {1.2.1}Assumptions and approximations:}{7}{section*.9}
+\contentsline {subsection}{\numberline {1.2.2}Eliassen-Palm theorem}{10}{section*.15}
+\contentsline {subsection}{\numberline {1.2.3}Transformed Eulerian Mean theory}{11}{section*.15}
+\contentsline {section}{\numberline {1.3}TEM in The Surface Layers}{16}{section*.16}
+\contentsline {section}{\numberline {1.4}Motivation}{17}{section*.16}
+\contentsline {section}{\numberline {1.5}Outline of model}{19}{figure.caption.17}
+\contentsline {subsection}{\numberline {1.5.1}MITgcm overview}{19}{section*.18}
+\contentsline {subsection}{\numberline {1.5.2}Considering model set up}{20}{figure.caption.19}
+\contentsline {subsubsection}{Fundamental parameters}{21}{section*.20}
+\contentsline {section}{\numberline {1.6}Channel model set up}{28}{section*.25}
+\contentsline {chapter}{\numberline {2}Diabatic eddies}{33}{figure.caption.27}
+\contentsline {section}{\numberline {2.1}Introduction}{33}{section*.28}
+\contentsline {section}{\numberline {2.2}Theory}{35}{figure.caption.29}
+\contentsline {section}{\numberline {2.3}Model Setup}{41}{figure.caption.30}
+\contentsline {section}{\numberline {2.4}Overturning response}{43}{table.caption.31}
+\contentsline {section}{\numberline {2.5}Heat budget}{48}{figure.caption.35}
+\contentsline {section}{\numberline {2.6}Controls on diabatic eddies}{54}{figure.caption.38}
+\contentsline {section}{\numberline {2.7}Conclusions}{57}{figure.caption.41}
+\contentsline {chapter}{\numberline {3}Surface Conditions}{61}{figure.caption.41}
+\contentsline {section}{\numberline {3.1}The influence of the surface forcing formulation.}{61}{section*.42}
+\contentsline {subsection}{\numberline {3.1.1}Set up}{62}{section*.43}
+\contentsline {subsection}{\numberline {3.1.2}Influence on overturning and diabatic eddies}{63}{section*.43}
+\contentsline {subsection}{\numberline {3.1.3}Summary}{68}{figure.caption.46}
+\contentsline {section}{\numberline {3.2}Varying the surface forcing}{69}{figure.caption.46}
+\contentsline {subsection}{\numberline {3.2.1}Model set up}{71}{figure.caption.47}
+\contentsline {subsection}{\numberline {3.2.2}Overturning}{74}{table.caption.52}
+\contentsline {subsection}{\numberline {3.2.3}Conclusions on varying the surface boundary condition}{90}{figure.caption.75}
+\contentsline {chapter}{\numberline {4}Northern stratification}{95}{figure.caption.79}
+\contentsline {subsection}{\numberline {4.0.1}Set up}{96}{section*.80}
+\contentsline {subsection}{\numberline {4.0.2}Preliminary experiments}{98}{section*.80}
+\contentsline {subsection}{\numberline {4.0.3}Direct alteration of northern boundary stratification}{101}{figure.caption.82}
+\contentsline {subsection}{\numberline {4.0.4}Overturning response}{102}{figure.caption.83}
+\contentsline {subsection}{\numberline {4.0.5}Energetics}{113}{figure.caption.95}
+\contentsline {subsection}{\numberline {4.0.6}Conclusions altered boundary conditions}{115}{figure.caption.99}
+\contentsline {chapter}{\numberline {5}Other Considerations}{117}{figure.caption.99}
+\contentsline {section}{\numberline {5.1}Including topography}{117}{section*.100}
+\contentsline {subsection}{\numberline {5.1.1}Set up}{118}{section*.100}
+\contentsline {subsection}{\numberline {5.1.2}Overturning}{120}{table.caption.102}
+\contentsline {subsection}{\numberline {5.1.3}Dynamics}{124}{figure.caption.106}
+\contentsline {section}{\numberline {5.2}ACC}{128}{figure.caption.111}
+\contentsline {subsection}{\numberline {5.2.1}The ACC response to altered northern boundary conditions}{129}{section*.112}
+\contentsline {chapter}{\numberline {6}Discussion}{133}{figure.caption.115}
+\contentsline {subsection}{\numberline {6.0.1}Closing the Northern Boundary}{133}{section*.116}
+\contentsline {section}{\numberline {6.1}The Surface Heat Forcing}{136}{figure.caption.118}
+\contentsline {section}{\numberline {6.2}Effects of Topography}{138}{figure.caption.118}
+\contentsline {section}{\numberline {6.3}Summary and Future Work}{138}{figure.caption.118}
+\contentsline {chapter}{Acronyms}{145}{section*.119}
+\contentsline {chapter}{Symbolslist}{149}{section*.121}
+\contentsline {chapter}{Glossary}{151}{section*.123}
+\contentsline {chapter}{Bibliography}{153}{chapter*.125}
+\contentsline {chapter}{Appendices}{161}{section*.126}
+\contentsline {section}{\numberline {A}Advective assumptions on model grid}{163}{section*.127}
+\contentsline {section}{\numberline {B}Eaxmple datafile}{165}{equation.a..1.4}

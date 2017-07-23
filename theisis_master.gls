@@ -1,0 +1,49 @@
+\glossarysection[\glossarytoctitle]{\glossarytitle}\glossarypreamble
+\begin{theglossary}\glossaryheader
+\glsgroupheading{A}\relax \glsresetentrylist %
+\glossentry{adiabatic}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{143}}}\glsgroupskip
+\glsgroupheading{B}\relax \glsresetentrylist %
+\glossentry{baroclinic}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{143}}}%
+\glossentry{barotropic}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{143}}}%
+\glossentry{Brunt Vaisala frequency}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{8}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{143}}}\glsgroupskip
+\glsgroupheading{D}\relax \glsresetentrylist %
+\glossentry{diabatic}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{143}}}\glsgroupskip
+\glsgroupheading{E}\relax \glsresetentrylist %
+\glossentry{e-folding}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{143}}}\glsgroupskip
+\glsgroupheading{G}\relax \glsresetentrylist %
+\glossentry{Geostrophic}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{143}}}\glsgroupskip
+\glsgroupheading{I}\relax \glsresetentrylist %
+\glossentry{incompressibility}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{7}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{143}}}%
+\glossentry{isotherm}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{143}}}\glsgroupskip
+\glsgroupheading{P}\relax \glsresetentrylist %
+\glossentry{psi}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{143}}}%
+\glossentry{psir}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{143}}}%
+\glossentry{psu}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{143}}}\glsgroupskip
+\glsgroupheading{R}\relax \glsresetentrylist %
+\glossentry{rho}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{143}}}%
+\glossentry{Rsbrad}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{3}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{143}}}\glsgroupskip
+\glsgroupheading{S}\relax \glsresetentrylist %
+\glossentry{SO}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{1}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{4}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{143}}}%
+\glossentry{Sv}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{143}}}%
+\end{theglossary}\glossarypostamble

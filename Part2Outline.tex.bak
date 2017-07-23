@@ -1,0 +1,122 @@
+\subsection{Direct alteration of northern boundary stratification}
+
+As the preliminary experiments revealed that the temperature profile must also be adjusted to make the northern boundary condition consistent with the surface heat fluxes.
+
+\begin{equation}
+T^*(z)=\Delta T \frac{(e^{z/N}-e^{-H/N})}{1-e^{-H/N}} + 2\left(  \frac{N-N_0}{N_0}\right),
+\label{eq:tprofn}
+\end{equation} 
+
+with $ N_0$ = 1000m and setting setting N max as H for the adjustment term. After which temperature profile is linear.
+$\Delta T $ is given by:
+\begin{equation}
+\Delta T = \Delta T _0 - \left( \frac{N-N_0}{N_0}\right),
+\end{equation} 
+
+
+This gives us the new temperature profiles in fig. \ref{fig:Tstratn}. The maximums and minimums of these profiles are a match with the southern surface minimums and surface maximums seen in the preliminary experiments. The most extreme case N = 50 m and N $\geq $ 3000 m required a further degree of adjustment in order to remove unventilated isotherms and or cold water that is never seen at the northern boundary.   
+
+ To ascertain the direct link between stratification at the northern boundary and the ROC we ran a series of experiments altering $T^*(z)$ by varying N ( 50m, 250m, 500m, 750m, 1000m, 2000m, 3000m and 100000m ). Here for clarity we focus on 4 runs varying N and 4 runs varying $\Delta T$ with the altered temperature profiles shown in figure \fref{fig:Tstratn}.a , which vary from a shallow sharp thermocline to a linear stratification profile. The focus on stratification leads us to run an additional two experiments halving and doubling the temperature range ($\Delta T$) in eq. \fref{eq:tprofdt} with an adjustment to prevent unstable circulation:
+
+\begin{equation}
+T^*(z)=\Delta T \frac{(e^{z/N}-e^{-H/N})}{1-e^{-H/N}} + 2\left(   \frac{\Delta T - \Delta T_0  }{\Delta T _0} \right),
+\label{eq:tprofdt}
+\end{equation} 
+
+where $\Delta T _0$ is again 8 $^o$C. Again the maximums and minimums of these profiles are a match with the southern surface minimums and surface maximums seen in the preliminary experiments. The profiles are shown in \fref{fig:Tstratn}b). All experiments were relaxed with a 3 day relaxation timescale.
+
+\begin{figure}[H]
+\center
+\subfloat{\includegraphics[width=0.4\textwidth]{../../Figures/TN.pdf}}
+\qquad 
+\subfloat{\includegraphics[width=0.4\textwidth]{../../Figures/TDT.pdf}}
+\caption{T  profiles: varying $\Delta T$}
+\label{fig:Tstratn}
+\end{figure}
+
+\subsection{Overturning response}
+
+\subsubsection*{Varying N}
+
+Once again the Eulerian mean overturning remains constant at around 2.25 Sv (not shown here). We calculate the iso thermal streamfunction following \fref{eq:psidense} for N = 500, 750, 1000, 3000 m to demonstrate the effect of directly altering the northern boundary stratification.
+\begin{figure}[H]
+\noindent \includegraphics[width=\textwidth]{../../Figures/VNROCyz.pdf}
+\caption{The isothermal stream function $\Psi_{res}(y,\theta)$ remapped onto depth coordinates, to give $\Psi_{res}(y,z)$ for a) N = 500 m  b) N=750 m, c) N=1000m and d)N= 3000m. Isotherms in multiples of 1$^{\circ}$C are overlaid as solid black contours.}
+\label{fig:Remap_varyN}
+\end{figure}
+
+Figure \ref{fig:Remap_varyN} shows the ROC when these new stratifications are applied. The natural stratification of 1000m used in previous experiments fig. \ref{fig:Remap_varyN}.c shows the 3 cell ROC we are familiar with. Increasing N depth weakening the ROC as isotherms appear to flatten slightly fig. \ref{fig:Remap_varyN}.d .When the e-folding length N is reduced we see a steepening of the isotherms in the south of the domain and a shallowing of the isotherms in the upper north of the domain. This leads to a large increase in the lower-most cell - baroclinic instability driven overturning cell fig. \ref{fig:Remap_varyN}.a-b. The isotherms become almost vertical in the south of fig. \ref{fig:Remap_varyN}. The clockwise mid-depth cell also intensifies as N is reduced in fig. \ref{fig:Remap_varyN}. In general we note decreasing N strengthens the SO ROC, however, in the absence of any abyssal stratification the lowermost cell appears to strengthen disproportionally. We see little effect on the surface mixed layer depth, varying only weakly in areas of reduced stratification.
+\begin{figure}[H]
+\center
+\noindent \includegraphics[width=\textwidth]{../../Figures/VNROCyt.pdf}
+\caption{The isothermal stream function $\Psi_{res}(y,\theta)$ for a) N = 500 m  b) N=750 m, c) N=1000m and d)N= 3000m. }
+\label{fig:ROCTvaryN}
+\end{figure}
+The changes to the SO ROC are highlighted in temperature space in \fref{fig:ROCTvaryN}, where the clock wise cell distinctly weakens with \fref{fig:ROCTvaryN}.d approaching the circulation seen at higher sponge relaxation time scales seen in chapter \ref{chap:2}. The SO ROC in temperature spaces gives a much clearer picture of the diminishing lowermost cell and the slightly increasing uppermost cell. This suggests a large shift in baroclinic stability with changing stratification altering the eddy compensation in the channel. 
+
+\subsubsection*{Varying $\Delta T$}
+
+The Eulerian mean overturning remains nearly unchanged, but we note a slight deviation when the top bottom temperature difference is doubled. \fref{fig:MOCdt} shows that the maxima of overturning remains at $\approx$ 2.25 Sv but the pattern of strongest forcing in the centre is disrupted slightly. Unlike, many of our experiments we also see and increase in mean kinetic energy for this run as well. This might arise from the dramatic flattening in isotherms and increase in stratification see in this run. We will investigate further the impacts on the main circulation when we discuss the ACC in chapter \ref{chap:5}.
+\begin{figure}[H]
+\center
+\noindent \includegraphics[width=\textwidth]{../../Figures/dtmoc.pdf}
+\caption{Eulerian overturning ($\overline{\Psi}$). }
+\label{fig:MOCdt}
+\end{figure}
+We also see large changes to the SO ROC in response to altering the stratification.This is best shown in temperature space in \fref{fig:ROCTdt}, a more condensed top to bottom temperature range gives rise to a stronger SO ROC and increasing the top to bottom temperature range gives the opposite effect weakening the SO ROC. \fref{fig:ROCTdt}.c forces flatter isopycnals and stratification at depth preventing the lowermost cell from forming (in the absence of topography). Like with increasing N in \fref{fig:ROCTvaryN} increasing $\Delta T$ leads to shallower isopycnals and weaker ROC.
+\begin{figure}[H]
+\center
+\noindent \includegraphics[width=\textwidth]{../../Figures/dtrocyt.pdf}
+\caption{The isothermal stream function $\Psi_{res}(y,\theta)$ . }
+\label{fig:ROCTdt}
+\end{figure}
+
+\subsection*{Heat Budget}
+Once again we evaluate the heat budget using equation \fref{eq:cart}:
+\begin{equation*}
+\underbrace{\frac{\partial \overline{v}\overline{T}}{\partial y } + \frac{\partial\overline{w} \overline{T}}{\partial z } + \frac{\partial \overline{v'T'}S_T}{\partial z } + \frac{\partial \overline{v'T'}}{\partial y }}_\text{Residual ($\nabla \cdot \overline{\textbf{u$_{\textbf{res}}$}T}$)} = \underbrace{\frac{\partial Q}{\partial z}}_\text{air-sea fluxes} - \underbrace{\frac{\partial \left( \overline{w'T'}-\overline{v'T'}S_T \right)}{\partial z }}_\text{Diabatic eddies} = \frac{\partial (Q - D)}{\partial z},
+\end{equation*}
+Plotting the RHS terms in black as the ROC heat divergence and the LHS in blue and red for the diabatic eddy heat flux divergence terms and the surface heat fluxes respectively. \fref{fig:QVN} shows a simple scenario of the heat flux divergences reducing with increasing N,with \fref{fig:QVN}.d having half the maxima of \fref{fig:QVN}.a.
+\begin{figure}[H]
+\noindent \includegraphics[width=\textwidth]{../../Figures/Qbudgetvn.pdf} 
+\caption{The components of the full depth buoyancy budget evaluated in as in eq.}
+\label{fig:QVN}
+\end{figure}
+This simple story is backed up by plotting the diabatic eddy heat flux divergence term in depth space. \fref{fig:VNdhd} shows the diabatic eddy heat flux divergence terms reducing in magnitude with increasing N. Showing the SO ROC can diminish not only through a spatial distribution change in the diabatic eddy heat flux divergence but in a reduction of the fluxes in response to altered northern boundary stratification.
+\begin{figure}[H]
+\noindent \includegraphics[width=\textwidth]{../../Figures/VNdhd.pdf} 
+\caption{Zonal mean diabatic eddy heat flux divergence}
+\label{fig:VNdhd}
+\end{figure}
+\subsubsection*{Varying $\Delta T$}
+As with varying N altering the top to bottom temperature difference shows a simple scenario of the heat flux divergences increasing with increasing temperature difernce ,with \fref{fig:QDT}.a having a third of the maxima of \fref{fig:QDT}.c. However when N is increase we see a reduction in the heat flux divergence magnitude leading to a reduction in SO ROC strength, which is the opposite to what we see in \fref{fig:QDT}.
+\begin{figure}[H]
+\noindent \includegraphics[width=\textwidth]{../../Figures/Qbudgetdt.pdf} 
+\caption{The components of the full depth buoyancy budget evaluated in as in Eq.~\ref{eq:cart}.}
+\label{fig:QDT}
+\end{figure}
+We see a uniform increase in strength of diabatic eddy heat flux divergence when plotted in depth space in \fref{fig:DTdhd}. Not only the maxima of heat flux divergence increase with increasing $\Delta T$ but we also see a much larger area of influence in \fref{fig:DTdhd}.c . Indicating a deeper influence of diabatic eddies in redistributing heat, this suggests that not only are the magnitude of the diabatic eddy heat fluxes important but their extent of area over which they act. 
+\begin{figure}[H]
+\noindent \includegraphics[width=\textwidth]{../../Figures/DTdhd.pdf} 
+\caption{Zonal mean diabatic eddy heat flux divergence}
+\label{fig:DTdhd}
+\end{figure}
+\subsection{Energetics}
+\subsubsection*{Varying N}
+As we might suspect due to the change in isopycnal slop and increasing stratification with increasing N. We see a steady decrease in EKE with increasing N in \fref{fig:VNEKE}.
+\begin{figure}[H]
+\noindent \includegraphics[width=\textwidth]{../../Figures/VNEKE.pdf} 
+\caption{Zonal mean EKE}
+\label{fig:VNEKE}
+\end{figure}
+This contributes to the decreasing diabatic eddy heat flux divergence and the decreasing SO ROC strength we see when increasing N. Although we note we see a very small increase in Mean Kinetic Energy (not shown here) leading to a smaller decrease in domain total Kinetic Energy.  
+\subsubsection*{Varying $\Delta T$}
+The increasing diabatic eddy heat flux divergence also corresponds to a 5 fold increase in EKE with between $4^oC$ and $16^oC$.   We note here we see a doubling in the maximum Mean Kinetic Energy (not shown here) leading to a slightly larger increase in domain total Kinetic Energy than the increase from EKE alone.  
+\begin{figure}[H]
+\noindent \includegraphics[width=\textwidth]{../../Figures/DTEKE.pdf} 
+\caption{Zonal mean EKE}
+\label{fig:DTEKE}
+\end{figure}
+\subsection{Conclusions altered boundary conditions}
+
+Varying the northern boundary appears to have clear consequences for eddy energetics and the SO ROC, which could promise an interesting direction for further research, what stratification with short relaxation time scales could lead to a full collapse of the SO ROC? We saw in chapter \ref{chap:2} that you can not simply use the profile from the closed scenario with the same forcing. The systematic weakening of the SO ROC with increasing N suggests that there is a possible northern boundary stratification that could be combined with differing surface forcing to collapse the SO ROC without turning off the sponge layer, the dabatic heat fluxes seen in this chapter also suggest that perhaps the strong dipole and deep mixed layer seen in chapter \ref{chap:2} are not required with the right combination of stratification and surface forcing. This would mean differing combinations of surface heat and freshwater fluxes could moderate the SO ROC response changes in the northern hemisphere by altering the response in the diabatic eddy heat fluxes. The idea that stratification plays a role in setting the overturning in the Southern Ocean is not a new one, this has been discussed at great length in numerous studies such as \citet{Ferreira2005}, where it is pointed out there must be a dependence on $N^2$ for eddy diffusivity to give eddy stresses in phase with surface winds and surface buoyancy gradient as rationalised in the mixing length hypothesis \citep{McWilliams2002}.

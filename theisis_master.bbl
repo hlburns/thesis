@@ -1,0 +1,473 @@
+\begin{thebibliography}{88}
+\providecommand{\natexlab}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem[{\textit{Abernathey and Cessi}(2014)}]{Abernathey2014}
+Abernathey, R., and P.~Cessi, {Topographic Enhancement of Eddy Efficiency in
+  Baroclinic Equilibration}, \textit{J. Phys. Ocean.}, \textit{44}(8),
+  2107--2126, 2014.
+
+\bibitem[{\textit{Abernathey et~al.}(2011)\textit{Abernathey, Marshall, and
+  Ferreira}}]{Abernathey2011}
+Abernathey, R., J.~Marshall, and D.~Ferreira, {The Dependence of Southern Ocean
+  Meridional Overturning on Wind Stress}, \textit{J. Phys. Oceanogr.},
+  \textit{41}(12), 2261--2278, 2011.
+
+\bibitem[{\textit{Abernathey et~al.}(2013)\textit{Abernathey, Ferreira, and
+  Klocker}}]{abernathey2013}
+Abernathey, R., D.~Ferreira, and A.~Klocker, {Diagnostics of isopycnal mixing
+  in a circumpolar channel}, \textit{Ocean Model.}, \textit{72}, 1--16, 2013.
+
+\bibitem[{\textit{Adcroft et~al.}(1997)\textit{Adcroft, Hill, and
+  Marshall}}]{Adcroft1997}
+Adcroft, A.~J., C.~Hill, and J.~Marshall, {Representation of Topography by
+  Shaved Cells in a Height Coordinate Ocean Model}, \textit{Mon. Weather Rev.},
+  \textit{125}(9), 2293--2315, 1997.
+
+\bibitem[{\textit{Adcroft et~al.}(2004)\textit{Adcroft, Hill, Campin, Marshall,
+  and Heimbach}}]{Adcroft2004}
+Adcroft, A.~J., C.~Hill, J.~M. Campin, J.~Marshall, and P.~Heimbach, {Overview
+  of the Formulation and Numerics of the MIT GCM}, \textit{Proc. ECMWF Semin.
+  Ser. Numer. Methods Recent Dev. Numer. methods Atmos. Ocean Model.}, pp.
+  139--149, 2004.
+
+\bibitem[{\textit{Allison et~al.}(2010)\textit{Allison, Johnson, Marshall, and
+  Munday}}]{allison2010}
+Allison, L.~C., H.~L. Johnson, D.~P. Marshall, and D.~R. Munday, {Where do
+  winds drive the antarctic circumpolar current?}, \textit{Geophys. Res.
+  Lett.}, \textit{37}(12), 1--5, 2010.
+
+\bibitem[{\textit{Andrews and McIntyre}(1976)}]{Andrews1976}
+Andrews, D.~G., and M.~E. McIntyre, {Planetary Waves in Horizontal and Vertical
+  Shear: The Generalized Eliassen-Palm Relation and the Mean Zonal
+  Acceleration}, 1976.
+
+\bibitem[{\textit{Boccaletti et~al.}(2007)\textit{Boccaletti, Ferrari, and
+  Fox-Kemper}}]{Boccaletti2007b}
+Boccaletti, G., R.~Ferrari, and B.~Fox-Kemper, {Mixed Layer Instabilities and
+  Restratification}, \textit{J. Phys. Oceanogr.}, \textit{37}, 2228--2250,
+  2007.
+
+\bibitem[{\textit{B{\"{o}}ning et~al.}(2008)\textit{B{\"{o}}ning, Dispert,
+  Visbeck, Rintoul, and Schwarzkopf}}]{boning2008}
+B{\"{o}}ning, C.~W., A.~Dispert, M.~Visbeck, S.~R. Rintoul, and F.~U.
+  Schwarzkopf, {The response of the Antarctic Circumpolar Current to recent
+  climate change}, \textit{Nat. Geosci.}, \textit{1}(12), 864--869, 2008.
+
+\bibitem[{\textit{Campin et~al.}(2004)\textit{Campin, Adcroft, Hill, and
+  Marshall}}]{Campin2004}
+Campin, J.~M., A.~Adcroft, C.~Hill, and J.~Marshall, {Conservation of
+  properties in a free-surface model}, \textit{Ocean Model.}, \textit{6}(3-4),
+  221--244, 2004.
+
+\bibitem[{\textit{Cerove{\v{c}}ki et~al.}(2009)\textit{Cerove{\v{c}}ki, Plumb,
+  and Heres}}]{cerovevcki2009}
+Cerove{\v{c}}ki, I., R.~A. Plumb, and W.~Heres, {Eddy transport and mixing in a
+  wind-and buoyancy-driven jet on the sphere}, \textit{J. Phys. Oceanogr.},
+  \textit{39}(5), 1133--1149, 2009.
+
+\bibitem[{\textit{Cerove{\v{c}}ki et~al.}(2011)\textit{Cerove{\v{c}}ki, Talley,
+  and Mazloff}}]{cerovecki2011}
+Cerove{\v{c}}ki, I., L.~D. Talley, and M.~R. Mazloff, {A comparison of southern
+  ocean air-sea buoyancy flux from an ocean state estimate with five other
+  products}, \textit{J. Clim.}, \textit{24}(24), 6283--6306, 2011.
+
+\bibitem[{\textit{Cessi et~al.}(2006)\textit{Cessi, Young, and
+  Polton}}]{cessi2006}
+Cessi, P., W.~R. Young, and J.~A.~J. Polton, {Control of large-scale heat
+  transport by small-scale mixing}, \textit{J. Phys. Oceanogr.},
+  \textit{36}(10), 1877--1894, 2006.
+
+\bibitem[{\textit{Chang et~al.}(1977)}]{Chang1997}
+Chang, J., et~al., \textit{{Methods in computational physics. Vol.{\_}17:
+  General circulation models of the atmosphere.}}, 1977.
+
+\bibitem[{\textit{Collins et~al.}(2013)\textit{Collins, James, Ray, Chen,
+  Lassman, and Brownlee}}]{Collins2013}
+Collins, S.~N., R.~S. James, P.~Ray, K.~Chen, A.~Lassman, and J.~Brownlee,
+  {Grids in Numerical Weather and Climate Models}, in \textit{Clim. Chang. Reg.
+  Responses}, edited by Y.~Zhang and P.~Ray, chap.~04, InTech, Rijeka, 2013.
+
+\bibitem[{\textit{Cox and Bryan}(1984)}]{cox1984}
+Cox, M., and K.~Bryan, {A numerical model of the ventilated thermocline}, 1984.
+
+\bibitem[{\textit{Daru and Tenaud}(2004)}]{Daru2004}
+Daru, V., and C.~Tenaud, {High order one-step monotonicity-preserving schemes
+  for unsteady compressible flow calculations}, \textit{J. Comput. Phys.},
+  \textit{193}, 563--594, 2004.
+
+\bibitem[{\textit{de~Szoeke and Levine}(1981)}]{szoeke1981}
+de~Szoeke, R.~A., and M.~D. Levine, {The advective flux of heat by mean
+  geostrophic motions in the Southern Ocean}, \textit{Deep Sea Res. Part A.
+  Oceanogr. Res. Pap.}, \textit{28}(10), 1057--1085, 1981.
+
+\bibitem[{\textit{D{\"{o}}{\"{o}}s and Webb}(1994)}]{Doos1994}
+D{\"{o}}{\"{o}}s, K., and D.~Webb, {The Deacon cell and the other meridional
+  cells of the Southern Ocean}, \textit{J. Phys. Oceanogr.}, 1994.
+
+\bibitem[{\textit{Farneti and Delworth}(2010)}]{farneti2010}
+Farneti, R., and T.~L. Delworth, {The role of mesoscale eddies in the remote
+  oceanic response to altered Southern Hemisphere winds}, \textit{J. Phys.
+  Oceanogr.}, \textit{40}(10), 2348--2354, 2010.
+
+\bibitem[{\textit{Ferreira et~al.}(2005)\textit{Ferreira, Marshall, and
+  Heimbach}}]{Ferreira2005}
+Ferreira, D., J.~Marshall, and P.~Heimbach, {Estimating Eddy Stresses by
+  Fitting Dynamics to Observations Using a Residual-Mean Ocean Circulation
+  Model and Its Adjoint}, \textit{J. Phys. Oceanogr.}, \textit{35}, 1891--1910,
+  2005.
+
+\bibitem[{\textit{Ferreira et~al.}(2015)\textit{Ferreira, Marshall, Bitz,
+  Solomon, and Plumb}}]{Ferreira2015}
+Ferreira, D., J.~Marshall, C.~M. Bitz, S.~Solomon, and A.~Plumb, {Antarctic
+  ocean and sea ice response to ozone depletion: A two-time-scale problem},
+  \textit{J. Clim.}, \textit{28}(3), 1206--1226, 2015.
+
+\bibitem[{\textit{Gaspar et~al.}(1990)\textit{Gaspar, Gr{\'{e}}goris, and
+  Lefevre}}]{Gaspar1990}
+Gaspar, P., Y.~Gr{\'{e}}goris, and J.~Lefevre, {A simple eddy kinetic energy
+  model for simulations of the oceanic vertical mixing.}, \textit{J. Geophys.
+  Res.}, \textit{95}(C9), 179--193, 1990.
+
+\bibitem[{\textit{Gent}(2011)}]{Gent2011a}
+Gent, P.~R., {The Gent-McWilliams parameterization: 20/20 hindsight},
+  \textit{Ocean Model.}, \textit{39}(1-2), 2--9, 2011.
+
+\bibitem[{\textit{Gent}(2015)}]{Gent2015}
+Gent, P.~R., {Effects of Southern Hemisphere Wind Changes on the Meridional
+  Overturning Circulation in Ocean Models}, \textit{Ann. Rev Mar Sci.}, pp.
+  1--34, 2015.
+
+\bibitem[{\textit{Gill}(1982)}]{Gill1982}
+Gill, A., {Atmospheric-ocean dynamics}, \textit{Int. Geophys. Ser.},
+  \textit{30}, 662, 1982.
+
+\bibitem[{\textit{Gill et~al.}(1974)\textit{Gill, Green, and
+  Simmons}}]{Gill1974a}
+Gill, A., J.~Green, and A.~Simmons, {Energy partition in the large-scale ocean
+  circulation and the production of mid-ocean eddies}, \textit{Deep Sea Res.
+  Part A. Oceanogr. Res. Pap.}, \textit{21}, 499--528, 1974.
+
+\bibitem[{\textit{Gnanadesikan}(1999)}]{gnanadesikan1999}
+Gnanadesikan, a., {A Simple Predictive Model for the Structure of the Oceanic
+  Pycnocline}, \textit{Science (80-. ).}, \textit{283}(5410), 2077--2079, 1999.
+
+\bibitem[{\textit{Gnanadesikan and Hallberg}(2000)}]{Gnanadesikan2000}
+Gnanadesikan, A., and R.~W. Hallberg, {On the Relationship of the Circumpolar
+  Current to Southern Hemisphere Winds in Coarse-Resolution Ocean Models},
+  \textit{J. Phys. Oceanogr.}, \textit{30}, 2013--2034, 2000.
+
+\bibitem[{\textit{Griffies et~al.}(2000)\textit{Griffies, B{\"{o}}ning, Bryan,
+  Chassignet, Gerdes, Hasumi, Hirst, Tr{\'{e}}guier, and Webb}}]{griffies2000}
+Griffies, S.~M., C.~W. B{\"{o}}ning, F.~O. Bryan, E.~P. Chassignet, R.~Gerdes,
+  H.~Hasumi, A.~Hirst, A.-M. Tr{\'{e}}guier, and D.~Webb, {Developments in
+  ocean climate modelling}, \textit{Ocean Model.}, \textit{2}(3), 123--192,
+  2000.
+
+\bibitem[{\textit{Hallberg and Gnanadesikan}(2006)}]{hallberg2006}
+Hallberg, R.~W., and A.~Gnanadesikan, {The role of eddies in determining the
+  structure and response of the wind-driven Southern Hemisphere overturning:
+  Results from the Modeling Eddies in the Southern Ocean (MESO) project},
+  \textit{J. Phys. Oceanogr.}, \textit{36}(12), 2232--2252, 2006.
+
+\bibitem[{\textit{Haney}(1971)}]{Hanley1971}
+Haney, R.~L., {Surface Thermal Boundary Condition for Ocean Circulation
+  Models}, 1971.
+
+\bibitem[{\textit{Hausmann et~al.}(2016)\textit{Hausmann, Czaja, and
+  Marshall}}]{Hausmann2016}
+Hausmann, U., A.~Czaja, and J.~Marshall, {Estimates of air-sea feedbacks on sea
+  surface temperature anomalies in the Southern Ocean}, \textit{J. Clim.},
+  \textit{29}(2), 439--454, 2016.
+
+\bibitem[{\textit{Held and Schneider}(1999)}]{Held1999}
+Held, I.~M., and T.~Schneider, {The Surface Branch of the Zonally Averaged Mass
+  Transport Circulation in the Troposphere}, \textit{J. Atmos. Sci.},
+  \textit{56}(11), 1688--1697, 1999.
+
+\bibitem[{\textit{Hidaka and Tsuchiya}(1953)}]{hidaka1953}
+Hidaka, K., and M.~Tsuchiya, {On the antarctic circumpolar current}, \textit{J.
+  Mar. Res}, \textit{12}(2), 214, 1953.
+
+\bibitem[{\textit{Hill et~al.}(2012)\textit{Hill, Ferreira, Campin, Marshall,
+  Abernathey, and Barrier}}]{hill2012}
+Hill, C., D.~Ferreira, J.-M. Campin, J.~Marshall, R.~Abernathey, and
+  N.~Barrier, {Controlling spurious diapycnal mixing in eddy-resolving
+  height-coordinate ocean models--Insights from virtual deliberate tracer
+  release experiments}, \textit{Ocean Model.}, \textit{45}, 14--26, 2012.
+
+\bibitem[{\textit{Hogg}(2010)}]{hogg2010}
+Hogg, A.~M., {An Antarctic Circumpolar Current driven by surface buoyancy
+  forcing}, \textit{Geophys. Res. Lett.}, \textit{37}(23), 2010.
+
+\bibitem[{\textit{Hogg et~al.}(2015)\textit{Hogg, Meredith, Chambers,
+  Abrahamsen, Hughes, and Morrison}}]{Hogg2015}
+Hogg, A.~M., M.~P. Meredith, D.~P. Chambers, E.~P. Abrahamsen, C.~W. Hughes,
+  and A.~K. Morrison, {Recent trends in the Southern Ocean eddy field},
+  \textit{J. Geophys. Res. C Ocean.}, \textit{120}(1), 257--267, 2015.
+
+\bibitem[{\textit{Ilıcak et~al.}(2012)\textit{Ilıcak, Adcroft, Griffies, and
+  Hallberg}}]{Ilıcak2012}
+Ilıcak, M., A.~J. Adcroft, S.~M. Griffies, and R.~W. Hallberg, {Spurious
+  dianeutral mixing and the role of momentum closure}, \textit{Ocean Model.},
+  \textit{45–46}, 37--58, 2012.
+
+\bibitem[{\textit{Jansen and Nadeau}(2016)}]{Jansen2016}
+Jansen, M.~F., and L.-P. Nadeau, {The Effect of Southern Ocean Surface Buoyancy
+  Loss on the Deep Ocean Circulation and Stratification}, \textit{J. Phys.
+  Oceanogr.}, pp. JPO--D--16--0084.1, 2016.
+
+\bibitem[{\textit{Jansen et~al.}(2015)\textit{Jansen, Adcroft, Hallberg, and
+  Held}}]{jansen2015}
+Jansen, M.~F., A.~J. Adcroft, R.~Hallberg, and I.~M. Held, {Parameterization of
+  eddy fluxes based on a mesoscale energy budget}, \textit{Ocean Model.},
+  \textit{92}, 28--41, 2015.
+
+\bibitem[{\textit{Johnson and Bryden}(1989)}]{johnson1989}
+Johnson, G.~C., and H.~L. Bryden, {On the size of the Antarctic Circumpolar
+  Current}, \textit{Deep Sea Res. Part A. Oceanogr. Res. Pap.}, \textit{36}(1),
+  39--53, 1989.
+
+\bibitem[{\textit{Karsten et~al.}(2002)\textit{Karsten, Jones, and
+  Marshall}}]{karsten2002}
+Karsten, R., H.~Jones, and J.~Marshall, {The role of eddy transfer in setting
+  the stratification and transport of a circumpolar current}, \textit{J. Phys.
+  Oceanogr.}, \textit{32}(1), 39--54, 2002.
+
+\bibitem[{\textit{Kazantsev}(2013)}]{Kazantsev2013}
+Kazantsev, E., {Optimal boundary conditions for ORCA-2 model}, \textit{Ocean
+  Dyn.}, \textit{63}(8), 943--959, 2013.
+
+\bibitem[{\textit{Kuo et~al.}(2005)\textit{Kuo, Plumb, and Marshall}}]{kuo2005}
+Kuo, A., R.~A. Plumb, and J.~Marshall, {Transformed Eulerian-mean theory. Part
+  II: Potential vorticity homogenization and the equilibrium of a wind-and
+  buoyancy-driven zonal flow}, \textit{J. Phys. Oceanogr.}, \textit{35}(2),
+  175--187, 2005.
+
+\bibitem[{\textit{Large and Yeager}(2009)}]{Large2009}
+Large, W.~G., and S.~G. Yeager, {The global climatology of an interannually
+  varying air - Sea flux data set}, \textit{Clim. Dyn.}, \textit{33}(2-3),
+  341--364, 2009.
+
+\bibitem[{\textit{Large et~al.}(1994)\textit{Large, Mcwilliams, and
+  Doney}}]{large1994}
+Large, W.~G., J.~C. Mcwilliams, and S.~C. Doney, {Oceanic Vertical Mixing - a
+  Review and a Model with a Nonlocal Boundary-Layer Parameterization},
+  \textit{Rev. Geophys.}, \textit{32}(94), 363--403, 1994.
+
+\bibitem[{\textit{{Le Qu{\'{e}}r{\'{e}}} et~al.}(2007)}]{lequere2007}
+{Le Qu{\'{e}}r{\'{e}}}, C., et~al., {Saturation of the Southern Ocean CO2 sink
+  due to recent climate change}, \textit{Science (80-. ).}, \textit{316}(5832),
+  1735--1738, 2007.
+
+\bibitem[{\textit{Legg and McWilliams}(2001)}]{Legg2001}
+Legg, S., and J.~C. McWilliams, {Convective Modifications of a Geostrophic Eddy
+  Field*}, \textit{J. Phys. Oceanogr.}, \textit{31}(4), 874--891, 2001.
+
+\bibitem[{\textit{Lorenz}(1960)}]{lorenz1960energy}
+Lorenz, E.~N., {Energy and numerical weather prediction}, \textit{Tellus},
+  \textit{12}(4), 364--373, 1960.
+
+\bibitem[{\textit{Madec and Delecluse}(1998)}]{Madec1998}
+Madec, G., and P.~Delecluse, {Institut Pierre Simon Laplace Ocean General
+  Circulation Model Reference Manual}, \textit{Tech. rep.}, 1998.
+
+\bibitem[{\textit{Marshall}(1997)}]{marshall1997}
+Marshall, D.~P., {Subduction of water masses in an eddying ocean}, \textit{J.
+  Mar. Res.}, \textit{55}(2), 201--222, 1997.
+
+\bibitem[{\textit{Marshall and Radko}(2003)}]{Marshall2003}
+Marshall, J., and T.~Radko, {Residual-mean solutions for the Antarctic
+  Circumpolar Current and its associated overturning circulation}, \textit{J.
+  Phys. Oceanogr.}, \textit{33}(11), 2341--2354, 2003.
+
+\bibitem[{\textit{Marshall and Speer}(2012)}]{marshall2012}
+Marshall, J., and K.~Speer, {Closure of the meridional overturning circulation
+  through Southern Ocean upwelling}, \textit{Nat. Geosci.}, \textit{5},
+  171--180, 2012.
+
+\bibitem[{\textit{Marshall et~al.}(1997)\textit{Marshall, Hill, Perelman, and
+  Adcroft}}]{jmarshall1997}
+Marshall, J., C.~Hill, L.~Perelman, and A.~J. Adcroft, {Hydrostatic,
+  quasi-hydrostatic, and nonhydrostatic ocean modeling}, \textit{J. Geophys.
+  Res. Ocean.}, \textit{102}(C3), 5733--5752, 1997.
+
+\bibitem[{\textit{McWilliams and Danabasoglu}(2002)}]{McWilliams2002}
+McWilliams, J.~C., and G.~Danabasoglu, {Eulerian and Eddy-Induced Meridional
+  Overturning Circulations in the Tropics}, \textit{J. Phys. Oceanogr.},
+  \textit{32}, 2054--2071, 2002.
+
+\bibitem[{\textit{Meredith and Hogg}(2006)}]{meredith2006}
+Meredith, M.~P., and A.~M. Hogg, {Circumpolar response of Southern Ocean eddy
+  activity to a change in the Southern Annular Mode}, \textit{Geophys. Res.
+  Lett.}, \textit{33}(16), 2006.
+
+\bibitem[{\textit{Meredith et~al.}(2012)\textit{Meredith, {Naveira Garabato},
+  Hogg, and Farneti}}]{Meredith2012}
+Meredith, M.~P., A.~C. {Naveira Garabato}, A.~M. Hogg, and R.~Farneti,
+  {Sensitivity of the overturning circulation in the Southern Ocean to decadal
+  changes in wind forcing}, \textit{J. Clim.}, \textit{25}(1), 99--110, 2012.
+
+\bibitem[{\textit{Mignone et~al.}(2006)\textit{Mignone, Gnanadesikan,
+  Sarmiento, and Slater}}]{Mignone2006}
+Mignone, B.~K., A.~Gnanadesikan, J.~L. Sarmiento, and R.~D. Slater, {Central
+  role of Southern Hemisphere winds and eddies in modulating the oceanic uptake
+  of anthropogenic carbon}, \textit{Geophys. Res. Lett.}, \textit{33}(1), 2006.
+
+\bibitem[{\textit{{Moore, GWK and Renfrew}}(2002)}]{Moore2002}
+{Moore, GWK and Renfrew}, I., {An Assessment of the Surface Turbulent Heat
+  Fluxes from the NCEP – NCAR Reanalysis over the Western Boundary Currents},
+  \textit{J. Clim.}, pp. 2020--2037, 2002.
+
+\bibitem[{\textit{Morrison and {McC. Hogg}}(2013)}]{morrison2013}
+Morrison, A.~K., and A.~{McC. Hogg}, {On the relationship between Southern
+  Ocean overturning and ACC transport}, \textit{J. Phys. Oceanogr.},
+  \textit{43}(1), 140--148, 2013.
+
+\bibitem[{\textit{Munk and Palm{\'{e}}n}(1951)}]{munk1951}
+Munk, W.~H., and E.~Palm{\'{e}}n, {Note on the Dynamics of the Antarctic
+  Circumpolar Current1}, \textit{Tellus}, \textit{3}(1), 53--55, 1951.
+
+\bibitem[{\textit{Nikurashin and Vallis}(2012)}]{Nikurashin2012a}
+Nikurashin, M., and G.~Vallis, {A Theory of the Interhemispheric Meridional
+  Overturning Circulation and Associated Stratification}, \textit{J. Phys.
+  Oceanogr.}, \textit{42}, 1652--1667, 2012.
+
+\bibitem[{\textit{Pauluis et~al.}(2011)\textit{Pauluis, Shaw, and
+  Lalibert{\'{e}}}}]{Pauluis2011}
+Pauluis, O., T.~Shaw, and F.~Lalibert{\'{e}}, {A Statistical Generalization of
+  the Transformed Eulerian-Mean Circulation for an Arbitrary Vertical
+  Coordinate System}, \textit{J. Atmos. Sci.}, \textit{68}(8), 1766--1783,
+  2011.
+
+\bibitem[{\textit{Plumb and Ferrari}(2005)}]{Plumb2005}
+Plumb, R., and R.~Ferrari, {Transformed Eulerian-mean theory. Part I:
+  Nonquasigeostrophic theory for eddies on a zonal-mean flow}, \textit{J. Phys.
+  Oceanogr.}, pp. 165--174, 2005.
+
+\bibitem[{\textit{Rintoul et~al.}(2012)}]{rintoul2012southern}
+Rintoul, S.~R., et~al., \textit{{The Southern Ocean observing system: initial
+  science and implementation strategy}}, Scientific Committee on Antarctic
+  Research, 2012.
+
+\bibitem[{\textit{Rosso et~al.}(2015)\textit{Rosso, Hogg, Kiss, and
+  Gayen}}]{Rosso2015}
+Rosso, I., A.~M. Hogg, A.~E. Kiss, and B.~Gayen, {Topographic influence on
+  submesoscale dynamics in the Southern Ocean}, \textit{Geophys. Res. Lett.},
+  \textit{42}, 1139--1147, 2015.
+
+\bibitem[{\textit{Saenz et~al.}(2012)\textit{Saenz, Hogg, Hughes, and
+  Griffiths}}]{saenz2012}
+Saenz, J.~A., A.~M. Hogg, G.~O. Hughes, and R.~W. Griffiths, {Mechanical power
+  input from buoyancy and wind to the circulation in an ocean model},
+  \textit{Geophys. Res. Lett.}, \textit{39}(13), 2012.
+
+\bibitem[{\textit{Sall{\'{e}}e et~al.}(2010)\textit{Sall{\'{e}}e, Speer,
+  Rintoul, and Wijffels}}]{Sallee2010}
+Sall{\'{e}}e, J.-B., K.~Speer, S.~Rintoul, and S.~Wijffels, {Southern Ocean
+  Thermocline Ventilation}, \textit{J. Phys. Oceanogr.}, \textit{40}, 509--529,
+  2010.
+
+\bibitem[{\textit{Shakespeare and Hogg}(2012)}]{shakespeare2012}
+Shakespeare, C.~J., and A.~Hogg, {An analytical model of the response of the
+  meridional overturning circulation to changes in wind and buoyancy forcing},
+  \textit{J. Phys. Oceanogr.}, \textit{42}(8), 1270--1287, 2012.
+
+\bibitem[{\textit{Speer et~al.}(2000)\textit{Speer, Rintoul, and
+  Sloyan}}]{speer2000}
+Speer, K., S.~R. Rintoul, and B.~Sloyan, {The Diabatic Deacon Cell*},
+  \textit{J. Phys. Oceanogr.}, \textit{30}(12), 3212--3222, 2000.
+
+\bibitem[{\textit{Stewart et~al.}(2014)\textit{Stewart, Ferrari, and
+  Thompson}}]{Stewart2014}
+Stewart, A.~L., R.~Ferrari, and A.~F. Thompson, {On the Importance of Surface
+  Forcing in Conceptual Models of the Deep Ocean}, \textit{J. Phys. Oceanogr.},
+  \textit{44}(3), 891--899, 2014.
+
+\bibitem[{\textit{Thompson and Sallee}(2012)}]{Thompson2012}
+Thompson, A.~F., and J.-B. Sallee, {Jets and topography: jet transitions and
+  the impact on transport in the Antarctic Circumpolar Current}, \textit{J.
+  Phys. Oceanogr.}, \textit{42}, 956--972, 2012.
+
+\bibitem[{\textit{Thompson and Solomon}(2002)}]{thompson2002}
+Thompson, D. W.~J., and S.~Solomon, {Interpretation of recent Southern
+  Hemisphere climate change}, \textit{Science (80-. ).}, \textit{296}(5569),
+  895--899, 2002.
+
+\bibitem[{\textit{Toggweiler and Russell}(2008)}]{Toggweiler2008}
+Toggweiler, J.~R., and J.~L. Russell, {Ocean circulation in a warming
+  climate.}, \textit{Nature}, \textit{451}(17), 286--288, 2008.
+
+\bibitem[{\textit{Tomczak and Godfrey}(2003)}]{tomczak2003}
+Tomczak, M., and J.~S. Godfrey, {The Atlantic Ocean}, \textit{Reg. Oceanogr. an
+  Introd.}, pp. 229--252, 2003.
+
+\bibitem[{\textit{Tr{\'{e}}guier et~al.}(1997)\textit{Tr{\'{e}}guier, Held, and
+  Larichev}}]{treguier1997}
+Tr{\'{e}}guier, A.-M., I.~M. Held, and V.~D. Larichev, {Parameterization of
+  quasigeostrophic eddies in primitive equation ocean models}, \textit{J. Phys.
+  Oceanogr.}, \textit{27}(4), 567--580, 1997.
+
+\bibitem[{\textit{Tr{\'{e}}guier et~al.}(2007)\textit{Tr{\'{e}}guier, England,
+  Rintoul, Madec, {Le Sommer}, Molines, and Others}}]{treguier2007}
+Tr{\'{e}}guier, A.-M., M.~H. England, S.~R. Rintoul, G.~Madec, J.~{Le Sommer},
+  J.-M. Molines, and Others, {Southern Ocean overturning across streamlines in
+  an eddying simulation of the Antarctic Circumpolar Current}, \textit{Ocean
+  Sci. Discuss.}, \textit{4}(4), 653--698, 2007.
+
+\bibitem[{\textit{Viebahn and Eden}(2012)}]{viebahn2012}
+Viebahn, J., and C.~Eden, {Standing eddies in the meridional overturning
+  circulation}, \textit{J. Phys. Oceanogr.}, \textit{42}(9), 1486--1508, 2012.
+
+\bibitem[{\textit{Visbeck et~al.}(1997)\textit{Visbeck, Marshall, Haine, and
+  Spall}}]{Visbeck1997}
+Visbeck, M., J.~Marshall, T.~Haine, and M.~Spall, {Specification of Eddy
+  Transfer Coefficients in Coarse-Resolution Ocean Circulation Models*},
+  \textit{J. Phys. Oceanogr.}, \textit{27}(3), 381--402, 1997.
+
+\bibitem[{\textit{von Storch et~al.}(2012)\textit{von Storch, Eden, Fast, Haak,
+  Hern{\'{a}}ndez-Deckers, Maier-Reimer, Marotzke, and
+  Stammer}}]{VonStorch2012}
+von Storch, J.-S., C.~Eden, I.~Fast, H.~Haak, D.~Hern{\'{a}}ndez-Deckers,
+  E.~Maier-Reimer, J.~Marotzke, and D.~Stammer, {An estimate of Lorenz energy
+  cycle for the world ocean based on the 1/10 degree STORM/NCEP simulation},
+  \textit{J. Phys. Oceanogr.}, \textit{42}(1992), 120821111920,009, 2012.
+
+\bibitem[{\textit{Whitworth and Peterson}(1985)}]{whitworth1985}
+Whitworth, T., and R.~G. Peterson, {Volume transport of the Antarctic
+  Circumpolar Current from bottom pressure measurements}, \textit{J. Phys.
+  Oceanogr.}, \textit{15}(6), 810--816, 1985.
+
+\bibitem[{\textit{Wolfe}(2014)}]{wolfe2014}
+Wolfe, C.~L., {Approximations to the ocean's residual circulation in arbitrary
+  tracer coordinates}, \textit{Ocean Model.}, \textit{75}(0), 20--35, 2014.
+
+\bibitem[{\textit{Wolfe and Cessi}(2009)}]{Wolfe2009}
+Wolfe, C.~L., and P.~Cessi, {Overturning circulation in an eddy-resolving
+  model: The effect of the pole-to-pole temperature gradient}, \textit{J. Phys.
+  Oceanogr.}, \textit{39}, 125--142, 2009.
+
+\bibitem[{\textit{Wolfe and Cessi}(2011)}]{Wolfe2011}
+Wolfe, C.~L., and P.~Cessi, {The adiabatic pole-to-pole overturning
+  circulation}, \textit{J. Phys. Oceanogr.}, pp. 1795--1810, 2011.
+
+\bibitem[{\textit{Wolfe et~al.}(2008)\textit{Wolfe, Cessi, McClean, and
+  Maltrud}}]{wolfe2008}
+Wolfe, C.~L., P.~Cessi, J.~L. McClean, and M.~E. Maltrud, {Vertical heat
+  transport in eddying ocean models}, \textit{Geophys. Res. Lett.},
+  \textit{35}(23), L23,605, 2008.
+
+\bibitem[{\textit{Wunsch and Ferrari}(2004)}]{Wunsch2004}
+Wunsch, C., and R.~Ferrari, {Vertical Mixing, Energy, and the General
+  Circulation of the Oceans}, \textit{Annu. Rev. Fluid Mech.}, \textit{36}(1),
+  281--314, 2004.
+
+\bibitem[{\textit{Zhai and Munday}(2014)}]{Zhai2014}
+Zhai, X., and D.~R. Munday, {Sensitivity of Southern Ocean overturning to wind
+  stress changes: Role of surface restoring time scales}, \textit{Ocean
+  Model.}, \textit{84}, 12--25, 2014.
+
+\end{thebibliography}

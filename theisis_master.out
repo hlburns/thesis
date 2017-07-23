@@ -1,0 +1,65 @@
+\BOOKMARK [0][-]{Doc-Start}{Abstract}{}% 1
+\BOOKMARK [0][-]{Doc-Start}{Acknowledgements}{}% 2
+\BOOKMARK [0][-]{chapter*.1}{Declaration of authorship}{}% 3
+\BOOKMARK [0][-]{section*.2}{Contents}{}% 4
+\BOOKMARK [0][-]{section*.3}{List of Tables}{}% 5
+\BOOKMARK [0][-]{section*.4}{List of Figures}{}% 6
+\BOOKMARK [0][-]{section*.4}{Introduction}{}% 7
+\BOOKMARK [1][-]{figure.caption.6}{Introduction to Southern Ocean dynamics}{section*.4}% 8
+\BOOKMARK [2][-]{section*.7}{Eddies in the the Southern Ocean}{figure.caption.6}% 9
+\BOOKMARK [2][-]{section*.7}{Meridional Overturning Circulation}{figure.caption.6}% 10
+\BOOKMARK [2][-]{figure.caption.8}{ACC}{figure.caption.6}% 11
+\BOOKMARK [2][-]{figure.caption.8}{Eddy saturation.}{figure.caption.6}% 12
+\BOOKMARK [1][-]{figure.caption.8}{Residual Mean and Transformed Eulerian Mean Theory}{section*.4}% 13
+\BOOKMARK [2][-]{section*.9}{Assumptions and approximations:}{figure.caption.8}% 14
+\BOOKMARK [2][-]{section*.15}{Eliassen-Palm theorem}{figure.caption.8}% 15
+\BOOKMARK [2][-]{section*.15}{Transformed Eulerian Mean theory}{figure.caption.8}% 16
+\BOOKMARK [1][-]{section*.16}{TEM in The Surface Layers}{section*.4}% 17
+\BOOKMARK [1][-]{section*.16}{Motivation}{section*.4}% 18
+\BOOKMARK [1][-]{figure.caption.17}{Outline of model}{section*.4}% 19
+\BOOKMARK [2][-]{section*.18}{MITgcm overview}{figure.caption.17}% 20
+\BOOKMARK [2][-]{figure.caption.19}{Considering model set up}{figure.caption.17}% 21
+\BOOKMARK [1][-]{section*.25}{Channel model set up}{section*.4}% 22
+\BOOKMARK [0][-]{figure.caption.27}{Diabatic eddies}{}% 23
+\BOOKMARK [1][-]{section*.28}{Introduction}{figure.caption.27}% 24
+\BOOKMARK [1][-]{figure.caption.29}{Theory}{figure.caption.27}% 25
+\BOOKMARK [1][-]{figure.caption.30}{Model Setup}{figure.caption.27}% 26
+\BOOKMARK [1][-]{table.caption.31}{Overturning response}{figure.caption.27}% 27
+\BOOKMARK [1][-]{figure.caption.35}{Heat budget}{figure.caption.27}% 28
+\BOOKMARK [1][-]{figure.caption.38}{Controls on diabatic eddies}{figure.caption.27}% 29
+\BOOKMARK [1][-]{figure.caption.41}{Conclusions}{figure.caption.27}% 30
+\BOOKMARK [0][-]{figure.caption.41}{Surface Conditions}{}% 31
+\BOOKMARK [1][-]{section*.42}{The influence of the surface forcing formulation.}{figure.caption.41}% 32
+\BOOKMARK [2][-]{section*.43}{Set up}{figure.caption.41}% 33
+\BOOKMARK [2][-]{section*.43}{Influence on overturning and diabatic eddies}{figure.caption.41}% 34
+\BOOKMARK [2][-]{figure.caption.46}{Summary}{figure.caption.41}% 35
+\BOOKMARK [1][-]{figure.caption.46}{Varying the surface forcing}{figure.caption.41}% 36
+\BOOKMARK [2][-]{figure.caption.47}{Model set up}{figure.caption.46}% 37
+\BOOKMARK [2][-]{table.caption.52}{Overturning}{figure.caption.46}% 38
+\BOOKMARK [2][-]{figure.caption.75}{Conclusions on varying the surface boundary condition}{figure.caption.46}% 39
+\BOOKMARK [0][-]{figure.caption.79}{Northern stratification}{}% 40
+\BOOKMARK [1][-]{section*.80}{Set up}{figure.caption.79}% 41
+\BOOKMARK [2][-]{section*.80}{Preliminary experiments}{figure.caption.79}% 42
+\BOOKMARK [2][-]{figure.caption.82}{Direct alteration of northern boundary stratification}{figure.caption.79}% 43
+\BOOKMARK [2][-]{figure.caption.83}{Overturning response}{figure.caption.79}% 44
+\BOOKMARK [2][-]{figure.caption.95}{Energetics}{figure.caption.79}% 45
+\BOOKMARK [2][-]{figure.caption.99}{Conclusions altered boundary conditions}{figure.caption.79}% 46
+\BOOKMARK [0][-]{figure.caption.99}{Other Considerations}{}% 47
+\BOOKMARK [1][-]{section*.100}{Including topography}{figure.caption.99}% 48
+\BOOKMARK [2][-]{section*.100}{Set up}{figure.caption.99}% 49
+\BOOKMARK [2][-]{table.caption.102}{Overturning}{figure.caption.99}% 50
+\BOOKMARK [2][-]{figure.caption.106}{Dynamics}{figure.caption.99}% 51
+\BOOKMARK [1][-]{figure.caption.111}{ACC}{figure.caption.99}% 52
+\BOOKMARK [2][-]{section*.112}{The ACC response to altered northern boundary conditions}{figure.caption.111}% 53
+\BOOKMARK [0][-]{figure.caption.115}{Discussion}{}% 54
+\BOOKMARK [1][-]{section*.116}{Closing the Northern Boundary}{figure.caption.115}% 55
+\BOOKMARK [1][-]{figure.caption.118}{The Surface Heat Forcing}{figure.caption.115}% 56
+\BOOKMARK [1][-]{figure.caption.118}{Effects of Topography}{figure.caption.115}% 57
+\BOOKMARK [1][-]{figure.caption.118}{Summary and Future Work}{figure.caption.115}% 58
+\BOOKMARK [0][-]{section*.119}{Acronyms}{}% 59
+\BOOKMARK [0][-]{section*.121}{Symbolslist}{}% 60
+\BOOKMARK [0][-]{section*.123}{Glossary}{}% 61
+\BOOKMARK [0][-]{chapter*.125}{Bibliography}{}% 62
+\BOOKMARK [0][-]{section*.126}{Appendices}{}% 63
+\BOOKMARK [1][-]{section*.127}{Advective assumptions on model grid}{section*.126}% 64
+\BOOKMARK [1][-]{equation.a..1.4}{Eaxmple datafile}{section*.126}% 65

@@ -1,0 +1,520 @@
+\chapter[Introduction]{Introduction}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\textcolor{red}{\textbf{To be covered:}}
+%\begin{itemize}
+%\item[]\textcolor{red}{Introduction to Southern Ocean Dynamics, its role in global ocean and climate, complexities with eddies and mean flow, further complexities...}
+%\item[]\textcolor{red}{Residual mean theory and TEM theory, the  Assumptions made, MR03 Ferrari and Plumb etc}
+%\item[]\textcolor{red}{Outline the the hypothesis here, the motivation and the main questions to focus on}
+%\item[]\textcolor{red}{Out line the model, introduce the MITgcm and how to set up the model for this purpose}
+%\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Overview}
+
+The \gls{SO} is unique, containing a band of latitudes of no continuous
+topography above 1800m below sea level \citep{hallberg2006}. Strong
+polar Westerlies allow for a strong zonal \gls{ACC} that flows Eastwards around the continent between 56$^o$ \& 62$^o$ S \citep{johnson1989}. This lack of topography and zonal flow results in unique dynamics that play and important role in connecting all the ocean basins as well as completing the global \gls{MOC} \citep{marshall2012} as seen in \fref{fig:MS2012}. The Southern Ocean is an important sink of $CO_2$ with the \gls{ACC} accounting for around 40$\%$ of the global uptake \citep{Mignone2006}. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{../../Figures/MOC2012.png}
+\caption{Southern Ocean's role in the global overturning schematic from \cite{marshall2012}, with blues and purples representing denser water masses and reds and yellows less dense water masses.}
+\label{fig:MS2012}
+\end{figure}
+
+Changes in the Southern Ocean overturning would alter the Southern Ocean carbon sink changing the upwelling of deep waters rich in Dissolved Inorganic Carbon (DIC), and altering the partial pressure of CO$_2$ in the ocean. Between 1981 and 2004 the Southern Ocean sink has decreased by 0.08 petagrams of C per year due to increased wind stress showing that the CO$_2$ sink cannot be assumed to stay constant\citep{lequere2007}. 
+
+However the dynamics of the Southern Ocean are complex and poorly understood, with sparse observations in time and space, it is therefore of great interest to fully understand the dynamics of the Southern Ocean and the response to future climate change. Of particular interest in this thesis is how changes in the northern Hemisphere might alter the Southern Ocean. Inter-hemispheric links between the SO ROC and Northern Hemisphere circulation were demonstrated in a number of studies \citep{Gnanadesikan2000,Wolfe2011}. We wish to identify the SO processes involved in this connection. First, we give a basic overview of Southern Ocean dynamics and theory to give context for our investigations before outlining modelling techniques used to investigate them. 
+
+
+\section{Introduction to Southern Ocean dynamics}
+
+As the Southern Ocean plays such a vital role in heat and carbon transport and the global overturning circulation there has been much interest over the years to understand it's complex dynamics and how the circulation might change in response to a changing climate. The SO is weakly stratified with very strongly tilted isopycnals across the ACC due to a lack of continental boundaries. This large isopycnal tilt supports a large geostrophic flow in the ACC and provides a route for deep water to move along isopycnals towards the surface. Many isopycnals outcrop and this allows for many density classes to feel direct buoyancy and momentum forcing from the atmosphere, allowing forcing of density classes well below the thermocline. 
+
+Strong winds generate sloping isopycnals which are maintained by a lack of continental boundaries. Wind stress is around a maxima at 50$^o$S, which corresponds to a change in sign of wind stress curl ($\nabla \times \tau$). The Southern Hemisphere westerly $\tau$ is associated with equatorward Ekman transport, this leads to a surface divergence where the $\nabla \times \tau < 0$ and convergence where $\nabla \times \tau > 0$. Thus a weak vertical velocity shoals isopycnals to the South and depresses them to the North critical for the ACC and the overturning circulation. In the Northern Hemisphere mid-latitudes this is balanced by the development of a mean meridional velocity supported by a zonal pressure gradient, that relaxes isopycnal tilt. In the SO, there is no zonal pressure gradient to force a mean meridional flow. However some local anomalies in the zonal pressure gradient do arise and are crucial for  the ACC.
+
+\subsection{Eddies in the the Southern Ocean}
+
+Eddies play a significant and vital role in the Southern Ocean. In this thesis turbulent flows on spatial scales greater than or equal the \gls{Rsbrad} ($O$ 10km in the SO ) are referred to as mesoscale eddies, distinct from the mean flow by spatial and temporal perturbations rather than coherent eddies alone. Often referred to as a deviation from the time mean, denoted by a prime ($'$) symbol.
+
+Oceanic eddies derive their energy primarily from baroclinic and barotropic instability which has an important impact on the large scale circulation. In principle, energy exchange between waves and mean flow can take place in both directions (to and from the mean flow).
+%Figure here 
+The energy exchange related to the Reynolds stress ($u'v'$) takes both signs, whereas the term related to the horizontal eddy density flux ($v'\rho '$) is predominantly positive so that energy is transferred from the mean flow to the waves, meaning that the mean flow is unstable to small perturbations. Two physically different mechanisms can be distinguished, corresponding to energy transfer, namely barotropic and baroclinic instability, both of which are important.
+Sloping isopycnals act as a source of potential energy which can be released as kinetic energy. If two fluid parcels are exchanged and a denser fluid parcel sinks to be replaced with less dense fluid then kinetic energy is released through a vertical exchange or fluid parcels can move along a sloping path between isopycnals maximising at a slope of half that of the isopycnal slope in a slantwise exchange. The slantwise exchange normally transfers heat poleward. This occurs through baroclinic instability. 
+
+Eddies can also be generated through horizontal shear in the horizontal velocity though barotropic instability. Barotropic instability is associated with the transport term: $$ -\frac{\partial U}{\partial y} <u'v'> $$ and can only occur if there is a horizontal shear of the background velocity i.e. \begin{equation*}
+ -\frac{\partial U}{\partial y}  \neq 0 . 
+\end{equation*} Since no vertical shear of U is needed (in contrast to baroclinic instability) a barotropic background current can produce the instability. Analysis of the energetics of the mean current shows that the energy is exchanged with the kinetic energy of the mean flow.
+
+One of the important consequences of barotropic instability is that flows with small length scales are likely to be unstable. In fact, it can be shown that interacting short Rossby waves are unstable \citep{Gill1974a}, which helps to explain the turbulent nature of mesoscale motions in the ocean.
+
+With both sloping isopycnals and strong barotropic flows, there is a very large amount of eddy activity in the SO playing an important role in both the ACC and the \gls{SO} overturning.
+
+\subsection{Meridional Overturning Circulation}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{../../Figures/SpeerSOMC.png}
+\caption{Southern Ocean circulation schematic from \citet{speer2000}. Showing the main water masses and overturning circulations with the buoyancy forcing. Acronyms are defined in the glossary section for reference.}
+\label{fig:SpeerSOMOC}
+\end{figure}
+
+One of the motivations of this work is understanding the overturning response to altered ocean physics to begin to understand how this might change in future climates. A general schematic is shown in \fref{fig:SpeerSOMOC} consisting of an upper and lower cell that is counter rotating \citep{Meredith2012}.  In the lower cell \gls{NADW} upwells near Antarctica and is converted to \gls{AABW} that sinks to the deep ocean. In the upper cell, the upwelling water is converted into \gls{AAIW} and \gls{SAMW} through the addition of heat and fresh water in the surface waters, which have a northward Ekman flow. The Upper cell is controlled by eddy and air-sea forcing \citep{rintoul2012southern} and this upper cell the main focus of the overturning in this thesis.
+
+Strong polar westerlies drive a mean Ekman overturning circulation ($\overline{\Psi}$) that steepens isopycnals while baroclinic instability drives an opposing eddy-induced circulation ($\Psi ^*$) \citep{Marshall2003} and shown in eddy permitting and resolving models \cite{hallberg2006}. This partly compensates the ekman circulation leading to a small residual circulation that acts to advect tracers along mean isopycnals \citep{speer2000}:
+
+\begin{equation}
+\psi_{res}=\underbrace{\overline{\psi}}_{mean}+\underbrace{\psi ^*}_{eddy}.
+\label{eq:res1}
+\end{equation}
+ 
+Exactly how eddies interact to contribute to the mean flow is outlined in \fref{sec:TEM}. Due to this residual nature of the Southern Ocean overturning the Meridional Overturning Circulation is referred to as the \gls{SOROC}. \citet{Toggweiler2008}, \citet{Marshall2003} and \citet{speer2000} showed that in the limit of weak interior diapycnal mixing the SO ROC transport must be along mean isopycnal surfaces and can only cross isopycnals in the surface diabatic layer and by deep convective mixing outside the Southern Ocean to connect the surface branch with the deep branch \fref{fig:SpeerSOMOC}. This limit does not apply to the deep cell of the SO ROC, associated with Antarctic Bottom Water formation, but is relevant for the pole-to-pole overturning circulation associated with North Atlantic Deep Water formation \citep{Wolfe2011}. This simple residual-mean decomposition allows for the parametrisations of eddies combining Gent-McWilliams and Green and Stone schemes \citep{Visbeck1997}. These parametrisations which have been refined over the years \citep[e.g.]{jansen2015}, but all assume largely adiabatic eddy fluxes. 
+
+Some models show up to a 70\% disparity in models using full eddy compensation or no eddy compensation, which would have major implications for future anthropogenic CO$_2$ uptake \citep{lequere2007}. Making it of great interest
+
+\subsection{ACC}
+
+In contrast to gyre circulations strong zonal flows are parallel to wind forcing $\textbf{u} \cdot \, \tau _s$ generating the ACC, the Worlds longest and strongest current system, extending 24,000 km long and around 130$\pm $ 10 Sv \citep{whitworth1985}. Like much of Southern Ocean dynamics the ACC is also unique, barotropicly flowing Eastward at almost all depths \footnote{Surface pressure gradient and stratification yields a positive shear to reduce the velocity with depth but, rarely enough to lead to a reversal.}%Cite?
+. Although the  ACC is actually composed of filaments of jet streams bound by fronts, the ACC is often simplified to one flow that can be approximated in a model by channel domain with periodic flow in the zonal direction. From a momentum balance, \fref{eq:mombalance}, it can be seen that wind stress is balanced by bottom form stress that arises from correlation between zonal gradients in bottom topography and pressure anomalies.
+\begin{equation}
+\overline{\tau}^{x} _{wind} = p_b \frac{\overline{\partial \eta_b}}{\partial x},
+\label{eq:mombalance}
+\end{equation}  
+where $\tau ^x _{wind} $ is the zonal wind stress, P$_b$ is bottom pressure and $\eta _b$ is the bottom topography. High pressure anomalies in SSH and are found upstream of bathymetric features and low pressure anomalies are found in lee of topography. The bottom form stress transfers momentum directly from the ocean into the solid earth. If topography is removed the ACC is seen to be roughly an order of magnitude larger than the observed values as first pointed out in \citet{munk1951}. 
+
+\subsection{Eddy saturation.}
+
+In recent years there has been much debate on the response of the ACC and SO ROC to increasing wind stress due a strong positive trend in the \gls{SAM} index \citep{thompson2002}, this was one of the strongest observed climatic trends \cite{Sallee2010}. However with longer time series of the SAM index and the inclusion of satellite observations show large inter annual and decadal variability suggest this trend is not as dramatic as it first appeared in the late 1990s \citep{Hogg2015}. None the less variations in response between the the ACC and the SO overturning to intensification of the polar westerlies allowed for a long of research into the mechanisms of eddies in the Southern Ocean and their role in Southern Ocean dynamics. With increasing wind stress there has been little response observed in isopycnal slope \citep{boning2008}. It is thought there is a near linear response in \gls{EKE} to increased \gls{symb:Tau}. Rather than accelerating the ACC transport, the momentum imparted by the wind is transferred to the bottom via interfacial form stress \cite{meredith2006}. \citet{morrison2013} showed a marked difference between eddy saturation and eddy compensation (ekman cancelling), indicating the differing depth scales for eddy driving of ACC and overturning can lead to differing responses to changing momentum forcing. Making the ACC response to altered forcing a worth while investigation as it may not have a similar response to the the SO ROC. 
+
+\section{Residual Mean and Transformed Eulerian Mean Theory}
+
+Due the the unique dynamics of the Southern Ocean the large scale mean circulation is influenced by the small scale time-varying components. Therefore time varying eddies need to be taken into account to establish the residual circulation rather than the fictitious deacon cell \citep{Doos1994}. Thus tend to approach SO dynamics in terms of residuals. This approach will be used through out this thesis and the background theory is outlined here.
+
+\subsection{Assumptions and approximations:}
+%% Explain why we need to make these !! (better justification
+First we outline the major assumptions and approximations used in order to simplify the equations used.
+
+\subsubsection*{Boussinesq approximation}
+
+We assume a Boussinesq fluid (Volume is conserved) as variations in density with depth are just 2-3 \% , $ \rho _0 (z)$ becomes $ \rho _0$ allowing the boussinesq equations:
+
+\begin{equation}
+\rho _0 \frac{Du}{Dt} = -2 \rho _0 \Omega \times u - \nabla \tilde{p} - \tilde{p} \nabla \Phi + \mathcal{F},
+\label{eq:BQ1}
+\end{equation}
+\begin{equation}
+\nabla \cdot u = 0,
+\label{eq:BQ2}
+\end{equation}
+\begin{equation}
+\rho _0 \frac{D (\theta, S)}{Dt} = ( \mathcal{G_S}, \mathcal{G_{\theta}}),
+\label{eq:BQ3}
+\end{equation}
+\begin{equation}
+\tilde{\rho} = F ( S, \theta, \rho _0 ) + F(S_0, \theta _0, \rho _0 (z)),
+\label{eq:BQ4}
+\end{equation}
+where \ref{eq:BQ2} is the \gls{incompressibility} equation in an adiabatic system.  The symbols are defined in the list of symbols section in the glossary.
+\subsubsection*{Small rossby number}
+Rossby number is small meaning the Coriolis frequency is important.
+\begin{equation}
+R_o=\frac{U}{f_o L} << 1 ,
+\end{equation}
+where $R_o$ is the rossby number.
+\subsubsection*{F-plane:}
+The $\beta $ effect is small so that: 
+\begin{equation}
+\frac{\beta L}{f} \leq R_o
+\end{equation}
+
+
+\subsubsection*{Static stability}
+
+\gls{Brunt Vaisala frequency} ($N^2$) is a function of depth (z) only so
+\begin{equation}
+N^2 (z) = \frac{\partial b}{\partial z} 
+\end{equation}
+where b is buoyancy.
+
+
+\subsubsection*{Hydrostatic balance}
+\begin{equation}
+\frac{\partial \psi}{\partial z}=\frac{b}{f_o}
+\end{equation}
+
+\subsection*{Quasi-Geostrophy}
+\label{sec:QG}
+Assume \gls{QG} so there is no mean advection and no vertical component of eddy \gls{PV} flux. QG assumes small rossby number, which we already assume along side:
+
+\begin{itemize}
+\item \textbf{Small aspect ratio:} Isopycnals have small slope as horizontal dimensions of ocean basins are much larger than vertical dimensions. Gives small vertical motions: \begin{equation}
+\frac{\partial_x b}{\partial_z b}\, \& \,\frac{\partial_y b}{\partial_z b} \leq R_o 
+\end{equation}
+\item \textbf{Small Ek number:} Ek $<<$  1. 
+\item stratified background state 
+\item all effects of compressibility neglected
+\end{itemize}
+
+These assumptions allow us to write a geostrophic streamfunction:
+
+The horizontal velocity divergence is 0.
+
+
+\begin{equation}
+\frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} =0 .
+\end{equation}
+We can write:
+
+\begin{equation}
+u=-\frac{\partial \psi}{\partial y}, \quad v=\frac{\partial \psi}{\partial x}, \quad w=o ,
+\end{equation}
+
+where $\psi$ is the geostrophic stream function:
+\begin{equation}
+\psi = \frac{\rho -\rho_o(z)}{\rho_of_o}
+\end{equation}
+
+Now starting from the \gls{QG} equations:
+\begin{equation}
+\underbrace{D_g}_\text{time derivative}u-\beta yv - \underbrace{f_o v_a}_\text{ageostrophic velocities} = \underbrace{\mathcal{G}_x}_\text{External forcing on momentum},
+\label{eq:qg1}
+\end{equation}
+\begin{equation}
+D_gv-\beta yu - f_o u_a = \mathcal{G}_y,
+\label{eq:qg2}
+\end{equation}
+\begin{equation}
+\frac{\partial u_a}{\partial x} + \frac{\partial v_a}{\partial y} + \frac{\partial w_a}{\partial z} = 0,
+\label{eq:qg3}
+\end{equation}
+\begin{equation}
+D_g +N^2 w_a = \underbrace{\mathcal{B}}_{\mathclap{\text{nonconservativie buoyancy forces}}} - \frac{\partial \overline{v'b'}}{\partial y}.
+\label{eq:qg4}
+\end{equation}
+
+Where $D_g$ is the material derivative: (
+
+\begin{equation}
+D_g=\frac{\partial}{\partial t} + u\frac{\partial}{\partial x} + v \frac{\partial}{\partial y}.
+\end{equation}
+
+Other symbols are define in the list of symbols).
+The ageostrophic velocity is the difference between the actual velocity and the geostrophic one. The external forcing ($\mathcal{G}$) arises from wind, stress and friction etc. The non-conservative buoyancy forcing ($\mathcal{B}$) is from small scale mixing, and surface heat fluxes etc. 
+
+Combining this using \gls{PV}:
+\begin{equation}
+q = f_o + \beta y + \frac{\partial v}{\partial x} - \frac{\partial u}{\partial y} + f_o \frac{\partial \frac{b}{N^2}}{\partial z}
+\label{eq:PV}
+\end{equation}
+and substituting the \gls{QG} equations into: 
+\begin{equation}
+\chi = \frac{\partial \mathcal{G}_y}{\partial x}-\frac{\partial \mathcal{G}_x}{\partial y} + \frac{\partial u}{\partial y} + f_o \frac{\partial \mathcal{B}}{N^2}{\partial z}
+\end{equation}
+
+This gives the equation for Quasi-geostrophic Potential Vorticity (QGPV).
+If  $\mathcal{G}=0$ and $\mathcal{B}=0$ then q is conserved (conservative flow). If flow is not conserved then $\chi$ represents local sources and sinks of q (viscous and diabatic effects).
+\begin{equation}
+D_g q= \chi
+\label{eq:QGPV}
+\end{equation}
+
+
+
+\subsection{Eliassen-Palm theorem}
+
+For small amplitude motions we can use:
+\begin{equation}
+\overline{u}(y,t)=\partial _y \overline{\psi}
+\end{equation}
+\begin{equation}
+\partial _y \overline{b} = -f_o \partial _z \overline{u},
+\end{equation}
+
+then substituting into \fref{eq:PV}. We get the mean PV in terms of the geostrophic streamfunction:
+\begin{equation}
+\overline{q}=f_o + \beta y + \frac{\partial^2 \psi}{\partial y^2}+\frac{\partial^2 \psi}{\partial z^2}\frac{\partial \frac{f^2_o}{N^2}}{\partial z}.
+\end{equation}
+
+As $\psi$ can be decomposed into eddy and mean contributions:
+
+\begin{equation*}
+\psi '=\psi - \overline{\psi}
+\end{equation*}
+
+The eddy vorticity ($q'$) can be described as:
+
+\begin{equation}
+q'=f_o + \beta y + \frac{\partial^2 \psi '}{\partial y^2}+f \frac{\partial^2 \psi}{\partial z^2}\frac{\partial \frac{f^2_o}{N^2}}{\partial z}
+\end{equation}
+
+and the eddy velocity as:
+
+\begin{equation}
+v'=\frac{\partial \psi '}{\partial x} .
+\end{equation}
+
+So the eddy PV flux can be described by:
+
+\begin{equation}
+\overline{v'q'}= \frac{\partial (-\overline{u'v'})}{\partial y} + \frac{\partial \frac{f_o}{N^2}(\overline{v'b'})}{\partial z} .
+\end{equation}
+
+This can be simplified defining the Eliassen-Palms flux $\textbf{F}$ as:
+\begin{equation}
+\textbf{F}= \begin{pmatrix}
+            -\overline{u'v'} \\ \frac{f_o}{N^2}\overline{v'b'}
+            \end{pmatrix},
+\end{equation}
+
+where the meridional component is the negative of the zonal eddy momentum and the vertical is proportional to the meridional eddy buoyancy flux.
+
+So the eddy PV flux can be written simply as:
+\begin{equation}
+\overline{v'q'}=\nabla . \textbf{F} .
+\end{equation}
+
+Now linearising the QGPV ~\fref{eq:QGPV} we get:
+
+\begin{equation}
+\frac{\partial q'}{\partial t} + \overline{u}\frac{\partial q'}{\partial x} + \overline{v}\frac{\partial \overline{q}}{\partial y}=\chi .
+\end{equation}
+
+Then we rearrange by multiplying by q' and averaging we get:
+
+\begin{equation}
+\underbrace{\frac{\partial q'^{2}}{2 \partial t} +  \underbrace{\cancel{\overline{\overline{u}q'}\frac{\partial q'}{\partial x}}}_\text{time av removes} + \overline{v'q'}\frac{\partial \overline{q}}{\partial y}}_\text{=0 when waves are steady}= \underbrace{\overline{\psi ' q'}}_{\mathclap{\text{ =0 if waves are conservative}}},
+\end{equation}
+
+which is the eddy enstropy equation. If waves are non divergent then $\nabla . F = 0$, meaning there is no eddy PV flux ($\overline{v'q'} = 0$).
+
+This allows us to show eddies impacting the mean zonal circulation in the QGPV budget\footnote{For small, steady and conservative waves the eddy flux doesn't impact the mean flow (non acceleration theorem).}.:
+
+\begin{equation}
+\frac{\partial \overline{q}}{\partial t} + \frac{\partial \overline{v'q'}}{\partial y} = \overline{\psi} .
+\end{equation}
+
+
+
+To simplify the problem we introduce \gls{TEM} theory. 
+
+
+\subsection{Transformed Eulerian Mean theory}
+\label{sec:TEM}
+Most of this theory is outlined in \citet{Marshall2003}. Starting from the QG equations outlined in ~\fref{sec:QG}. Eddy buoyancy and momentum fluxes change the mean zonal state through the terms $\frac{\partial (\overline{v'b'})}{\partial y}$ and $\frac{\partial (\overline{u'v'})}{\partial y}$ in equations \fref{eq:qg4} and \fref{eq:qg1}.\footnote{Sometimes there is no eddy momentum fluxes but thermal wind balance insists both momentum and buoyancy fluxes are required to change the mean flow so eddies will drive the ageostrophic terms as well inducing an ageostrophic mean motion.} 
+
+If we redefine a mean meridional ageostrophic circulation.
+
+by taking the mean buoyancy budget:
+\begin{equation*}
+\frac{\partial\overline{b}}{\partial t} + \overline{w_a}N^2 = \overline{\mathcal{B}}-\frac{\partial (\overline{v'b'})}{\partial y}.\tag{ref{eq:qg3} \textit{revisited}}.
+\end{equation*}
+
+Using ~\fref{eq:cont} and defining the ageostrophic streamfunction as:
+
+\begin{equation}
+(\overline{v_a},\overline{w_a})=(\frac{\partial \overline{\psi} }{\partial y},\frac{\partial \overline{\psi}}{\partial z}).
+\end{equation}
+
+And putting back into the mean buoyancy budget \fref{eq:qg4}
+
+\begin{equation*}
+\frac{\partial\overline{b}}{\partial t} + \frac{\partial \overline{\psi}}{\partial z}N^2 + \frac{\partial (\overline{v'b'})}{\partial y} = \overline{\mathcal{B}},
+\end{equation*}
+
+
+assuming static stratification so that $N^2=N^2(z)$ and 
+that $\frac{\partial \overline{v_a}}{\partial y} = - \frac{\partial \overline{w_a}}{\partial z} =\frac{\partial \overline{\psi}}{\partial y} $
+Gives:
+
+\begin{equation}
+\frac{\partial\overline{b}}{\partial t} + \frac{\partial (\overline{\psi } N^2 +\overline{v'b'})}{\partial y} = \overline{\mathcal{B}}
+\end{equation}
+
+Moving $N^2$ out of brackets as it doesn't vary with latitude (static stability assumption):
+
+\begin{equation}
+\frac{\partial\overline{b}}{\partial t} + \frac{\partial (\overline{\psi} +\frac{\overline{v'b'}}{N^2})}{\partial y}N^2 = \overline{\mathcal{B}}.
+\end{equation}
+
+Here the term $\frac{\overline{v'b'}}{N^2}$ is the eddy flux term (giving a mean advection) so we can define $\psi ^* $ as the eddy induced mean stream function:
+
+\begin{equation}
+\psi ^* = \frac{\overline{v'b'}}{N^2}
+\label{eq:eddyflux}
+\end{equation}
+
+And the residual stream function is defined as:
+
+\begin{equation}
+\underbrace{\psi _{res}}_\text{residual}= \underbrace{\overline{\psi}}_\text{ageostrophic} + \underbrace{\psi ^*}_\text{eddy}
+\end{equation}
+
+Now we can define a residual circulation:
+\begin{equation}
+(\overline{v_{res}},\overline{w_{res}})=(\frac{\partial \psi _{res}}{\partial y},\frac{\partial \psi _{res}}{\partial z})
+\end{equation}
+
+So if we now put $\psi _{res}$ back into the mean buoyancy budget \fref{eq:qg4}, the eddy terms fall out:
+
+\begin{equation*}
+\frac{\partial\overline{b}}{\partial t} + \overline{w_a}N^2= \overline{\mathcal{B}}- \underbrace{\frac{\partial \psi ^*}{\partial y}}_\text{$\psi _{res}$ - $\overline{\psi}$}N^2 
+\end{equation*}
+
+\begin{equation*}
+\frac{\partial\overline{b}}{\partial t} + \overline{w_a}N^2= \overline{\mathcal{B}}- \underbrace{\frac{\partial \psi _{res}}{\partial y}}_\text{$\overline{w^*}$}N^2 -  \underbrace{\frac{\partial \overline{\psi}}{\partial y}}_\text{$\overline{w_a}$}N^2
+\end{equation*}
+
+\begin{equation*}
+\frac{\partial\overline{b}}{\partial t} + \cancel{\overline{w_a}N^2}= \overline{\mathcal{B}}-\overline{w_{res}}N^2 - \cancel{\overline{w_a}N^2}
+\end{equation*}
+
+Which removes the eddy terms in the mean buoyancy budget:
+\begin{equation}
+\frac{\partial\overline{b}}{\partial t} + \overline{w_{res}}N^2= \overline{\mathcal{B}} 
+\label{eq:mbbres}
+\end{equation}
+
+The equations of momentum ``transformed" :
+
+\begin{equation}
+\frac{\partial \overline{u}}{\partial t} - f_o \overline{v^*} = \overline{\mathcal{G}_x}+\underbrace{\overline{v'q'}}_\text{$\nabla . \textbf{F}$ eddy forcing}
+\label{eq:momres}
+\end{equation}
+\begin{equation}
+f_o \frac{\partial \overline{u}}{\partial z} = -\frac{\overline{b}}{\partial y}
+\end{equation}
+\begin{equation}
+\frac{\partial \overline{v^*}}{\partial y} + \frac{\partial \overline{w^*}}{\partial z} = 0
+\label{eq:cont}
+\end{equation}
+and the mean buoyancy budget
+\begin{equation*}
+\frac{\partial\overline{b}}{\partial t} + \overline{w^*}N^2= \overline{\mathcal{B}}.
+\end{equation*}
+
+So from the term $\nabla . \textbf{F}$ in \fref{eq:momres} showing that if the flow is conservative (non accelerational then there are no eddy influences!).
+
+\subsubsection*{Momentum and buoyancy balances}
+
+The mean buoyancy budget \footnote{Zonal average refer to stream wise averages in the presence of topography, so that eddy fluxes are transient.}
+\begin{equation}
+\frac{\overline{v}\partial \overline{b}}{\partial y} + \frac{\overline{w}\partial \overline{b}}{\partial z} + \underbrace{\frac{\partial \overline{v'b'}}{\partial y}}_\text{EP flux} + \frac{\partial \overline{w'b'}}{\partial y} = \underbrace{\frac{\partial B}{\partial z}}._\text{Buoyancy forcing due to air-sea interactions and small scale mixing}
+\end{equation}
+In terms of a residual circulation:
+\begin{equation}
+\psi _{res} = \overline{\psi} +\psi ^*
+\end{equation}
+\begin{equation}
+\psi ^*=\frac{\overbrace{-w'b'}^\text{eddy flux}}{\underbrace{b_y}}_\text{mean meridional buoyancy gradient}
+\end{equation}
+Assuming that $\overline{v'b'}$ is in the $\overline{b}$ surface (assume all the eddy fluxes are along isopycnals) so that $\nabla . \overline{v'b'}$ can be written as fluxes along isopycnals as advective transport $\textbf{v}^* \nabla \overline{b}$:
+\begin{equation}
+u' \frac{\partial \overline{b}}{\partial x} + v' \frac{\partial \overline{b}}{\partial y} + w' \frac{\partial \overline{b}}{\partial z} 
+\end{equation}
+And replacing $\overline{v}$ and $\overline{w}$ with:
+\begin{equation*}
+\overline{w} = \frac{- \partial \psi_{res}}{\partial z} + \frac{- \partial \psi ^*}{\partial z} 
+\end{equation*}
+\begin{equation*}
+\overline{v} = \frac{- \partial \psi_{res}}{\partial y} + \frac{- \partial \psi ^*}{\partial y} 
+\end{equation*}
+Then decomposing the eddy flux $(v'b',w'b')$ into along $\overline{b}$ components: $(\frac{\overline{w'b'}}{S_p},\overline{w'b'})$ and horizontal components $(\overline{v'b'}-\frac{\overline{w'b'}}{S_p},0)$  where:
+\begin{equation}
+S_p= \frac{-\overline{b_y}}{\overline{b_z}}.
+\end{equation}
+The buoyancy budget can be written in terms of a residual flux:
+\begin{equation*}
+(\frac{\partial \psi _{res}}{\partial y}) + (\frac{\partial \psi ^*}{\partial z}) \frac{\partial \overline{b}}{\partial y} + (\frac{\partial \psi ^*}{\partial z} -  \frac{\partial \psi _{res}}{\partial z})\frac{\partial \overline{b}}{\partial z} + \frac{\partial(\overline{v'b'}-\frac{\overline{w'b'}}{S_p},\frac{\overline{w'b'}}{S_p})}{\partial y}+ \frac{\partial (\overline{w'b'},0)}{\partial z}= \frac{\partial B}{\partial z}
+\end{equation*}
+If we define $\mu $ as:
+\begin{equation*}
+\mu=(\frac{\overline{w'b'}}{\overline{v'b'}})(\frac{1}{S_p})
+\end{equation*}
+We get:
+\begin{equation*}
+\underbrace{(\frac{\partial \psi _{res}}{\partial y}) \frac{\partial \overline{b}}{\partial y} + (\frac{\partial \psi _{res}}{\partial z})\frac{\partial \overline{b}}{\partial z}}_\text{Jacobian $J(\psi_{res} , \overline{b})$} = \frac{\partial B}{\partial z} - \frac{\partial (\overline{v'b'}-\frac{\overline{w'b'}}{S_p})}{\partial y}
+\end{equation*}
+And substituting in $\mu$ 
+\begin{equation}
+J(\psi_{res} , \overline{b}) = \frac{\partial B}{\partial z} - \frac{\partial (1-\mu )\overline{v'b'}}{\partial y}
+\label{eq:mr03bbudget}
+\end{equation}
+When $\mu = 1$ then $\frac{\partial (0)}{\partial y}$ then the eddy flux is solely along $\overline{b}$ surfaces and there are no diapycnal fluxes (pure advection). (The interior = adiabatic so $\mu = 1 $). 
+
+When $ \mu = 0 $ then diapycnal fluxes are important (e.g. in the mixed layer) so eddy fluxes are across buoyancy surfaces $ \overline{w'b'} = 0$. Mostly these surface fluxes are taken to be negligible and the adiabatic components are assumed to be the significant components. In the limit of adiabatic eddies, vanishingly small mixing and air-sea buoyancy fluxes ($\mu = B = 0$) so that:
+
+\begin{equation}
+\psi ^* = \frac{\overline{w'b'}}{\overline{b}_y}
+\end{equation} 
+
+to give:
+
+\begin{equation}
+\frac{\partial \psi _{res}}{\partial y}\frac{\partial \overline{b}}{\partial z} - \frac{\partial \psi _{res}}{\partial z}\frac{\partial \overline{b}}{\partial y}=0
+\end{equation}
+
+So $\overline{b}$ is advected by $\psi _{res}$.
+
+Evaluating \fref{eq:mr03bbudget} at the base of the mixed layer \cite{Marshall2003} devised a well used diagnostic. Assuming that $\frac{ \partial b}{\partial z}= 0$ (vertical isopycnals) we can remove a term from the LHS:
+
+\begin{equation*}
+\cancel{\frac{\partial \psi _{res}}{\partial z}\frac{ \partial b}{\partial z}}-\frac{\partial \psi _{res}}{\partial z}\frac{ \partial b_0}{\partial y} = \frac{\partial B}{\partial z} - (1-\mu ) \frac{\partial}{\partial y}(\overline{v'b'}),
+\end{equation*}
+
+and integrate over the mixed layer to give:
+
+\begin{equation*}
+\int_{-h_{ml}}^{0} -\frac{\partial \psi _{res}}{\partial z} \frac{\partial b_0}{\partial y} \mathrm{d}z = \int_{h_{ml}}^{0} \frac{\partial B}{\partial z} - (1-\mu ) \frac{\partial}{\partial y}(\overline{v'b'}) \mathrm{d}z.
+\end{equation*}
+
+Evaluating at the base of the mixed layer; $\psi _{res}$ goes to zero at the surface. This allows us to write the LHS as the $ \displaystyle{\left. \psi_{res} \right |_{z=0} -\left. \psi_{res} \right |_{z=h_{ml}}}$
+
+\begin{equation*}
+0 - \left. \psi_{res} \right |_{z=h_{ml}} \frac{\partial b_0}{\partial y} = B_0 - (1- \mu) \int_{h_{ml}}^{0} \frac{\partial}{\partial y}(\overline{v'b'}) \mathrm{d}z
+\end{equation*}
+
+which is often condensed to:
+
+\begin{equation}
+\left. \psi_{res}\right|_{z=h_{ml}} \frac{\partial b_0}{\partial y} = \underbrace{\tilde{B_0}}_{\mathclap{\text{net buoyancy supplied to the mixed layer by air-sea fluxes and lateral adiabatic eddy fluxes}}}
+\label{eq:MR03b}
+\end{equation}
+
+This allows for a simple diagnostic tool: If $\tilde{B} > 0$ (Buoyancy gain (heating)) then $\frac{\partial b_0}{\partial y} > 0$ so $ \left. \psi_{res}\right|_{z=h_{ml}} >0$. Relating surface buoyancy gain/loss to the sign of the SO ROC. Often we see this buoyancy gain/loss to be taken as simply the surface heat fluxes where the diabatic eddy contribution is assumed to be negligible. 
+
+\section{TEM In The Surface Layers}
+
+This original framework presented in \citet{Marshall2003} does not allow for real irreversible diapycnal eddy fluxes as Quasi-Geostrophy approximations are used. Which requires assumptions such as a small aspect ratio which ceases to be true in the surface mixed layer. When trying to establish the components of eddy fluxes we must consider how the surface mixed layer is handled in order to truly remove the along isopycnal component. In section \ref{sec:TEM} we use \fref{eq:eddyflux} which is taken from a Q-G case in \citet{Andrews1976} which is inconsistent with \fref{fig:MR03scheme} where we expect very steep isopycnals in the diabatic layer.  \fref{eq:eddyflux} would only be be sufficient in the interior where $\displaystyle{|\overline{b}_z|\gg |\overline{b}_y|}$ (strongly stratified). If there is any surface buoyancy gradient there will be diapycnal eddy fluxes and therefore vertical residual flux through the surface. To circumnavigate this issue \citet{Held1999,treguier1997} introduce a vanishingly thin surface layer in which the residual flow transitions to zero at the surface as used in the mixed layer diagnostic \fref{eq:MR03b} where the residual flux is assumed zero at the surface and only the base of the mixed layer is considered.   
+
+In the mixed layer $\displaystyle{|\overline{b}_y|\gg |\overline{b}_z|}$ the eddy streamfunction becomes:
+\begin{equation}
+\Psi = \frac{\overline{w'b'}}{\overline{b}_y},
+\label{eq:HS99}
+\end{equation}
+from \citet{Held1999}.
+This gives horizontal fluxes in the mixed layers so no residual flux through the surface. However in this definition is not aplicable in the interior where both the denominator and numerator in \fref{eq:HS99} may be very small leading to large errors. Thus it would be suggested to use  \fref{eq:eddyflux} in the interior and \fref{eq:HS99} in the mixed layer with the surface mass flux spread over the transition region. 
+
+\citet{Plumb2005} suggest an alternative definition of $\Psi$:
+\begin{equation}
+\Psi = - |\nabla \overline{b}|^{-1} (\textbf{s}\cdot\overline{\textbf{u}'b'}),
+\label{eq:PF05psi}
+\end{equation}
+and a residual diapycnal eddy buoyancy flux:
+\begin{equation}
+\textbf{F}(b) = \textbf{n}(\textbf{n}\cdot\overline{\textbf{u}'b'}),
+\end{equation}
+directed along mean buoyancy gradient. Where vector \textbf{n} is the mean buoyancy gradient ($\displaystyle{\sfrac{\nabla \overline{b}}{|\overline{b}|}}$) and vector \textbf{s} is along mean buoyancy surfaces ($\displaystyle{\textbf{n}\times \textbf{i} }$) 
+
+\section{Motivation}
+
+The resolution of current climate models is restricted by computational limitations, the average resolutions of coupled climate models is $\displaystyle{1 \deg}$ \cite{}, so they require parameterization of eddies. Thus the complex interaction of eddy processes in the Southern Ocean may not be fully captured in those models. These parameterization schemes do not represent diabatic eddy fluxes well, which could lead to missing feedbacks in global climate models. As a result, the debate is still open as to whether eddy parameterizations should be purely adiabatic or have additional diapycnal mixing terms \citep{Gent2011a}. It is of great interest to understand what possible feedbacks are being neglected in climate models and what the physical processes behind them are. 
+
+\citet{Marshall2003} showed that in most realistic cases the diabatic eddy contribution is often small compared to the surface forcing and that the SO ROC can be predicted from the surface forcing using \fref{eq:MR03b}. Many studies, however, show an interhemispheric connection via the Atlantic meridional overturning circulation (AMOC) and North Atlantic Deep Water (NADW) formation, which acts as a control on the SO ROC (e.g. ~\citet{Wolfe2009}, ~\citet{Nikurashin2012a}, and from the ~\cite{Marshall2003} schematic).  This suggests that the interhemispheric control on the SO ROC occurs via changes in the budget of Eq.~\ref{eq:mr03bbudget}, in particular, that either other diabatic forcing terms become important in $Q$, or that the diabatic eddy fluxes can no longer be neglected compared to the surface forcing when the ocean state switches to another one that is different from the present-day climate. The impact of the AMOC on the SO ROC must come via the northern boundary condition, i.e. the stratification north of the channel, impacting the isopycnal slope in the interior of the channel. As the adiabatic pole-to-pole circulation is the motivation of this study and in the remainder of this thesis refer to SO ROC to its upper cell for convenience\footnote{Unless otherwise stated.}.   This suggests that the inter-hemispheric control on the SO ROC occurs via changes in the stratification north of the Antarctic Circumpolar Current (ACC). For a different stratification north of the ACC, the diabatic eddy component could become as important as the surface buoyancy forcing term, or even the dominant term. 
+
+\begin{figure}
+\noindent \includegraphics[width=\textwidth]{../../Figures/TEM2.pdf}
+\caption{Adaptation of \protect{\citet{Marshall2003}} schematic.}
+\label{fig:MR03scheme}
+\end{figure}
+
+Within the \citet{Marshall2003} framework we can see that the Southern Ocean is not disconnected from the rest of the worlds oceans, and must rely on outside diabatic processes to close the SO ROC see \fref{fig:MR03scheme}. We wish to investigate in a very idealised, theoretical, way the possible mechanisms and controls on the SO ROC. This will allow us to illuminate possible considerations that may be overlooked when setting up channel models and glimpse possible interactions with boundary conditions that may have been previously unconsidered.
+

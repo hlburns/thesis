@@ -1,0 +1,133 @@
+%\addbibresource{../SOMOC2} 
+\section{Impact on ROC}
+A series of experiments were ran varying the relaxation time-scales $\tau_T$ to go from mimicking strong NADW formation to a fully closed channel ($\tau_T = \infty$). The relaxation time-scales used for these runs were: 3, 10, 30, 100, 1000, 3000, 10000 and $\infty$ days. To illustrate the outcome of these experiments results from $\tau_T$ = 3, 300, 3000 and $\infty$ days are shown in this section.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                     MOC                     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Eulerian MOC}
+For each run the Eulerian  mean overturning stream function is calculated:
+\begin{equation}
+\bar{\psi}(y, z)=\iint \overline{v}\, \mathrm{d}x\, \mathrm{d}z,
+\end{equation}
+shown in Fig. \ref{fig:MOC}. The Eulerian mean stream function can also be written as:
+\begin{equation}
+\bar{\psi}(y, z)= \frac{\tau _s}{\rho _0 f},
+\label{EQ:psimean}
+\end{equation}
+implying that the Eulerian mean stream function only depends on the wind stress. 
+%% 4
+\begin{figure}[t]
+\noindent \includegraphics[width=\textwidth]{../../Figures/MOC2.pdf}
+\caption{The Eulerian mean ($\overline{\Psi}$) shown for relaxation time-scales of 3, 300, 3000 and infinite days. Isotherms in intervals of 1$^{\circ}$C are overlain as solid black contours.}
+\label{fig:MOC}
+\end{figure}
+%% 5
+\begin{figure}[t]
+\noindent \includegraphics[width=\textwidth]{../../Figures/TheoryMOC.png}
+\caption{Left: The Eulerian mean ($\overline{\Psi}$) calculated from $\tau _s$. Right: Model $\overline{\Psi}$ calculated from 75 years averaged velocities. }
+\label{fig:TMOC}
+\end{figure}
+Indeed local wind forcing remains the same for each experiment and as a result the Eulerian mean MOC ($\overline{\psi}$) remains constant (maximum $\approx$ 2.25 Sv which scales to $\approx$ 60 Sv for a full channel) regardless of the northern boundary condition. The expected MOC pattern that can be obtained using the values wind stress, reference density and the Coriolis parameter used in the model matches closely to the overturning stream function obtained the experiments as seen in Fig.~\ref{fig:TMOC}  demonstrating the independence from far field forcing.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                    ROC                      %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{ROC Overview}
+The ROC depends on the MOC and an opposing eddy component. The eddy component is often written as:
+\begin{equation}
+\psi ^* = KS_p = \frac{\overline{w'T'}}{T_{y}},
+\label{eq:edpsi}
+\end{equation}
+\citep{Held1999},
+where the eddy overturning ($\psi ^*$) depends on eddy diffusivity (K) and isopycnal slope ($\displaystyle{S_p= \frac{T_y}{T_z}}$). The eddy diffusivity depends on a number of factors including the background vertical buoyancy gradient \citep{Ferreira2005} which is influenced by the imposed buoyancy at the northern boundary. Although the mean component can be calculated from wind forcing alone, the eddy-induced overturning relies on the stratification and diabatic eddy heat fluxes, implying the ROC can not be determined from local surface forcing alone. 
+
+The ROC is calculated as an isothermal stream function following the method of \citet{Abernathey2011}:
+\begin{equation}
+\psi_{res}(y, \theta)= \frac{1}{\Delta t} \int_{t_o}^{t_{o}+\Delta t} \int_{0}^{L_x}  \int_{\theta}^{0} vh \,\mathrm{d}\theta \,\mathrm{d}x\,\mathrm{d}t,
+\label{EQ:psidense} 
+\end{equation} 
+where $\displaystyle{h = \frac{-\partial z}{\partial \theta}}$ is the layer thickness in potential temperature ($\theta$) and the averaging period $\Delta t$ is 75 years. The isothermal stream function is calculated over 42 discrete potential temperature layers and is remapped onto depth coordinates to give $\psi_{res}(y,z)$. The ROC in temperature space ($\psi_{res}(y,\theta$)) found in these runs is shown in Fig. \ref{fig:ROCT}.
+%% 6
+\begin{figure}
+\noindent \includegraphics[width=0.9\textwidth]{../../Figures/ROC.pdf} 
+\caption{The isothermal stream function $\Psi_{res}(y,\theta)$ in temperature co-ordinates for relaxation time-scales of 3, 300, 3000, and infinite days.}
+\label{fig:ROCT}
+\end{figure}
+%% 7
+\begin{figure}
+\noindent \includegraphics[width=\textwidth]{../../Figures/RemapT.pdf} 
+\caption{The isothermal stream function $\Psi_{res}(y,\theta)$ remapped onto depth coordinates to give $\Psi_{res}(y,z)$ for relaxation time-scales of 3, 300, 3000, and infinite days. Isotherms in intervals of 1$^{\circ}$C are overlain as solid black contours. Above is the surface heat forcing displayed.}
+\label{fig:Remap}
+\end{figure}
+%% 8
+\begin{figure}
+ \noindent \includegraphics[width=\textwidth]{../../Figures/Areas.png} 
+\caption{The SO ROC when NADW formation is large (3 day relaxation timescale in the sponge), illustrating the 3 main overturning cells.}
+\label{fig:Areas}
+\end{figure}
+
+When a short relaxation time-scale of 3 days is applied (Fig.~\ref{fig:ROCT} and Fig.~\ref{fig:Remap}), the SO ROC features 3 distinct cells directed along mean isopycnals, reproducing the ROC found in \cite{Abernathey2011} as outlined in Fig. \ref{fig:Areas}. These cells can be thought of as a bottom anticlockwise cell representing an Antarctic Bottom Water (AABW) cell, a deep clockwise cell representing the  NADW cell and an anticlockwise cell confined to the surface diabatic layer that can be thought of as a Sub Antarctic Mode Water (SAMW) cell. The SO ROC is weak with a maximum of $\pm$ 0.75 Sv (30$\%$ of the mean) away from the surface. This is a realistic result as scaled to a full length channel (approximately a factor of 25 times larger) a transport of 15 Sv would be obtained. This three cell structure disintegrates with increasing relaxation timescale (Fig.~\ref{fig:ROCT} and Fig.~\ref{fig:ROCells}). When plotted as a function of depth the ROC can be seen aligned with isotherms in Fig.~\ref{fig:Remap}. The response of each cell is outlined over the next sections.
+%% 9
+\begin{figure}
+\noindent \includegraphics[width=\textwidth]{../../Figures/ROCcells.pdf} 
+\caption{Maximum overturning stream function for overturning cells defined in Fig. \ref{fig:Areas} as a function of relaxation timescale (at y = 1700km). The blue line shows the bottom cell (AABW), the red line shows the deep water cell (NADW) and the green line shows the mode water cell (SAMW).   }
+\label{fig:ROCells}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                    SAMW                     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{SAMW Cell}
+This cell is almost completely contained within the surface diabatic layer where warm water from the north moves southwards to reach the cooling region to the north of the Antarctic Circumpolar Current (ACC), where the water is subducted and returns northward adiabatically. When the relaxation time scale is between 3-300 days the SAMW cell remains fairly constant (Fig.~\ref{fig:Remap}a,b). A large meridional temperature gradient ($\approx 3.^{\circ} C$ temperature decrease over 500 km) in this region is maintained, with the sponge layer effectively preventing the surface cooling to penetrate to below 100-200 m.
+
+As the relaxation time scale is increased from 100s to 1000s of days the stratification in the northern half of the domain weakens and the surface meridional temperature gradient can no longer be maintained, preventing water mass transformation. The circulation begins to weaken and shallows, no longer being able to extend far from the sponge layer. For even longer relaxation timescales Fig.~\ref{fig:Remap}c) the sponge layer no longer maintains the stratification seen in Fig. \ref{fig:Remap}a, allowing surface cooling to lower the 5$^{\circ}$C isotherm north of the ACC, creating a deep unstratified surface layer. Without any meridional temperature gradient the southward eddy heat transport in this layer collapses. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                    NADW                     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{NADW Cell}
+At mid depth the SO ROC features a band of upwelling water that can be associated with the NADW cell. After the NADW has upwelled to the surface, the upper branch moves northward to the cooling region of the domain where the water subducts along the 4.5$^{\circ}C$ isotherm. This cell is contained between the 2$^{\circ}C$ and 4.5$^{\circ}C$ isotherms and remains fairly constant in extent and strength as long as the relaxation timescale is between 3 and 100 days. There is a slight weakening over these time scales but while the stratification remains intact the cell remains relatively unaffected. 
+
+When the relaxation time scale is increased to 1000 days the NADW cell shallows and weakens more significantly as the 4.5$^{\circ}C$ isotherm deepens and a thin mid depth band of stratification is formed. Once the relaxation time scale is increased beyond 1000 days there is no circulation within the original density range anymore and the only clockwise circulation that remains is confined to the surface mixed layer and the link with the northern boundary becomes much weaker. When relaxation timescales are increased beyond 3000 days the connection to the northern boundary weakens further and the cell becomes a surface intensified wind driven cell. Once the connection to the north is completely lost the cell can no longer be maintained and eventually disappears completely as seen in the closed basin.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                    AABW                     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{AABW Cell}
+The lowermost cell is associated with the lower branch of the NADW cell flowing southward, after which surface cooling and subducting establish a connection with an abyssal northward flowing branch. Due to the complex nature of AABW formation and the idealised set up of this model, the lowermost cell is not thought to truly represent the nature of the AABW cell. As the relaxation time scale of the sponge layer is increased beyond 100 days the cell intensifies in the southern part of the domain, probably in response to a shallowing and weakening of the NADW cell, but the connection with the northern boundary weakens. Beyond a 1000 day relaxation timescale there is no connection anymore to the north of the domain, so a northward return flow can no longer be maintained, leaving behind a small surface diabatic circulation at the south of the domain. This is the result of the very weak interior mixing applied in this set-up, while in reality the AABW-cell is maintained by enhanced abyssal and deep mixing over rough topography.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                  CLOSED                     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Closed Regime Overview}
+When the northern boundary of the Southern Ocean is closed there is a complete collapse of the SO ROC. In this case the cells can not be closed at the northern boundary, so only weak diabatic circulations may exist that are completely confined within the surface diabatic layer. No circulation unconnected to the north can be maintained as there is no longer a means to close the circulation away from the adiabatic interior. This underscores the SO ROC being part of an adiabatic pole-to-pole circulation \citep{Wolfe2011}. When the circulation at the northern end collapses, the circulation at the southern end is doomed to disappear as well. 
+
+Because the the northern boundary condition plays a strong role in setting the stratification across the domain and the interior ROC follows adiabatic path ways, it is interesting to note the changes in stratification across the different relaxation timescales. The stratification at the northern boundary is controlled by the relaxation time scale in the sponge, with short relaxation time scales forcing a top-to-bottom stratification as observed today. Longer relaxation time scales allow the stratification to evolve to an alternative state with a large unstratified surface layer and sharp internal boundary layer just below the thermocline. The northern boundary stratification T$_N$ also plays an important role in setting the isopycnal slope in the interior of the domain which can be associated with a meridional buoyancy gradient allowing for the ROC. From Fig.~\ref{fig:Remap} it is clear that large changes in stratification occur with changing $\tau_T$. Reducing NADW formation changes the Southern Ocean stratification \cite{Nikurashin2012a} to a diabatically driven regime. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                    EDDY                     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Eddy Response}
+%% 10
+\begin{figure}
+\noindent \includegraphics[width=\textwidth]{../../Figures/eddy.pdf} 
+\caption{Eddy overturning stream function ($\Psi ^*$) in depth coordinates for relaxation time scales of 3, 300, 3000, and infinite days, calculated from $\Psi ^* = \Psi_{res}(y,z)-\overline{\Psi}$. Isotherms in intervals of 1$^{\circ}$C are overlain as solid black contours}\label{fig:EOC}
+\end{figure}
+A changing ROC in response to changing far-field forcing implies that there must be a response in the eddy field as the mean overturning remains constant. Fig.~\ref{fig:EOC} shows the changing eddy overturning with increasing $\tau_T$ as calculated from $\Psi_{res}-\overline{\Psi}$ . Although the maximum eddy overturning strength remains the same at $\approx$ -2.25 Sv the spatial pattern of the eddy overturning varies with increasing relaxation time-scales. As $\tau_T$ tends towards infinity the eddy-induced overturning circulation completely compensates the Eulerian mean overturning circulation below the surface mixed layer, resulting in a zero ROC below the thermocline (Fig. \ref{fig:Remap}). 
+
+The change in the eddy field can be more clearly seen in the meridional heat transports shown in Fig.~\ref{fig:VT}, where there is a large change in eddy heat flux associated with the stratification changes. Fig.~\ref{fig:VTMean} shows that the heat flux by the mean flow remains constant regardless of northern boundary condition, acting solely as an intense northwards surface Ekman heat flux. The eddy heat fluxes exhibit large changes though (Fig.~\ref{fig:VT}a-d). As the stratification narrows to a mid depth band of highly stratified water with a large stratified surface layer, the surface eddy heat fluxes concentrate in the south of the domain transporting heat down gradient to the south across isopycnals in the region with strong meridional buoyancy gradient. Much weaker eddy heat transport occurs in the northern part of the domain where the flux is down gradient to the north as the surface heat fluxes have set up a weak reverse buoyancy gradient (warm in the central region of the domain and cool in the north). 
+
+As we see large changes in the ROC connected to large changes in the eddy field, in Eq.~\ref{eq:mixbb} the diabatic eddy fluxes $D$ must start to counteract the surface buoyancy forcing $Q$, reducing the net buoyancy forcing $B_0$. As a result, the diabatic component of the eddy heat flux can no longer be neglected. The difference between $\displaystyle{\frac{\overline{w'T'}}{T_y} \text{ and } \frac{\overline{v'T'}}{T_z}}$ can be used to show where diabatic fluxes become important (Fig.~\ref{fig:EOCDiff}). Where there is no difference the eddy fluxes are adiabatic but where there are large differences diabatic eddy fluxes are large and have to be taken into account. Fig.~\ref{fig:EOCDiff} shows large differences in diabatic eddies with increasing relaxation timescale. Although diabatic eddy fluxes remain confined to a surface diabatic layer, the surface diabatic layer deepens dramatically at the northern end of the ACC when the far-field forcing decreases. This process is represented in the pycnocline model of \cite{g99} which predicts a deeper thermocline when NADW formation decreases. 
+
+\section{Summary}
+
+This study demonstrates that the SO ROC depends on the far-field forcing and not only on the local surface heat and wind forcing. 
+As the Eulerian mean overturning depends only on the surface wind forcing (Fig.~\ref{fig:MOC}) there must be a response in the eddy overturning circulation. 
+The changes in the eddy circulation are clearly seen in the large changes in eddy heat transport, particularly in diabatic eddy flux heat divergence which plays an increasingly important role when the far-field forcing weakens (Fig.~\ref{fig:Diabaticim1}). 
+In response to reduced far-field forcing, i.e. NADW formation, the surface mixed layer deepens at the northern side of the ACC and the diabatic component of eddy heat fluxes increases considerably counteracting the surface heat flux. 
+When the northern boundary is closed, i.e. the Southern Ocean becomes completely isolated from the north, the SO ROC completely collapses. 
+The processes governing the weakening of the SO ROC in response to reduced NADW formation find some analogue in the pycnocline model of \cite{g99}. However, in the latter model the increase in eddy-induced overturning results from a deepening pycnocline, or vertical scale depth set by the isopycnal slope across the ACC. In the numerical model, such increase of the isopycnal slope is not observed. It is in fact the deepening of a diabatic surface layer that governs the weakening of the ROC, allowing for stronger diabatic eddy heat flux divergences, a process not captured in the model of \cite{g99}.  
+As a result, a different scaling is required to describe this process.
+Through geometrical augments (Fig.~\ref{fig:BBschem}) and well established TEM scaling theory a relationship with the northern boundary can be rationalised in Eq.~\ref{EQ:temnew},
+allowing the SO ROC to be diagnosed from observable quantities: surface heat fluxes, isopycnal slope and the northern boundary stratification profile.  
+The inclusion of a decent proxy (or scaling) for the diabatic component of the eddy heat fluxes and further work to assess the robustness of the assumptions behind the scaling could lead to improvements in diagnosing the SO ROC in the real ocean as well as providing scalings to be included in climate models providing the feedbacks on the SO ROC that occur in eddy-resolving models.
+Current computational limitations require parameterisation of eddies in climate models and therefore the complex interaction of eddy processes in the Southern Ocean may not be fully captured. Current parameterisation schemes do not represent diabatic eddy fluxes well \cite{griffies2000} \cite{Mcwilliams2008} which could lead to missing feedbacks in large global climate models. Therefore it is of great interest to understand what possible feedbacks are being neglected in climate models and what are the physical processes behind them. 
+
+It should be stressed that the present study used a highly idealised set up to test the concept of the far-field control of the SO ROC, to test this further an number of additional factors must be included in future model runs such as the addition of topography and allowing for an explicit connection to the North Atlantic. Including topography would introduce an influence of standing eddies on the ROC that can have significant impact \citep{abernathey2013}. The inclusion of a continental slope should lead to a stronger and deeper AABW cell and the effects of entrainment and stronger diffusion above topography in maintaining this cell require further investigation. 
+Also the response of the ACC is of interest. The response of the ACC does not necessarily follow the response of the ROC, however large changes in Southern Ocean stratification do lead to large changes in the baroclinic component of the ACC transport, which is an interesting aspect of the Southern Ocean response to far-field forcing that was not considered in this paper.  
+How increasing eddy-compensation through stronger diabatic eddy heat flux divergences interacts with the process of eddy saturation is another topic that should be further clarified \citep{Morrison2013}.
